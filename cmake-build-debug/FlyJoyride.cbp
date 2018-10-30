@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FlyJoyride">
-				<Option output="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/FlyJoyride" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug"/>
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/FlyJoyride" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlyJoyride"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlyJoyride"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="FlyJoyride/fast">
-				<Option output="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/FlyJoyride" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug"/>
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/FlyJoyride" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,44 +77,44 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlyJoyride/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 FlyJoyride/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Character.cpp">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Character.h">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Game.cpp">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Game.h">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Map.cpp">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Map.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Map.h">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Map.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Window.cpp">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/Window.h">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/main.cpp">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/CMakeLists.txt">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/Athos/ClionProjects/FlyJoyride/cmake_modules/FindSFML.cmake">
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake_modules/FindSFML.cmake">
 			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>

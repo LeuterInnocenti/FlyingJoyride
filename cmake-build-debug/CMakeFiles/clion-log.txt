@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Athos/ClionProjects/FlyJoyride
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Athos/Documents/GitHub/ProvaProgetto
 -- The C compiler identification is AppleClang 10.0.0.10001044
 -- The CXX compiler identification is AppleClang 10.0.0.10001044
 -- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
@@ -16,4 +16,4 @@
 -- Found SFML 2.4.2 in /Library/Frameworks/SFML.framework
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug
+-- Build files have been written to: /Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug
