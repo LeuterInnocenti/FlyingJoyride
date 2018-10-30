@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>

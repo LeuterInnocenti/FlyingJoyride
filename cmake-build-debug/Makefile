@@ -123,6 +123,33 @@ FlyJoyride/fast:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/build
 .PHONY : FlyJoyride/fast
 
+Block.o: Block.cpp.o
+
+.PHONY : Block.o
+
+# target to build an object file
+Block.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.o
+.PHONY : Block.cpp.o
+
+Block.i: Block.cpp.i
+
+.PHONY : Block.i
+
+# target to preprocess a source file
+Block.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.i
+.PHONY : Block.cpp.i
+
+Block.s: Block.cpp.s
+
+.PHONY : Block.s
+
+# target to generate assembly for a file
+Block.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.s
+.PHONY : Block.cpp.s
+
 Character.o: Character.cpp.o
 
 .PHONY : Character.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FlyJoyride"
+	@echo "... Block.o"
+	@echo "... Block.i"
+	@echo "... Block.s"
 	@echo "... Character.o"
 	@echo "... Character.i"
 	@echo "... Character.s"

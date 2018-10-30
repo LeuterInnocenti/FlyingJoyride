@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_COMPILER /usr/bin/g++)
 set(CMAKE_C_COMPILER /usr/bin/gcc)
 
-set(SOURCE_FILES main.cpp Game.cpp Game.h Window.cpp Window.h Map.cpp Map.h Character.cpp Character.h)
+set(SOURCE_FILES main.cpp Game.cpp Game.h Window.cpp Window.h Map.cpp Map.h Character.cpp Character.h Block.cpp Block.h)
 add_executable(FlyJoyride ${SOURCE_FILES})
 
 set(EXECUTABLE_NAME ${PROJECT_NAME})

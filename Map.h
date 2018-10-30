@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Character.h"
+#include "Block.h"
 #include <memory>
 
 class Map {
