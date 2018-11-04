@@ -20,6 +20,8 @@ public:
 
     void Reset();
 
+    void HandleText();
+
     void Update();
 
     void Render(sf::RenderWindow &window);
@@ -31,10 +33,14 @@ public:
     float GetviewCenter() { return view.getCenter().x; }
 
 private:
+
+    void Addstring(std::string message);
+
     unsigned int score;
     float speed;
     sf::View view;
     sf::Text text;
+    sf::Font font;
     sf::Vector2f WindowSize;
     Character &character;
 };

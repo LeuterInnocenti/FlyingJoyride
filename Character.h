@@ -11,9 +11,10 @@ public:
 
     ~Character();
 
-    void Update();
+    //void Update();
 
 private:
+
 };
 
 #endif //FLYJOYRIDE_CHARACTER_H

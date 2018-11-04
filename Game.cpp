@@ -12,12 +12,20 @@ Game::~Game() {}
 void Game::Update() {
     window.Update();
     map.Update();
-    character.Update();
+    //character.Update();
+    //block.Update();
+    /*if(character.GetDeath()){
+     *  std::cout<<"Il tuo punteggio è: "<<map.GetScore()<<std::endl;
+     *  window.SetDone();
+     *}
+     */
 }
 
 void Game::HandleInput() {}
 
 void Game::Render() {
     window.BeginDraw();
+    map.Render(*window.GetRenderWindow());
+    //TO DO: stessa cosa per character, block e enemy
     window.EndDraw();
 }
