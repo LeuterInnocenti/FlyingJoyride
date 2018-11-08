@@ -22,9 +22,7 @@ public:
 
     void createBullet();
 
-    void moveBullet(std::vector<sf::CircleShape> bullets);
-
-    void Shoot();
+    void moveBullet();
 
     bool GetDeath() { return death; }
 

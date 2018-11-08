@@ -31,7 +31,7 @@ void Character::Update(unsigned int wSizeY) {
         createBullet();
         frequency=0;
     }
-    moveBullet(bullets);
+    moveBullet();
 }
 
 void Character::createBullet(){
@@ -41,26 +41,12 @@ void Character::createBullet(){
     bullets.emplace_back(sf::CircleShape(bullet));
 }
 
-void Character::Shoot() {
-    createBullet();
-    bullets.emplace_back(sf::CircleShape(bullet));
+void Character::moveBullet(){
     for(size_t j = 0; j < bullets.size(); ++j){
         bullets[j].move(0.5,0);
         if(bullets[j].getPosition().x >= windowSize.x)
             bullets.erase(bullets.begin()+j);
     }
-    bullets.resize(2);
-}
-
-void Character::moveBullet(std::vector<sf::CircleShape> bullets){
-    std::cout<<"numero proiettli= "<<bullets.size()<<std::endl;
-    //nel container ci sono i proiettili ma non si muovono
-    for(size_t j = 1; j < bullets.size(); ++j){
-        bullets[j].move(0.5,0);
-        if(bullets[j].getPosition().x >= windowSize.x)
-            bullets.erase(bullets.begin()+j);
-    }
-    bullets.resize(2);
 }
 
 bool Character::GameOver(bool death){
@@ -78,7 +64,19 @@ void Character::Death() {
 
 void Character::Render(sf::RenderWindow &window) {
     window.draw(player);
-    window.draw(bullet);
+    //window.draw(bullet);
     for(const auto &b : bullets)
         window.draw(b);
 }
+
+/*void Character::Shoot() {
+    createBullet();
+    bullets.emplace_back(sf::CircleShape(bullet));
+    for(size_t j = 0; j < bullets.size(); ++j){
+        bullets[j].move(0.5,0);
+        if(bullets[j].getPosition().x >= windowSize.x)
+            bullets.erase(bullets.begin()+j);
+    }
+    //bullets.resize(2);
+}
+ */
