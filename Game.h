@@ -7,7 +7,7 @@
 
 #include "Window.h"
 #include "Map.h"
-//#include "Block.h"
+#include "Block.h"
 #include "Character.h"
 #include "SFML/Graphics.hpp"
 
@@ -24,7 +24,7 @@ public:
 private:
     Window window;
     Map map;
-    //Block block;
+    Block block;
     Character character;
 };
 

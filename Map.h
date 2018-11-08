@@ -37,7 +37,7 @@ private:
     void Addstring(std::string message);
 
     unsigned int score;
-    float speed;
+    //float speed;
     sf::View view;
     sf::Text text;
     sf::Font font;

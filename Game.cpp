@@ -3,29 +3,45 @@
 //
 
 #include "Game.h"
+#include <iostream>
 
 Game::Game() : window ("Joyride", sf::Vector2u (1080, 720)),
-               map(sf::Vector2f (500, 16000), 0, character){}
+               map(sf::Vector2f (500, 16000), 0, character),
+               character(sf::Vector2i (1080, 720)),
+               block(sf::Vector2i (1080, 720), character) {}
 
 Game::~Game() {}
 
 void Game::Update() {
     window.Update();
     map.Update();
-    //character.Update();
-    //block.Update();
-    /*if(character.GetDeath()){
-     *  std::cout<<"Il tuo punteggio è: "<<map.GetScore()<<std::endl;
-     *  window.SetDone();
-     *}
-     */
+    character.Update(window.GetWindowSize().y);
+    block.Move();
+    block.Update();
+    block.Collision();
+    if(character.GetDeath()){
+        //std::cout<<"Il tuo punteggio è: "<<10<<std::endl; //stampa score: map.GetScore()
+        //window.SetDone();
+     }
 }
 
-void Game::HandleInput() {}
+void Game::HandleInput() {
+    /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+        character.Shoot();
+    */
+}
 
 void Game::Render() {
     window.BeginDraw();
-    map.Render(*window.GetRenderWindow());
-    //TO DO: stessa cosa per character, block e enemy
+    character.Render(*window.GetRenderWindow());
+    block.Render(*window.GetRenderWindow());
+    /*int num = 0;
+    while(num%5==0){
+        block.SetBlock();
+        num++;
+    }
+     */
+    //map.Render(*window.GetRenderWindow());
+    //TO DO: stessa cosa per enemy
     window.EndDraw();
 }

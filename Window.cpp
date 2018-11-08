@@ -14,6 +14,7 @@ Window::~Window() {
 
 Window::Window(const std::string &title, const sf::Vector2u &size) {
     Setup(title, size);
+    //t.loadFromFile("background.png");
 }
 
 void Window::Setup(const std::string &title, const sf::Vector2u &size) {

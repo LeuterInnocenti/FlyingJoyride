@@ -3,6 +3,7 @@
 
 CMakeFiles/FlyJoyride.dir/Block.cpp.o: Block.cpp
 CMakeFiles/FlyJoyride.dir/Block.cpp.o: Block.h
+CMakeFiles/FlyJoyride.dir/Block.cpp.o: Character.h
 
 CMakeFiles/FlyJoyride.dir/Character.cpp.o: Character.cpp
 CMakeFiles/FlyJoyride.dir/Character.cpp.o: Character.h

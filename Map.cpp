@@ -40,7 +40,4 @@ void Map::Addstring(std::string message) {
 
 void Map::Update() {
     IncreaseScore();
-    //View(false);
 }
-
-//void Map::View(bool textview){} scorre la visuale per centrarla sul Character
