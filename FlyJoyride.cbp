@@ -102,12 +102,6 @@
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Map.cpp">
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Map.h">
-			<Option target="FlyJoyride"/>
-		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>

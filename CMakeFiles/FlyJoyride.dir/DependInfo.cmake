@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/Block.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/Character.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/Game.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/Map.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/Map.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/Window.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir/main.cpp.o"
   )

@@ -27,8 +27,7 @@ private:
     void Create();
 
     sf::RenderWindow window;
-    sf::Texture t;
-    sf::Text text;
+    //sf::Texture t;
     bool isDone;
     sf::Vector2u windowSize;
     std::string windowTitle;

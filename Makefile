@@ -204,33 +204,6 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
-Map.o: Map.cpp.o
-
-.PHONY : Map.o
-
-# target to build an object file
-Map.cpp.o:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Map.cpp.o
-.PHONY : Map.cpp.o
-
-Map.i: Map.cpp.i
-
-.PHONY : Map.i
-
-# target to preprocess a source file
-Map.cpp.i:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Map.cpp.i
-.PHONY : Map.cpp.i
-
-Map.s: Map.cpp.s
-
-.PHONY : Map.s
-
-# target to generate assembly for a file
-Map.cpp.s:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Map.cpp.s
-.PHONY : Map.cpp.s
-
 Window.o: Window.cpp.o
 
 .PHONY : Window.o
@@ -303,9 +276,6 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
-	@echo "... Map.o"
-	@echo "... Map.i"
-	@echo "... Map.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"

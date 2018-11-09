@@ -10,15 +10,16 @@ Map::Map(sf::Vector2f WindS, unsigned int score, Character &character)
     Reset ();
 }
 
-Map::~Map() {}
+//Map::~Map() {}
 
-void Map::Reset() {
+/*void Map::Reset() {
     HandleText();
     score = 0;
     view = sf::View(sf::Vector2f (300, 15000), sf::Vector2f (600, 600));
 }
+*/
 
-void Map::HandleText() { //gestione del testo
+/*void Map::HandleText() { //gestione del testo
     font.loadFromFile("arial.ttf");
     text.setFont(font);
     text.setString("");
@@ -26,18 +27,22 @@ void Map::HandleText() { //gestione del testo
     text.setCharacterSize(25);
     text.setPosition(15200, 50);
 }
+*/
 
-void Map::IncreaseScore() {}
+//void Map::IncreaseScore() {}
 
-void Map::Render(sf::RenderWindow &window) {
+/*void Map::Render(sf::RenderWindow &window) {
     window.draw(text);
     window.setView(view);
 }
+*/
 
-void Map::Addstring(std::string message) {
+/*void Map::Addstring(std::string message) {
     text.setString(message);
 }
+*/
 
-void Map::Update() {
+/*void Map::Update() {
     IncreaseScore();
 }
+*/

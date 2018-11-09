@@ -24,6 +24,9 @@ public:
 
     void moveBullet();
 
+    //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
+    //sf::FloatRect GetBulletBound() { return bullet.getGlobalBounds(); }
+
     bool GetDeath() { return death; }
 
     float GetPosx() { return player.getPosition().x; }
@@ -34,16 +37,14 @@ public:
 
 private:
     sf::Vector2i windowSize;
-
     sf::CircleShape bullet;
     std::vector<sf::CircleShape> bullets;
     sf::RectangleShape player;
     static const float g; //gravity
     static const float jump;
     bool death = false;
-
-    int frequency = 0;
-    int shootRate = 200;
+    sf::Clock clock;
+    static const float shootTime;
 };
 
 #endif //FLYJOYRIDE_CHARACTER_H

@@ -12,13 +12,7 @@ CMakeFiles/FlyJoyride.dir/Game.cpp.o: Block.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Character.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Game.cpp
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Game.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: Map.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Window.h
-
-CMakeFiles/FlyJoyride.dir/Map.cpp.o: Block.h
-CMakeFiles/FlyJoyride.dir/Map.cpp.o: Character.h
-CMakeFiles/FlyJoyride.dir/Map.cpp.o: Map.cpp
-CMakeFiles/FlyJoyride.dir/Map.cpp.o: Map.h
 
 CMakeFiles/FlyJoyride.dir/Window.cpp.o: Window.cpp
 CMakeFiles/FlyJoyride.dir/Window.cpp.o: Window.h
@@ -26,7 +20,6 @@ CMakeFiles/FlyJoyride.dir/Window.cpp.o: Window.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Block.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Character.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Game.h
-CMakeFiles/FlyJoyride.dir/main.cpp.o: Map.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Window.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: main.cpp
 

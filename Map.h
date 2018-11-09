@@ -14,35 +14,35 @@ class Map {
 public:
     Map(sf::Vector2f WindS, unsigned int score, Character &character);
 
-    ~Map();
+    //~Map();
 
-    void IncreaseScore();
+    //void IncreaseScore();
 
-    void Reset();
+    //void Reset();
 
-    void HandleText();
+    //void HandleText();
 
-    void Update();
+    //void Update();
 
-    void Render(sf::RenderWindow &window);
+    //void Render(sf::RenderWindow &window);
 
-    float GetScore() { return static_cast<int> (score); }
+    //float GetScore() { return static_cast<int> (score); }
 
-    float Gettextposition() { return text.getPosition().x; }
+    //float Gettextposition() { return text.getPosition().x; }
 
-    float GetviewCenter() { return view.getCenter().x; }
+    //float GetviewCenter() { return view.getCenter().x; }
 
 private:
 
-    void Addstring(std::string message);
+    //void Addstring(std::string message);
 
-    unsigned int score;
+    //unsigned int score;
     //float speed;
-    sf::View view;
-    sf::Text text;
-    sf::Font font;
-    sf::Vector2f WindowSize;
-    Character &character;
+    //sf::View view;
+    //sf::Text text;
+    //sf::Font font;
+    //sf::Vector2f WindowSize;
+    //Character &character;
 };
 
 #endif //FLYJOYRIDE_MAP_H

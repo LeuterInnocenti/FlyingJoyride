@@ -43,6 +43,7 @@ void Window::Destroy() {
 
 void Window::BeginDraw() {
     window.clear(sf::Color::Black);
+    //t.loadFromFile("background.png");
 }
 
 void Window::EndDraw() {

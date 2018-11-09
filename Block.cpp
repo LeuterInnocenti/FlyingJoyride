@@ -3,12 +3,14 @@
 //
 
 #include "Block.h"
-#include <chrono>
+#include <ctime>
 #include <iostream>
 
 const sf::Vector2f Block::speed = sf::Vector2f(0.7,0);
+const float Block::creationRate = 2.1f;
 
-Block::Block(sf::Vector2i windSize, Character &c) : windowSize (windSize), character(c) {
+Block::Block(sf::Vector2i windSize, Character &c) : windowSize (windSize), character(c), clock() {
+    srand((unsigned)time(NULL));
     SetBlock();
 }
 
@@ -19,45 +21,41 @@ Block::~Block() {
 void Block::Update() {
     //Delete();
     Collision();
-    frequency++;
-    if(frequency > 250){
+    if(clock.getElapsedTime().asSeconds() >= creationRate){
         SetBlock();
-        frequency=0;
+        clock.restart();
     }
 }
 
 void Block::SetBlock() {
-    block.setSize(sf::Vector2f (100, 100));
+    SetSize();
+    block.setSize(sf::Vector2f(size, size));
     block.setFillColor(sf::Color::Red);
     Random();
-    block.setPosition(1000,random * blockSize);
+    block.setPosition(1000,random);
     blocks.emplace_back(block);
-    itr = blocks.begin();
-    blocks.insert(itr+1,block);
-    //range -= scale;
-    //Bsize = rand() % 8 + 1; //varia la posizione
-    //count += 1;
 }
 
-bool Block::Move() {
+int Block::SetSize(){
+    size = rand() % maxSize + 100;
+    return size;
+}
+
+void Block::Move() {
     for(auto i = 0; i < blocks.size(); ++i) {
         blocks[i].move(-speed.x, speed.y);
-        if (blocks[i].getPosition().x >= windowSize.x) {
-            blocks[i].setPosition(pointzero, blocks[i].getPosition ().y);
-            repos = true;
-        }//SE BLOCCO MAGGIORE DELLA GRANDEZZA  MAPPA TORNA ALLO ZERO
     }
-    return repos;
 }
 
-int Block::Random() { //funzione randomica per settare coordinata Y del blocco
-    srand((unsigned)time(NULL));
-    int maxY = (windowSize.y / blockSize) - 2;
-    random = rand() % maxY + 1;
+//funzione randomica per settare coordinata Y del blocco
+int Block::Random() {
+    int maxY = windowSize.y-100; //minY è 0
+    random = rand() % maxY;
     return random;
 }
 
-void Block::Collision() { // se character interseca con block muore e gameover
+// se character interseca con block muore e gameover
+void Block::Collision() {
     for(auto &i : blocks){
         if(i.getGlobalBounds().intersects(character.GetBound())){
             character.GameOver(true);
