@@ -3,18 +3,20 @@
 //
 
 #include "Game.h"
+#include <utility>
 #include <iostream>
 
 Game::Game() : window ("Joyride", sf::Vector2u (1080, 720)),
-               map(sf::Vector2f (500, 16000), 0, character),
                character(sf::Vector2i (1080, 720)),
-               block(sf::Vector2i (1080, 720), character) {}
+               block(sf::Vector2i (1080, 720), character) {
+    Reset();
+}
 
 Game::~Game() {}
 
 void Game::Update() {
+    IncreaseScore();
     window.Update();
-    map.Update();
     character.Update(window.GetWindowSize().y);
     block.Move();
     block.Update();
@@ -25,23 +27,38 @@ void Game::Update() {
      }
 }
 
-void Game::HandleInput() {
-    /*if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
-        character.Shoot();
-    */
+void Game::HandleInput() {}
+
+void Game::IncreaseScore() {}
+
+void Game::HandleText() { //gestione del testo
+    font.loadFromFile("arial.ttf");
+    text.setFont(font);
+    text.setString("");
+    text.setFillColor(sf::Color::White);
+    text.setCharacterSize(25);
+    text.setPosition(15200, 50);
+}
+
+void Game::Addstring(std::string message) {
+    text.setString(message);
+}
+
+void Game::Reset() {
+    HandleText();
+    score = 0;
+    view = sf::View(sf::Vector2f (300, 15000), sf::Vector2f (600, 600));
+}
+
+void Game::Render(sf::RenderWindow &window) {
+    window.draw(text);
+    window.setView(view);
 }
 
 void Game::Render() {
     window.BeginDraw();
     character.Render(*window.GetRenderWindow());
     block.Render(*window.GetRenderWindow());
-    /*int num = 0;
-    while(num%5==0){
-        block.SetBlock();
-        num++;
-    }
-     */
-    //map.Render(*window.GetRenderWindow());
     //TO DO: stessa cosa per enemy
     window.EndDraw();
 }
