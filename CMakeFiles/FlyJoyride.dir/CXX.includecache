@@ -9,19 +9,11 @@
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-ctime
--
-iostream
--
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-SFML/Graphics/RenderWindow.hpp
--
 SFML/Graphics.hpp
 -
 vector
--
-memory
 -
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
@@ -29,8 +21,6 @@ Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
-iostream
--
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
@@ -39,8 +29,6 @@ SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
-utility
--
 iostream
 -
 
@@ -53,8 +41,6 @@ Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
-memory
--
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
 Window.h

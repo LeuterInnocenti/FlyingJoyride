@@ -3,8 +3,6 @@
 //
 
 #include "Block.h"
-#include <ctime>
-#include <iostream>
 
 const sf::Vector2f Block::speed = sf::Vector2f(0.7,0);
 const float Block::creationRate = 2.1f;
@@ -19,61 +17,52 @@ Block::~Block() {
 }
 
 void Block::Update() {
-    //Delete();
+    Delete();
     Collision();
-    if(clock.getElapsedTime().asSeconds() >= creationRate){
+    if (clock.getElapsedTime().asSeconds() >= creationRate) {
         SetBlock();
         clock.restart();
     }
 }
 
 void Block::SetBlock() {
-    SetSize();
-    block.setSize(sf::Vector2f(size, size));
+    block.setSize(sf::Vector2f(100, 100));
     block.setFillColor(sf::Color::Red);
     Random();
     block.setPosition(1000,random);
     blocks.emplace_back(block);
 }
 
-int Block::SetSize(){
-    size = rand() % maxSize + 100;
-    return size;
-}
-
 void Block::Move() {
-    for(auto i = 0; i < blocks.size(); ++i) {
+    for (auto i = 0; i < blocks.size(); ++i) {
         blocks[i].move(-speed.x, speed.y);
     }
 }
 
 //funzione randomica per settare coordinata Y del blocco
 int Block::Random() {
-    int maxY = windowSize.y-100; //minY è 0
+    int maxY = windowSize.y - 100; //minY è 0
     random = rand() % maxY;
     return random;
 }
 
 // se character interseca con block muore e gameover
 void Block::Collision() {
-    for(auto &i : blocks){
-        if(i.getGlobalBounds().intersects(character.GetBound())){
+    for(int i = 0; i < blocks.size(); i++){
+        if(blocks[i].getGlobalBounds().intersects(character.GetBound())){
             character.GameOver(true);
         }
+        if(blocks[i].getGlobalBounds().intersects(character.getposBullet()))
+            character.eraseBullet(i);
     }
 }
 
-//NON FUNZIONA
-void Block::Delete(){
-    for(int i = 0; i < blocks.size(); ++i){
-        if(blocks[i].getPosition().x > character.GetPosx() + distance){
+void Block::Delete() {
+    for (int i = 0; i < blocks.size(); ++i) {
+        if (blocks[i].getPosition().x + blocks[i].getSize().x < 0) {
             EraseB(i); // se esce dallo schermo lo cancella
         }
     }
-}
-
-float Block::GetposBlock(int index) {
-    return blocks[index].getPosition().y;
 }
 
 void Block::Render(sf::RenderWindow &window) {

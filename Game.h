@@ -9,48 +9,27 @@
 #include "Block.h"
 #include "Character.h"
 #include "SFML/Graphics.hpp"
-#include <memory>
 
 class Game {
 public:
     Game();
-
     ~Game();
-
     void Update();
-
-    void HandleInput();
-
     void Render();
-
     Window *GetWindow() { return &window; };
-
-    //gestione testo e score
-    void Reset();
-
+    void Reset(); //gestione testo e score
     void HandleText();
-
     void IncreaseScore();
-
-    float GetScore() { return static_cast<int> (score); }
-
-    float Gettextposition() { return text.getPosition().x; }
-
-    void Render(sf::RenderWindow &window);
-
-    float GetviewCenter() { return view.getCenter().x; }
 
 private:
     Window window;
     Block block;
     Character character;
 
-    //aggiunge riga di testo
-    void Addstring(std::string message);
+    sf::Texture backgroundTexture;
+    sf::Sprite background;
 
     unsigned int score;
-    //float speed;
-    sf::View view;
     sf::Text text;
     sf::Font font;
     sf::Vector2f WindowSize;

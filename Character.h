@@ -11,39 +11,33 @@
 class Character {
 public:
     Character(sf::Vector2i windSize);
-
     ~Character();
-
+    void Render(sf::RenderWindow &window);
     void Update(unsigned int wSizeY);
-
+    sf::FloatRect GetBound() { return player.getGlobalBounds(); }
     bool GameOver(bool death);
-
-    void Death();
-
-    void createBullet();
-
-    void moveBullet();
-
-    //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
-    //sf::FloatRect GetBulletBound() { return bullet.getGlobalBounds(); }
-
+    void Death() { death = true; }
     bool GetDeath() { return death; }
 
-    float GetPosx() { return player.getPosition().x; }
-
-    sf::FloatRect GetBound() { return player.getGlobalBounds(); }
-
-    void Render(sf::RenderWindow &window);
+    // funzioni per gestire bullets
+    void createBullet();
+    void moveBullet();
+    void eraseBullet(int j);
+    sf::FloatRect getposBullet(); //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
 
 private:
     sf::Vector2i windowSize;
+    sf::RectangleShape player;
+    sf::Clock clock;
+    bool death = false;
+
     sf::CircleShape bullet;
     std::vector<sf::CircleShape> bullets;
-    sf::RectangleShape player;
+    static const float bulletSpeed;
+
     static const float g; //gravity
     static const float jump;
-    bool death = false;
-    sf::Clock clock;
+    static const float levelGround;
     static const float shootTime;
 };
 
