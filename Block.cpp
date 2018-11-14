@@ -42,7 +42,7 @@ void Block::move() {
 
 //funzione randomica per settare coordinata Y del blocco
 int Block::random() {
-    int maxY = static_cast<int>(windowSize.y - (levelGround + block.getSize().x)); //-100
+    int maxY = static_cast<int>(windowSize.y - (levelGround + block.getSize().x));
     randomPos = rand() % maxY;
     return randomPos;
 }
@@ -53,7 +53,7 @@ void Block::collision() {
         if(blocks[i].getGlobalBounds().intersects(character.getBound())){
             character.gameOver(true);
         }
-        if(blocks[i].getGlobalBounds().intersects(character.getposBullet()))
+        if(blocks[i].getGlobalBounds().intersects(character.getPosBullet()))
             character.eraseBullet();
     }
 }

@@ -42,7 +42,7 @@ void Game::handleText() { // gestione del testo
 
 
 void Game::reset() {
-    //HandleText();
+    //handleText();
     score = 0;
 }
 

@@ -6,9 +6,9 @@
 
 const float Character::g = 0.7;
 const float Character::jump = 1.8;
-const float Character::shootTime = 1.5f;
+const float Character::shootTime = 1.3f;
 const float Character::levelGround = 63.0f;
-const float Character::bulletSpeed = 1.7;
+const float Character::bulletSpeed = 1.7f;
 
 Character::Character(sf::Vector2i windSize) : windowSize(windSize), clock() {
     player.setSize(sf::Vector2f(100, 50));
@@ -64,14 +64,15 @@ void Character::render(sf::RenderWindow &window) {
 }
 
 //restituisce il rect di bullet per intersect
-sf::FloatRect Character::getposBullet() {
+sf::FloatRect Character::getPosBullet() {
     sf::FloatRect bulletshape;
-    for (auto &i : bullets) {
-        bulletshape = i.getGlobalBounds();
+    for (int i = 0; i < bullets.size(); i++) {
+        bulletshape = bullets[i].getGlobalBounds();
+        ind = i;
     }
     return bulletshape;
 }
 
 void Character::eraseBullet() {
-    bullets.erase(bullets.begin());
+    bullets.erase(bullets.begin()+ind);
 }

@@ -22,13 +22,14 @@ public:
     void createBullet();
     void moveBullet();
     void eraseBullet();
-    sf::FloatRect getposBullet(); //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
+    sf::FloatRect getPosBullet(); //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
 
 private:
     sf::Vector2i windowSize;
     sf::RectangleShape player;
     sf::Clock clock;
     bool characterDeath = false;
+    int ind;
 
     sf::CircleShape bullet;
     std::vector<sf::CircleShape> bullets;
