@@ -9,23 +9,22 @@
 #include <vector>
 #include "Character.h"
 
-
 class Block {
 public:
     Block(sf::Vector2i windSize, Character &c);
     ~Block();
-    void SetBlock();
-    void Update();
-    void Render(sf::RenderWindow &window);
+    void setBlock();
+    void update();
+    void render(sf::RenderWindow &window);
 
-    void Collision();
-    void Delete();
-    void Move();
-    void EraseB(int index) { blocks.erase(blocks.begin() + index); }
+    void collision();
+    void deleteB();
+    void move();
+    void eraseB(int index) { blocks.erase(blocks.begin() + index); }
 
 private:
-    int Random();
-    int random;
+    int random();
+    int randomPos;
 
     sf::Clock clock;
     sf::RectangleShape block;
@@ -35,6 +34,7 @@ private:
     sf::Vector2i windowSize;
 
     static const float creationRate; // frequenza con cui vengono creati i blocchi
+    static const int levelGround;
     static const sf::Vector2f speed;
 };
 

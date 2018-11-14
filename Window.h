@@ -12,22 +12,22 @@ public:
     Window();
     Window(const std::string &title, const sf::Vector2u &size);
     ~Window();
-    void BeginDraw();
-    void EndDraw();
-    void Update();
-    bool IsDone() { return isDone; };
+    void beginDraw();
+    void endDraw();
+    void update();
+    bool isDone() { return done; };
     sf::RenderWindow *GetRenderWindow();
     sf::Vector2u GetWindowSize();
-    void Draw(sf::Drawable &drawable);
-    void SetDone() { isDone = true; }
+    void draw(sf::Drawable &drawable);
+    void setDone() { done = true; }
 
 private:
-    void Setup(const std::string &title, const sf::Vector2u &size);
-    void Destroy();
-    void Create();
+    void setup(const std::string &title, const sf::Vector2u &size);
+    void destroy();
+    void create();
 
     sf::RenderWindow window;
-    bool isDone;
+    bool done;
     sf::Vector2u windowSize;
     std::string windowTitle;
 

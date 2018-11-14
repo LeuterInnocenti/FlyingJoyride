@@ -14,12 +14,12 @@ class Game {
 public:
     Game();
     ~Game();
-    void Update();
-    void Render();
+    void update();
+    void render();
     Window *GetWindow() { return &window; };
-    void Reset(); //gestione testo e score
-    void HandleText();
-    void IncreaseScore();
+    void reset(); //gestione testo e score
+    void handleText();
+    void increaseScore();
 
 private:
     Window window;

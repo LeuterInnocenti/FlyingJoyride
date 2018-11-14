@@ -7,9 +7,9 @@
 int main() {
     Game game;
 
-    while(!game.GetWindow()->IsDone()){
-        game.Render();
-        game.Update();
+    while(!game.GetWindow()->isDone()){
+        game.render();
+        game.update();
     }
 
 }

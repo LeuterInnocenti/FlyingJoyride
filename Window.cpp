@@ -5,50 +5,50 @@
 #include "Window.h"
 
 Window::Window() {
-    Setup("Game", sf::Vector2u(400, 600));
+    setup("Game", sf::Vector2u(400, 600));
 }
 
 Window::~Window() {
-    Destroy();
+    destroy();
 };
 
 Window::Window(const std::string &title, const sf::Vector2u &size) {
-    Setup(title, size);
+    setup(title, size);
 }
 
-void Window::Setup(const std::string &title, const sf::Vector2u &size) {
+void Window::setup(const std::string &title, const sf::Vector2u &size) {
     windowTitle = title;
     windowSize = size;
-    isDone = false;
+    done = false;
     window.setFramerateLimit(30);
-    Create();
+    create();
 }
 
-void Window::Update() {
+void Window::update() {
     sf::Event event;
     while (window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
-            isDone = true;
+            done = true;
     }
 }
 
-void Window::Create() {
+void Window::create() {
     window.create({windowSize.x, windowSize.y}, windowTitle);
 }
 
-void Window::Destroy() {
+void Window::destroy() {
     window.close();
 }
 
-void Window::BeginDraw() {
+void Window::beginDraw() {
     window.clear(sf::Color::Black);
 }
 
-void Window::EndDraw() {
+void Window::endDraw() {
     window.display();
 }
 
-void Window::Draw(sf::Drawable &drawable) {
+void Window::draw(sf::Drawable &drawable) {
     window.draw(drawable);
 }
 

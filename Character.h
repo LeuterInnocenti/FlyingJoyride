@@ -7,29 +7,28 @@
 
 #include <SFML/Graphics.hpp>
 
-
 class Character {
 public:
     Character(sf::Vector2i windSize);
     ~Character();
-    void Render(sf::RenderWindow &window);
-    void Update(unsigned int wSizeY);
-    sf::FloatRect GetBound() { return player.getGlobalBounds(); }
-    bool GameOver(bool death);
-    void Death() { death = true; }
-    bool GetDeath() { return death; }
+    void render(sf::RenderWindow &window);
+    void update(unsigned int wSizeY);
+    sf::FloatRect getBound() { return player.getGlobalBounds(); }
+    bool gameOver(bool death);
+    void death() { characterDeath = true; }
+    bool getDeath() { return characterDeath; }
 
     // funzioni per gestire bullets
     void createBullet();
     void moveBullet();
-    void eraseBullet(int j);
+    void eraseBullet();
     sf::FloatRect getposBullet(); //per gestire interesezione tra bullet e block: bullet non deve oltrepassare un block
 
 private:
     sf::Vector2i windowSize;
     sf::RectangleShape player;
     sf::Clock clock;
-    bool death = false;
+    bool characterDeath = false;
 
     sf::CircleShape bullet;
     std::vector<sf::CircleShape> bullets;

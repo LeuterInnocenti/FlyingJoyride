@@ -6,9 +6,9 @@
 
 const float Character::g = 0.7;
 const float Character::jump = 1.8;
-const float Character::shootTime = 1.2f;
+const float Character::shootTime = 1.5f;
 const float Character::levelGround = 63.0f;
-const float Character::bulletSpeed = 0.5;
+const float Character::bulletSpeed = 1.7;
 
 Character::Character(sf::Vector2i windSize) : windowSize(windSize), clock() {
     player.setSize(sf::Vector2f(100, 50));
@@ -18,7 +18,7 @@ Character::Character(sf::Vector2i windSize) : windowSize(windSize), clock() {
 
 Character::~Character() {}
 
-void Character::Update(unsigned int wSizeY) {
+void Character::update(unsigned int wSizeY) {
     player.setPosition(player.getPosition().x, player.getPosition().y + g);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         player.setPosition(player.getPosition().x, player.getPosition().y - jump);
@@ -49,15 +49,15 @@ void Character::moveBullet(){
     }
 }
 
-bool Character::GameOver(bool death){
-    Death();
-    if(death) {
+bool Character::gameOver(bool characterDeath){
+    death();
+    if(characterDeath) {
         player.setFillColor(sf::Color::White);
     }
-    return death;
+    return characterDeath;
 }
 
-void Character::Render(sf::RenderWindow &window) {
+void Character::render(sf::RenderWindow &window) {
     window.draw(player);
     for(const auto &b : bullets)
         window.draw(b);
@@ -72,6 +72,6 @@ sf::FloatRect Character::getposBullet() {
     return bulletshape;
 }
 
-void Character::eraseBullet(int j) {
-    bullets.erase(bullets.begin()+j);
+void Character::eraseBullet() {
+    bullets.erase(bullets.begin());
 }

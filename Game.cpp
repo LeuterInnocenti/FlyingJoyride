@@ -8,7 +8,7 @@
 Game::Game() : window ("Joyride", sf::Vector2u (1080,720)),
                character(sf::Vector2i (1080, 720)),
                block(sf::Vector2i (1080, 720), character) {
-    Reset();
+    reset();
     backgroundTexture.loadFromFile("Background.png");
     background.setTexture(backgroundTexture);
     background.setScale(0.95,0.95);
@@ -16,22 +16,22 @@ Game::Game() : window ("Joyride", sf::Vector2u (1080,720)),
 
 Game::~Game() {}
 
-void Game::Update() {
-    IncreaseScore();
-    window.Update();
-    character.Update(window.GetWindowSize().y);
-    block.Move();
-    block.Update();
-    block.Collision();
-    if(character.GetDeath()){
+void Game::update() {
+    increaseScore();
+    window.update();
+    character.update(window.GetWindowSize().y);
+    block.move();
+    block.update();
+    block.collision();
+    if(character.getDeath()){
         // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
-        window.SetDone();
+        window.setDone();
      }
 }
 
-void Game::IncreaseScore() {}
+void Game::increaseScore() {}
 
-void Game::HandleText() { // gestione del testo
+void Game::handleText() { // gestione del testo
     font.loadFromFile("arial.ttf");
     text.setFont(font);
     text.setString("");
@@ -41,16 +41,16 @@ void Game::HandleText() { // gestione del testo
 }
 
 
-void Game::Reset() {
+void Game::reset() {
     //HandleText();
     score = 0;
 }
 
-void Game::Render() {
-    window.BeginDraw();
-    window.Draw(background);
-    character.Render(*window.GetRenderWindow());
-    block.Render(*window.GetRenderWindow());
-    window.EndDraw();
+void Game::render() {
+    window.beginDraw();
+    window.draw(background);
+    character.render(*window.GetRenderWindow());
+    block.render(*window.GetRenderWindow());
+    window.endDraw();
     //TO DO: stessa cosa per enemy
 }
