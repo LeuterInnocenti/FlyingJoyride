@@ -12,32 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="662df83b-ada6-4c57-bab5-8436fab25d9e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/NormalBlock.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NormalBlock.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PowerUpBlock.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PowerUpBlock.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleBlockFactory.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleBlockFactory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Block.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/Block.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Character.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlyJoyride.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/FlyJoyride.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleBlockFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleBlockFactory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleBlockFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleBlockFactory.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -54,8 +33,8 @@
       <file leaf-file-name="SimpleBlockFactory.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimpleBlockFactory.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="270">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
               <folding>
                 <element signature="e#133#151#0" expanded="true" />
               </folding>
@@ -66,8 +45,8 @@
       <file leaf-file-name="SimpleBlockFactory.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimpleBlockFactory.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="64" />
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding>
                 <element signature="e#52#83#0" expanded="true" />
               </folding>
@@ -78,8 +57,8 @@
       <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            <state relative-caret-position="900">
+              <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
               <folding>
                 <element signature="e#105#124#0" expanded="true" />
               </folding>
@@ -90,8 +69,8 @@
       <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+            <state relative-caret-position="89">
+              <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
               <folding>
                 <element signature="e#52#69#0" expanded="true" />
               </folding>
@@ -155,6 +134,7 @@
       <find>blocks</find>
       <find>clock1</find>
       <find>unique</find>
+      <find>shared</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,9 +166,9 @@
         <option value="$PROJECT_DIR$/Block.h" />
         <option value="$PROJECT_DIR$/PowerUpBlock.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/SimpleBlockFactory.h" />
         <option value="$PROJECT_DIR$/SimpleBlockFactory.cpp" />
+        <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
@@ -260,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1540910196989</updated>
       <workItem from="1540910206269" duration="104340000" />
-      <workItem from="1542130379049" duration="65220000" />
+      <workItem from="1542130379049" duration="70809000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1540910290566</created>
@@ -280,7 +260,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169560000" />
+    <option name="totallyTimeSpent" value="175149000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -297,12 +277,12 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23987292" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.53384614" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.53269535" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32854864" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32854864" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854864" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36769232" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36682615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32854864" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -353,7 +333,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -624,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleBlockFactory.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding>
             <element signature="e#133#151#0" expanded="true" />
           </folding>
@@ -634,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimpleBlockFactory.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="64" />
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="e#52#83#0" expanded="true" />
           </folding>
@@ -644,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="900">
+          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
           <folding>
             <element signature="e#105#124#0" expanded="true" />
           </folding>
@@ -654,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        <state relative-caret-position="89">
+          <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
           <folding>
             <element signature="e#52#69#0" expanded="true" />
           </folding>

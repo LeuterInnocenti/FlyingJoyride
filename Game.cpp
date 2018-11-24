@@ -130,17 +130,17 @@ void Game::eraseBullet() {
 
 void Game::setBlock() {
     if (normalBlockClock.getElapsedTime().asSeconds() >= creationRateNB) {
-        std::shared_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
+        std::unique_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
         random();
         block->setPosition(sf::Vector2f(windowSize.x + 2*block->getSize().x,randomPos));
-        blocks.emplace_back(block);
+        blocks.push_back(move(block));
         normalBlockClock.restart();
     }
     else if (powerUpBlockClock.getElapsedTime().asSeconds() >= creationRatePUB) {
-        std::shared_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
+        std::unique_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
         random();
         block->setPosition(sf::Vector2f(windowSize.x + 2*block->getSize().x,randomPos));
-        blocks.emplace_back(block);
+        blocks.push_back(move(block));
         powerUpBlockClock.restart();
     }
 }
@@ -163,8 +163,8 @@ void Game::deleteBlock() {
 void Game::collision() {
     for(auto &i : blocks){
         /*
-        std::shared_ptr<Block> test = std::shared_ptr<Block>(new class NormalBlock());
-        test = dynamic_cast<>(i);
+        std::shared_ptr<NormalBlock> test;
+        test = dynamic_cast<std::shared_ptr<NormalBlock>>(i);
         */
         // se character interseca con block muore e gameover
         if(i->getGlobalBounds().intersects(player.getBound())) {

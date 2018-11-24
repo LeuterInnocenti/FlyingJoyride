@@ -15,17 +15,7 @@ class SimpleBlockFactory {
 public:
     SimpleBlockFactory();
     virtual ~SimpleBlockFactory();
-    std::shared_ptr<Block> createBlock(BlockType type);
-    /*
-    Block createBlock(std::string type) const {
-        Block block;
-        if(type.compare("PowerUpBlock") == 0) //type.compare restituisce un intero
-            block = PowerUpBlock();
-        else
-            block = NormalBlock();
-        return block;
-    }
-    */
+    std::unique_ptr<Block> createBlock(BlockType type);
 };
 
 #endif //FLYJOYRIDE_SIMPLEBLOCKFACTORY_H

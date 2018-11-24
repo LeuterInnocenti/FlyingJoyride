@@ -58,7 +58,7 @@ private:
     static const float bulletSpeed;
 
     Block block;
-    std::vector<std::shared_ptr<Block>> blocks;
+    std::vector<std::unique_ptr<Block>> blocks;
     sf::Clock normalBlockClock;
     sf::Clock powerUpBlockClock;
     static const sf::Vector2f speed;
