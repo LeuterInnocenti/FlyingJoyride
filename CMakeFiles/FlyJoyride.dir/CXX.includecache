@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp
-Block.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 SFML/Graphics.hpp
 -
-vector
--
-Character.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp
 Character.h
@@ -41,6 +33,44 @@ Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
+SimpleBlockFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.h
+string
+-
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp
+NormalBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp
+PowerUpBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+iostream
+-
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp
+SimpleBlockFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.h
+NormalBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
+PowerUpBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+PowerUpBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+NormalBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
 Window.h

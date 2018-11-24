@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp">
-			<Option target="FlyJoyride"/>
-		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
@@ -100,6 +97,24 @@
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp">

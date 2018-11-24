@@ -123,33 +123,6 @@ FlyJoyride/fast:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/build
 .PHONY : FlyJoyride/fast
 
-Block.o: Block.cpp.o
-
-.PHONY : Block.o
-
-# target to build an object file
-Block.cpp.o:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.o
-.PHONY : Block.cpp.o
-
-Block.i: Block.cpp.i
-
-.PHONY : Block.i
-
-# target to preprocess a source file
-Block.cpp.i:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.i
-.PHONY : Block.cpp.i
-
-Block.s: Block.cpp.s
-
-.PHONY : Block.s
-
-# target to generate assembly for a file
-Block.cpp.s:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.s
-.PHONY : Block.cpp.s
-
 Character.o: Character.cpp.o
 
 .PHONY : Character.o
@@ -203,6 +176,87 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+NormalBlock.o: NormalBlock.cpp.o
+
+.PHONY : NormalBlock.o
+
+# target to build an object file
+NormalBlock.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o
+.PHONY : NormalBlock.cpp.o
+
+NormalBlock.i: NormalBlock.cpp.i
+
+.PHONY : NormalBlock.i
+
+# target to preprocess a source file
+NormalBlock.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.i
+.PHONY : NormalBlock.cpp.i
+
+NormalBlock.s: NormalBlock.cpp.s
+
+.PHONY : NormalBlock.s
+
+# target to generate assembly for a file
+NormalBlock.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.s
+.PHONY : NormalBlock.cpp.s
+
+PowerUpBlock.o: PowerUpBlock.cpp.o
+
+.PHONY : PowerUpBlock.o
+
+# target to build an object file
+PowerUpBlock.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o
+.PHONY : PowerUpBlock.cpp.o
+
+PowerUpBlock.i: PowerUpBlock.cpp.i
+
+.PHONY : PowerUpBlock.i
+
+# target to preprocess a source file
+PowerUpBlock.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.i
+.PHONY : PowerUpBlock.cpp.i
+
+PowerUpBlock.s: PowerUpBlock.cpp.s
+
+.PHONY : PowerUpBlock.s
+
+# target to generate assembly for a file
+PowerUpBlock.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.s
+.PHONY : PowerUpBlock.cpp.s
+
+SimpleBlockFactory.o: SimpleBlockFactory.cpp.o
+
+.PHONY : SimpleBlockFactory.o
+
+# target to build an object file
+SimpleBlockFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o
+.PHONY : SimpleBlockFactory.cpp.o
+
+SimpleBlockFactory.i: SimpleBlockFactory.cpp.i
+
+.PHONY : SimpleBlockFactory.i
+
+# target to preprocess a source file
+SimpleBlockFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.i
+.PHONY : SimpleBlockFactory.cpp.i
+
+SimpleBlockFactory.s: SimpleBlockFactory.cpp.s
+
+.PHONY : SimpleBlockFactory.s
+
+# target to generate assembly for a file
+SimpleBlockFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.s
+.PHONY : SimpleBlockFactory.cpp.s
 
 Window.o: Window.cpp.o
 
@@ -267,15 +321,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FlyJoyride"
-	@echo "... Block.o"
-	@echo "... Block.i"
-	@echo "... Block.s"
 	@echo "... Character.o"
 	@echo "... Character.i"
 	@echo "... Character.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... NormalBlock.o"
+	@echo "... NormalBlock.i"
+	@echo "... NormalBlock.s"
+	@echo "... PowerUpBlock.o"
+	@echo "... PowerUpBlock.i"
+	@echo "... PowerUpBlock.s"
+	@echo "... SimpleBlockFactory.o"
+	@echo "... SimpleBlockFactory.i"
+	@echo "... SimpleBlockFactory.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"
