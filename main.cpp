@@ -7,7 +7,7 @@
 int main() {
     Game game;
 
-    while(!game.GetWindow()->isDone()){
+    while (!game.GetWindow()->isDone()) {
         game.render();
         game.update();
     }

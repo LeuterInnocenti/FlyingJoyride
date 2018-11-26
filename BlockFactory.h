@@ -11,10 +11,10 @@
 
 enum BlockType {PowerUpBlock, NormalBlock};
 
-class SimpleBlockFactory {
+class BlockFactory {
 public:
-    SimpleBlockFactory();
-    virtual ~SimpleBlockFactory();
+    BlockFactory();
+    virtual ~BlockFactory();
     std::unique_ptr<Block> createBlock(BlockType type);
 };
 

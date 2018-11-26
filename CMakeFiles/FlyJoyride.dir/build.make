@@ -201,28 +201,28 @@ CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o.provides: CMakeFiles/FlyJoyride.dir
 CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o
 
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o: CMakeFiles/FlyJoyride.dir/flags.make
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o: SimpleBlockFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: CMakeFiles/FlyJoyride.dir/flags.make
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: BlockFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp > CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.i
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp > CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.i
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp -o CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.s
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp -o CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.s
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.requires:
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.requires:
 
-.PHONY : CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.requires
+.PHONY : CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.requires
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.provides: CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.requires
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.provides.build
-.PHONY : CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.provides
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides
 
-CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o
+CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
 
 
 # Object files for target FlyJoyride
@@ -233,7 +233,7 @@ FlyJoyride_OBJECTS = \
 "CMakeFiles/FlyJoyride.dir/Character.cpp.o" \
 "CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o" \
 "CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o" \
-"CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o"
+"CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o"
 
 # External object files for target FlyJoyride
 FlyJoyride_EXTERNAL_OBJECTS =
@@ -244,7 +244,7 @@ FlyJoyride: CMakeFiles/FlyJoyride.dir/Window.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/Character.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o
-FlyJoyride: CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o
+FlyJoyride: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/build.make
 FlyJoyride: CMakeFiles/FlyJoyride.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FlyJoyride"
@@ -261,7 +261,7 @@ CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/Window.cpp.o.requi
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/Character.cpp.o.requires
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o.requires
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o.requires
-CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o.requires
+CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.requires
 
 .PHONY : CMakeFiles/FlyJoyride.dir/requires
 

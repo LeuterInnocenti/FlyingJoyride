@@ -13,5 +13,5 @@ PowerUpBlock::PowerUpBlock() {
 PowerUpBlock::~PowerUpBlock() {}
 
 void PowerUpBlock::activePowerUp() {
-    std::cout<<"è stato attivato il PowerUp!"<<std::endl;
+    std::cout << "PowerUp attivato!" << std::endl;
 }

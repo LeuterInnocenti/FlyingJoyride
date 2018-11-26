@@ -11,7 +11,7 @@ class PowerUpBlock : public Block {
 public:
     PowerUpBlock();
     virtual ~PowerUpBlock();
-    void activePowerUp();
+    static void activePowerUp();
 };
 
 #endif //FLYJOYRIDE_POWERUPBLOCK_H

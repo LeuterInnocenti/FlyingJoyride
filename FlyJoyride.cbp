@@ -87,6 +87,12 @@
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp">
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h">
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp">
 			<Option target="FlyJoyride"/>
 		</Unit>
@@ -109,12 +115,6 @@
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h">
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.cpp">
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/SimpleBlockFactory.h">
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp">

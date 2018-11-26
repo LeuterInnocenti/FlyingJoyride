@@ -22,6 +22,8 @@ public:
     sf::Vector2f getPlayerPosition(){return player.getPosition();}
     void setPlayerPosition(float posX, float posY){player.setPosition(posX, posY);}
 
+    void setColor(sf::Color color) { player.setFillColor(color); }
+
 private:
     sf::RectangleShape player;
     bool characterDeath = false;

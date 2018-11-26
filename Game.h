@@ -10,7 +10,7 @@
 #include "Character.h"
 #include "SFML/Graphics.hpp"
 
-#include "SimpleBlockFactory.h"
+#include "BlockFactory.h"
 #include <string>
 
 class Game {
@@ -39,8 +39,9 @@ public:
     void collision();
 
 private:
-    int random();
-    int randomPos;
+    int randomCreation();
+    int randomPos();
+    int randomY;
 
     Window window;
     sf::Sprite background;
@@ -58,21 +59,20 @@ private:
     static const float bulletSpeed;
 
     Block block;
+    BlockFactory factory;
     std::vector<std::unique_ptr<Block>> blocks;
-    sf::Clock normalBlockClock;
-    sf::Clock powerUpBlockClock;
+    sf::Clock blockClock;
     static const sf::Vector2f speed;
+    int blockX;
+    int countBlock;
+    bool isCreated;
 
-    static const float creationRateNB;  // frequenza con cui vengono creati i blocchi normali
-    static const float creationRatePUB; // frequenza con cui vengono creati i blocchi Powerup
+    static const float creationRate;  // frequenza con cui vengono creati i blocchi normali
     sf::Vector2i windowSize = sf::Vector2i (1080, 720);
 
     unsigned int score;
     sf::Text text;
     sf::Font font;
-
-    SimpleBlockFactory factory;
-    std::string type;
 };
 
 #endif //FLYJOYRIDE_GAME_H

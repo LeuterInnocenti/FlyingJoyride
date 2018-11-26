@@ -123,6 +123,33 @@ FlyJoyride/fast:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/build
 .PHONY : FlyJoyride/fast
 
+BlockFactory.o: BlockFactory.cpp.o
+
+.PHONY : BlockFactory.o
+
+# target to build an object file
+BlockFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
+.PHONY : BlockFactory.cpp.o
+
+BlockFactory.i: BlockFactory.cpp.i
+
+.PHONY : BlockFactory.i
+
+# target to preprocess a source file
+BlockFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.i
+.PHONY : BlockFactory.cpp.i
+
+BlockFactory.s: BlockFactory.cpp.s
+
+.PHONY : BlockFactory.s
+
+# target to generate assembly for a file
+BlockFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.s
+.PHONY : BlockFactory.cpp.s
+
 Character.o: Character.cpp.o
 
 .PHONY : Character.o
@@ -231,33 +258,6 @@ PowerUpBlock.cpp.s:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.s
 .PHONY : PowerUpBlock.cpp.s
 
-SimpleBlockFactory.o: SimpleBlockFactory.cpp.o
-
-.PHONY : SimpleBlockFactory.o
-
-# target to build an object file
-SimpleBlockFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.o
-.PHONY : SimpleBlockFactory.cpp.o
-
-SimpleBlockFactory.i: SimpleBlockFactory.cpp.i
-
-.PHONY : SimpleBlockFactory.i
-
-# target to preprocess a source file
-SimpleBlockFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.i
-.PHONY : SimpleBlockFactory.cpp.i
-
-SimpleBlockFactory.s: SimpleBlockFactory.cpp.s
-
-.PHONY : SimpleBlockFactory.s
-
-# target to generate assembly for a file
-SimpleBlockFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/SimpleBlockFactory.cpp.s
-.PHONY : SimpleBlockFactory.cpp.s
-
 Window.o: Window.cpp.o
 
 .PHONY : Window.o
@@ -321,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FlyJoyride"
+	@echo "... BlockFactory.o"
+	@echo "... BlockFactory.i"
+	@echo "... BlockFactory.s"
 	@echo "... Character.o"
 	@echo "... Character.i"
 	@echo "... Character.s"
@@ -333,9 +336,6 @@ help:
 	@echo "... PowerUpBlock.o"
 	@echo "... PowerUpBlock.i"
 	@echo "... PowerUpBlock.s"
-	@echo "... SimpleBlockFactory.o"
-	@echo "... SimpleBlockFactory.i"
-	@echo "... SimpleBlockFactory.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"
