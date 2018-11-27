@@ -25,6 +25,8 @@ Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o
  Test/lib/googletest/include/gtest/internal/gtest-port.h
  Test/lib/googletest/include/gtest/internal/gtest-string.h
  Test/lib/googletest/include/gtest/internal/gtest-type-util.h
+Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp
 Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h

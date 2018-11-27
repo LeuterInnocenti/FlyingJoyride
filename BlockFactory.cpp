@@ -17,6 +17,5 @@ std::unique_ptr<Block> BlockFactory::createBlock(BlockType type) {
     } else if (type == BlockType::PowerUpBlock) {
         result = std::unique_ptr<Block>(new class PowerUpBlock());
     }
-    // result->setBitap(); per mettere lo sprite, vedi e.g. Bertini
     return result;
 }

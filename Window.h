@@ -16,8 +16,8 @@ public:
     void endDraw();
     void update();
     bool isDone() { return done; };
-    sf::RenderWindow *GetRenderWindow();
-    sf::Vector2u GetWindowSize();
+    sf::RenderWindow *getRenderWindow();
+    sf::Vector2u getWindowSize();
     void draw(sf::Drawable &drawable);
     void setDone() { done = true; }
 

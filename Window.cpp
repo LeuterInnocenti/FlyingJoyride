@@ -52,10 +52,10 @@ void Window::draw(sf::Drawable &drawable) {
     window.draw(drawable);
 }
 
-sf::RenderWindow *Window::GetRenderWindow() {
+sf::RenderWindow *Window::getRenderWindow() {
     return &window;
 }
 
-sf::Vector2u Window::GetWindowSize() {
+sf::Vector2u Window::getWindowSize() {
     return windowSize;
 }

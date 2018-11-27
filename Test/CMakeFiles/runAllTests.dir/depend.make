@@ -25,6 +25,8 @@ Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o: Test/lib/googletest/incl
 Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o: Test/lib/googletest/include/gtest/internal/gtest-string.h
 Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o: Test/lib/googletest/include/gtest/internal/gtest-type-util.h
 
+Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Test/GameFixture.cpp
+
 Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o: Block.h
 Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o: NormalBlock.h
 Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o: Test/NormalBlockFixture.cpp

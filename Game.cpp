@@ -70,7 +70,7 @@ void Game::reset() {
 void Game::render() {
     window.beginDraw();
     window.draw(background);
-    player.render(*window.GetRenderWindow());
+    player.render(*window.getRenderWindow());
     for (auto &block : blocks)
         window.draw(*block);
     for (auto &b : bullets)
@@ -83,9 +83,9 @@ void Game::movePlayer() {
     player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y + g);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
         player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y - jump);
-    if (player.getPlayerPosition().y + player.getPlayerSize().y >= window.GetWindowSize().y - levelGround)
+    if (player.getPlayerPosition().y + player.getPlayerSize().y >= window.getWindowSize().y - levelGround)
         player.setPlayerPosition(player.getPlayerPosition().x,
-                                 window.GetWindowSize().y - player.getPlayerSize().y - levelGround);
+                                 window.getWindowSize().y - player.getPlayerSize().y - levelGround);
     if (player.getPlayerPosition().y <= 0)
         player.setPlayerPosition(player.getPlayerPosition().x, 0);
 }
@@ -109,7 +109,7 @@ void Game::createBullet() {
 void Game::moveBullet() {
     for (size_t j = 0; j < bullets.size(); ++j) {
         bullets[j].move(bulletSpeed, 0);
-        if (bullets[j].getPosition().x >= window.GetWindowSize().x + 2 * player.getPlayerSize().x)
+        if (bullets[j].getPosition().x >= window.getWindowSize().x + 2 * player.getPlayerSize().x)
             bullets.erase(bullets.begin() + j);
     }
 }
@@ -166,9 +166,8 @@ void Game::collision() {
     for (auto &i : blocks) {
         class NormalBlock *test = dynamic_cast<class NormalBlock *>(i.get());
         // se character interseca con block muore e gameover
-        if (i->getGlobalBounds().intersects(player.getBound()) && test != nullptr) {
+        if (i->getGlobalBounds().intersects(player.getBound()) && test != nullptr)
             player.gameOver(true);
-        }
         // se character interseca PowerUpBlock si attiva il potenziamento
         if (i->getGlobalBounds().intersects(player.getBound()) && test == nullptr) {
             PowerUpBlock::activePowerUp();

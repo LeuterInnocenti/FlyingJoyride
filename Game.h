@@ -22,7 +22,7 @@ public:
     void handleText();
     void increaseScore();
     Window *GetWindow() { return &window; };
-    void reset(); //gestione testo e score
+    void reset(); // gestione testo e score
 
     void shoot();
     void moveBullet();
@@ -53,7 +53,7 @@ private:
     sf::CircleShape bullet;
     std::vector<sf::CircleShape> bullets;
     int ind;
-    static const float g; //gravity
+    static const float g; // gravity
     static const float jump;
     static const float shootTime;
     static const float bulletSpeed;

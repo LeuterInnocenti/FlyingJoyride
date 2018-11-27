@@ -28,6 +28,8 @@ gtest/gtest.h
 ../Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp
 gtest/gtest.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
