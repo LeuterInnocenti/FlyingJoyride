@@ -1,3 +1,11 @@
+/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir
 /Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/rebuild_cache.dir
 /Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/edit_cache.dir
 /Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/FlyJoyride.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/rebuild_cache.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/edit_cache.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/CMakeFiles/rebuild_cache.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/CMakeFiles/edit_cache.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/CMakeFiles/gtest_main.dir
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/CMakeFiles/gtest.dir

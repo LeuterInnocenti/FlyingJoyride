@@ -3,11 +3,14 @@ project(FlyJoyride)
 
 set(CMAKE_CXX_STANDARD 11)
 
+add_subdirectory(Test)
+
 set(CMAKE_CXX_COMPILER /usr/bin/g++)
 set(CMAKE_C_COMPILER /usr/bin/gcc)
 
 set(SOURCE_FILES main.cpp Game.cpp Game.h Window.cpp Window.h Character.cpp Character.h Block.h NormalBlock.cpp NormalBlock.h PowerUpBlock.cpp PowerUpBlock.h BlockFactory.cpp BlockFactory.h)
 add_executable(FlyJoyride ${SOURCE_FILES})
+add_library(core ${SOURCE_FILES})
 
 set(EXECUTABLE_NAME ${PROJECT_NAME})
 

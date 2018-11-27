@@ -1,5 +1,6 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Athos/Documents/GitHub/ProvaProgetto
 -- Found SFML 2.4.2 in /Library/Frameworks/SFML.framework
+-- Found SFML 2.4.2 in /Library/Frameworks/SFML.framework
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/Athos/Documents/GitHub/ProvaProgetto

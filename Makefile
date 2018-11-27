@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
 # Target rules for targets named FlyJoyride
 
 # Build rule for target.
@@ -123,12 +136,52 @@ FlyJoyride/fast:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/build
 .PHONY : FlyJoyride/fast
 
+#=============================================================================
+# Target rules for targets named runAllTests
+
+# Build rule for target.
+runAllTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runAllTests
+.PHONY : runAllTests
+
+# fast build rule for target.
+runAllTests/fast:
+	$(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/build
+.PHONY : runAllTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make Test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 BlockFactory.o: BlockFactory.cpp.o
 
 .PHONY : BlockFactory.o
 
 # target to build an object file
 BlockFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/BlockFactory.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
 .PHONY : BlockFactory.cpp.o
 
@@ -138,6 +191,7 @@ BlockFactory.i: BlockFactory.cpp.i
 
 # target to preprocess a source file
 BlockFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/BlockFactory.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.i
 .PHONY : BlockFactory.cpp.i
 
@@ -147,6 +201,7 @@ BlockFactory.s: BlockFactory.cpp.s
 
 # target to generate assembly for a file
 BlockFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/BlockFactory.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.s
 .PHONY : BlockFactory.cpp.s
 
@@ -156,6 +211,7 @@ Character.o: Character.cpp.o
 
 # target to build an object file
 Character.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Character.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Character.cpp.o
 .PHONY : Character.cpp.o
 
@@ -165,6 +221,7 @@ Character.i: Character.cpp.i
 
 # target to preprocess a source file
 Character.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Character.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Character.cpp.i
 .PHONY : Character.cpp.i
 
@@ -174,6 +231,7 @@ Character.s: Character.cpp.s
 
 # target to generate assembly for a file
 Character.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Character.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Character.cpp.s
 .PHONY : Character.cpp.s
 
@@ -183,6 +241,7 @@ Game.o: Game.cpp.o
 
 # target to build an object file
 Game.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Game.cpp.o
 .PHONY : Game.cpp.o
 
@@ -192,6 +251,7 @@ Game.i: Game.cpp.i
 
 # target to preprocess a source file
 Game.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
@@ -201,6 +261,7 @@ Game.s: Game.cpp.s
 
 # target to generate assembly for a file
 Game.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
@@ -210,6 +271,7 @@ NormalBlock.o: NormalBlock.cpp.o
 
 # target to build an object file
 NormalBlock.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/NormalBlock.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o
 .PHONY : NormalBlock.cpp.o
 
@@ -219,6 +281,7 @@ NormalBlock.i: NormalBlock.cpp.i
 
 # target to preprocess a source file
 NormalBlock.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/NormalBlock.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.i
 .PHONY : NormalBlock.cpp.i
 
@@ -228,6 +291,7 @@ NormalBlock.s: NormalBlock.cpp.s
 
 # target to generate assembly for a file
 NormalBlock.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/NormalBlock.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.s
 .PHONY : NormalBlock.cpp.s
 
@@ -237,6 +301,7 @@ PowerUpBlock.o: PowerUpBlock.cpp.o
 
 # target to build an object file
 PowerUpBlock.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/PowerUpBlock.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o
 .PHONY : PowerUpBlock.cpp.o
 
@@ -246,6 +311,7 @@ PowerUpBlock.i: PowerUpBlock.cpp.i
 
 # target to preprocess a source file
 PowerUpBlock.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/PowerUpBlock.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.i
 .PHONY : PowerUpBlock.cpp.i
 
@@ -255,6 +321,7 @@ PowerUpBlock.s: PowerUpBlock.cpp.s
 
 # target to generate assembly for a file
 PowerUpBlock.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/PowerUpBlock.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.s
 .PHONY : PowerUpBlock.cpp.s
 
@@ -264,6 +331,7 @@ Window.o: Window.cpp.o
 
 # target to build an object file
 Window.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Window.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Window.cpp.o
 .PHONY : Window.cpp.o
 
@@ -273,6 +341,7 @@ Window.i: Window.cpp.i
 
 # target to preprocess a source file
 Window.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Window.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Window.cpp.i
 .PHONY : Window.cpp.i
 
@@ -282,6 +351,7 @@ Window.s: Window.cpp.s
 
 # target to generate assembly for a file
 Window.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Window.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Window.cpp.s
 .PHONY : Window.cpp.s
 
@@ -291,6 +361,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.o
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -300,6 +371,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.i
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -309,6 +381,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/main.cpp.s
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -318,9 +391,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... core"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FlyJoyride"
+	@echo "... runAllTests"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... BlockFactory.o"
 	@echo "... BlockFactory.i"
 	@echo "... BlockFactory.s"

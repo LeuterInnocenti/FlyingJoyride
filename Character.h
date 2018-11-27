@@ -23,6 +23,7 @@ public:
     void setPlayerPosition(float posX, float posY){player.setPosition(posX, posY);}
 
     void setColor(sf::Color color) { player.setFillColor(color); }
+    sf::Color getColor() { return player.getFillColor(); }
 
 private:
     sf::RectangleShape player;
