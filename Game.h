@@ -26,10 +26,10 @@ public:
 
     void shoot();
     void moveBullet();
-    void movePlayer();
+    bool movePlayer();
     void eraseBullet();
     void createBullet();
-    sf::FloatRect getPosBullet();
+    sf::FloatRect getBoundBullet();
 
     void deleteBlock();
     void moveBlock();
@@ -38,15 +38,30 @@ public:
     void setBlock();
     void collision();
 
-private:
     int randomCreation();
     int randomPos();
+
+    // funzioni getter
+    static const float getShootTime();
+    static const float getLevelGround();
+    static const float getG();
+    static const float getJump();
+    static const float getBulletSpeed();
+    int getMaxY() const;
+    const sf::Vector2f &getSpeed() const;
+    float getCreationRate() const;
+    int getContainerSize() { return static_cast<int>(blocks.size()); };
+    const std::vector<sf::CircleShape> &getBullets() const;
+
+private:
     int randomY;
+    int maxY;
 
     Window window;
     sf::Sprite background;
     sf::Texture backgroundTexture;
     static const float levelGround;
+    sf::Clock speedClock;
 
     Character player;
     sf::Clock playerClock;
@@ -56,19 +71,20 @@ private:
     static const float g; // gravity
     static const float jump;
     static const float shootTime;
+
     static const float bulletSpeed;
 
     Block block;
     BlockFactory factory;
     std::vector<std::unique_ptr<Block>> blocks;
     sf::Clock blockClock;
-    static const sf::Vector2f speed;
+    sf::Vector2f speed;
     int blockX;
     int countBlock;
     bool isCreated;
 
-    static const float creationRate;  // frequenza con cui vengono creati i blocchi normali
-    sf::Vector2i windowSize = sf::Vector2i (1080, 720);
+    float creationRate;  // frequenza con cui vengono creati i blocchi normali
+    sf::Vector2i windowSize;
 
     unsigned int score;
     sf::Text text;

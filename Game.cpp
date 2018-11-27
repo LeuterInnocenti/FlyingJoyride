@@ -10,11 +10,11 @@ const float Game::levelGround = 63.0f;
 const float Game::bulletSpeed = 1.7f;
 const float Game::g = 0.7;
 const float Game::jump = 1.8;
-const sf::Vector2f Game::speed = sf::Vector2f(0.7, 0); // velocità dei blocchi
-const float Game::creationRate = 1.4f;
 
-Game::Game() : window("Joyride", sf::Vector2u(1080, 720)), countBlock(1), blockX(100), isCreated(false),
-               player(), playerClock(), blockClock(), factory() {
+Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)),
+               countBlock(1), blockX(100), isCreated(false), creationRate(1.4f), speed(sf::Vector2f(0.7, 0)),
+               windowSize(window.getWindowSize()),
+               player(), playerClock(), blockClock(), speedClock(), factory() {
     reset();
 
     backgroundTexture.loadFromFile("Background.png");
@@ -24,6 +24,8 @@ Game::Game() : window("Joyride", sf::Vector2u(1080, 720)), countBlock(1), blockX
 
     srand((unsigned) time(nullptr));
     setBlock();
+
+    maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
 Game::~Game() {
@@ -32,10 +34,9 @@ Game::~Game() {
 
 void Game::update() {
     window.update();
-    increaseScore();
 
     shoot();
-    getPosBullet();
+    getBoundBullet();
 
     movePlayer();
     if (player.getDeath()) {
@@ -48,6 +49,12 @@ void Game::update() {
 
     setBlock();
     moveBlock();
+
+    if (speedClock.getElapsedTime().asSeconds() >= 10) {
+        speed.x += 0.2;
+        creationRate -= 0.1;
+        speedClock.restart();
+    }
 }
 
 void Game::increaseScore() {}
@@ -79,7 +86,7 @@ void Game::render() {
     // TO DO: stessa cosa per enemy
 }
 
-void Game::movePlayer() {
+bool Game::movePlayer() {
     player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y + g);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
         player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y - jump);
@@ -114,7 +121,7 @@ void Game::moveBullet() {
     }
 }
 
-sf::FloatRect Game::getPosBullet() {
+sf::FloatRect Game::getBoundBullet() {
     sf::FloatRect bulletshape;
     for (int i = 0; i < bullets.size(); i++) {
         bulletshape = bullets[i].getGlobalBounds();
@@ -132,7 +139,7 @@ void Game::setBlock() {
         std::unique_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
         randomPos();
         block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
-        blocks.push_back(move(block));
+        blocks.emplace_back(move(block));
         isCreated = true;
         blockClock.restart();
         countBlock++;
@@ -141,7 +148,7 @@ void Game::setBlock() {
         std::unique_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
         randomPos();
         block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
-        blocks.push_back(move(block));
+        blocks.emplace_back(move(block));
         blockClock.restart();
         countBlock++;
     }
@@ -175,18 +182,36 @@ void Game::collision() {
             // blocks.erase();
         }
         // se bullet interseca un block viene eliminato
-        if (i->getGlobalBounds().intersects(getPosBullet()))
+        if (i->getGlobalBounds().intersects(getBoundBullet()))
             eraseBullet();
     }
 }
 
 // funzione randomica per settare coordinata Y del blocco
 int Game::randomPos() {
-    int maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
     randomY = rand() % maxY;
     return randomY;
 }
 
 int Game::randomCreation() {
-    return (rand() % 3);
+    return (rand() % 4);
 }
+
+// funzioni getter
+const float Game::getShootTime() { return shootTime; }
+
+const float Game::getLevelGround() { return levelGround; }
+
+const float Game::getG() { return g; }
+
+const float Game::getJump() { return jump; }
+
+const float Game::getBulletSpeed() { return bulletSpeed; }
+
+const sf::Vector2f &Game::getSpeed() const { return speed; }
+
+float Game::getCreationRate() const { return creationRate; }
+
+int Game::getMaxY() const { return maxY; }
+
+const std::vector<sf::CircleShape> &Game::getBullets() const { return bullets; }

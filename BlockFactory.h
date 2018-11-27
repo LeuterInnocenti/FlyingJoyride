@@ -9,7 +9,7 @@
 #include "PowerUpBlock.h"
 #include "NormalBlock.h"
 
-enum BlockType {PowerUpBlock, NormalBlock};
+enum BlockType { PowerUpBlock, NormalBlock };
 
 class BlockFactory {
 public:
