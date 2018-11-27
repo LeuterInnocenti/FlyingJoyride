@@ -10,8 +10,30 @@
 SFML/Graphics.hpp
 -
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+PowerUpBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+NormalBlock.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
+-
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+Window.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+Character.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
+SFML/Graphics.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
+BlockFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
+string
 -
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
@@ -29,6 +51,10 @@ gtest/gtest.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp
+gtest/gtest.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
+../Game.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp
 gtest/gtest.h

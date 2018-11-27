@@ -7,5 +7,5 @@
 
 TEST(WindowTest, testSize) {
     Window gameWindow;
-    EXPECT_EQ(sf::Vector2u(400, 600), gameWindow.getWindowSize());
+    ASSERT_EQ(sf::Vector2u(400, 600), gameWindow.getWindowSize());
 }

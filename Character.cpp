@@ -12,9 +12,9 @@ Character::Character() {
 
 Character::~Character() {}
 
-bool Character::gameOver(bool characterDeath){
+bool Character::gameOver(bool characterDeath) {
     death();
-    if(characterDeath) {
+    if (characterDeath) {
         player.setFillColor(sf::Color::White);
     }
     return characterDeath;
