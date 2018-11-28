@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Athos/ClionProjects/FlyJoyride
+CMAKE_SOURCE_DIR = /Users/Athos/Documents/GitHub/ProvaProgetto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles /Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles /Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ FlyJoyride: cmake_check_build_system
 FlyJoyride/fast:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/build
 .PHONY : FlyJoyride/fast
+
+Block.o: Block.cpp.o
+
+.PHONY : Block.o
+
+# target to build an object file
+Block.cpp.o:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.o
+.PHONY : Block.cpp.o
+
+Block.i: Block.cpp.i
+
+.PHONY : Block.i
+
+# target to preprocess a source file
+Block.cpp.i:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.i
+.PHONY : Block.cpp.i
+
+Block.s: Block.cpp.s
+
+.PHONY : Block.s
+
+# target to generate assembly for a file
+Block.cpp.s:
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Block.cpp.s
+.PHONY : Block.cpp.s
 
 Character.o: Character.cpp.o
 
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FlyJoyride"
+	@echo "... Block.o"
+	@echo "... Block.i"
+	@echo "... Block.s"
 	@echo "... Character.o"
 	@echo "... Character.i"
 	@echo "... Character.s"

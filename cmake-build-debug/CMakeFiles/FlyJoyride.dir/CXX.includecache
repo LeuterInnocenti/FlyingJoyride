@@ -6,49 +6,59 @@
 
 #IncludeRegexTransform: 
 
-/Users/Athos/ClionProjects/FlyJoyride/Character.cpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp
 Character.h
-/Users/Athos/ClionProjects/FlyJoyride/Character.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
-/Users/Athos/ClionProjects/FlyJoyride/Character.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
-/Users/Athos/ClionProjects/FlyJoyride/Game.cpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
 Game.h
-/Users/Athos/ClionProjects/FlyJoyride/Game.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 
-/Users/Athos/ClionProjects/FlyJoyride/Game.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 Window.h
-/Users/Athos/ClionProjects/FlyJoyride/Window.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 Map.h
-/Users/Athos/ClionProjects/FlyJoyride/Map.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Map.h
 Character.h
-/Users/Athos/ClionProjects/FlyJoyride/Character.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
-/Users/Athos/ClionProjects/FlyJoyride/SFML/Graphics.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
 
-/Users/Athos/ClionProjects/FlyJoyride/Map.cpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/Map.cpp
 iostream
 -
+utility
+-
 Map.h
-/Users/Athos/ClionProjects/FlyJoyride/Map.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Map.h
 
-/Users/Athos/ClionProjects/FlyJoyride/Map.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Map.h
 SFML/Graphics.hpp
 -
 Character.h
-/Users/Athos/ClionProjects/FlyJoyride/Character.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 memory
 -
 
-/Users/Athos/ClionProjects/FlyJoyride/Window.cpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
 Window.h
-/Users/Athos/ClionProjects/FlyJoyride/Window.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 
-/Users/Athos/ClionProjects/FlyJoyride/Window.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp
 -
 
-/Users/Athos/ClionProjects/FlyJoyride/main.cpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp
 Game.h
-/Users/Athos/ClionProjects/FlyJoyride/Game.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FlyJoyride"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;CMake Files\Test\;CMake Files\Test\lib\;CMake Files\Test\lib\googletest\;CMake Files\Test\lib\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core/fast">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FlyJoyride">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyJoyride" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 FlyJoyride"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FlyJoyride/fast">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyJoyride" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 FlyJoyride/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runAllTests">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 runAllTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runAllTests/fast">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 runAllTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/Athos/Documents/GitHub/ProvaProgetto/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
+					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CharacterFixture.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/runAllTests.cpp">
+			<Option target="runAllTests"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Test\"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Test\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\Test\lib\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

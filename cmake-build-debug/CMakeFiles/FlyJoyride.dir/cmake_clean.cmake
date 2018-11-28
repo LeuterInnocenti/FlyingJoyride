@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FlyJoyride.dir/Window.cpp.o"
   "CMakeFiles/FlyJoyride.dir/Map.cpp.o"
   "CMakeFiles/FlyJoyride.dir/Character.cpp.o"
+  "CMakeFiles/FlyJoyride.dir/Block.cpp.o"
   "FlyJoyride.pdb"
   "FlyJoyride"
 )

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Athos/ClionProjects/FlyJoyride
+# Install script for directory: /Users/Athos/Documents/GitHub/ProvaProgetto
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

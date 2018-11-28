@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/Athos/ClionProjects/FlyJoyride/Character.cpp" "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Character.cpp.o"
-  "/Users/Athos/ClionProjects/FlyJoyride/Game.cpp" "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Game.cpp.o"
-  "/Users/Athos/ClionProjects/FlyJoyride/Map.cpp" "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Map.cpp.o"
-  "/Users/Athos/ClionProjects/FlyJoyride/Window.cpp" "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Window.cpp.o"
-  "/Users/Athos/ClionProjects/FlyJoyride/main.cpp" "/Users/Athos/ClionProjects/FlyJoyride/cmake-build-debug/CMakeFiles/FlyJoyride.dir/main.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Block.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Character.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Game.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Map.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Map.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/Window.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/cmake-build-debug/CMakeFiles/FlyJoyride.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
