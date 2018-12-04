@@ -5,13 +5,14 @@
 #ifndef FLYJOYRIDE_GAME_H
 #define FLYJOYRIDE_GAME_H
 
-#include "Window.h"
-#include "Block.h"
-#include "Character.h"
-#include "SFML/Graphics.hpp"
-
-#include "BlockFactory.h"
 #include <string>
+#include "Block.h"
+#include "Enemy.h"
+#include "Window.h"
+#include "Character.h"
+#include "BlockFactory.h"
+#include "EnemyFactory.h"
+#include "SFML/Graphics.hpp"
 
 class Game {
 public:
@@ -27,15 +28,18 @@ public:
     void shoot();
     void moveBullet();
     void movePlayer();
+    void eraseEnemy();
     void eraseBullet();
     void createBullet();
     sf::FloatRect getBoundBullet();
+    sf::FloatRect getBoundEnemy();
 
-    void deleteBlock();
-    void moveBlock();
+    void deleteObject();
+    void moveObject(); //poi diventa moveObject
     void eraseB(int index) { blocks.erase(blocks.begin() + index); }
+    void eraseF(int index) { enemies.erase(enemies.begin() + index); }
 
-    void createBlock();
+    void createObjects();
     void collision();
 
     int randomCreation();
@@ -72,6 +76,7 @@ private:
     std::vector<sf::CircleShape> bullets;
 
     int ind;
+    int iter;
     static const float g; // gravità
     static const float jump;
     static const float shootTime;
@@ -81,12 +86,16 @@ private:
 
     Block block;
     sf::Vector2f speed;
-    sf::Clock blockClock;
-    BlockFactory factory;
+    sf::Clock objectClock;
+    BlockFactory factoryB;
     std::vector<std::unique_ptr<Block>> blocks;
 
+    EnemyFactory factoryE;
+    sf::Texture fEnemyTexture1;
+    std::vector<std::unique_ptr<Enemy>> enemies;
+
     int blockX;
-    int countBlock;
+    int counter;
     bool isCreated;
 
     float creationRate;  // frequenza con cui vengono creati i blocchi normali

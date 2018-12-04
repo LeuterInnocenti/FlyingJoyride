@@ -6,6 +6,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o"
   "CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o"
   "CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o"
+  "CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o"
+  "CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o"
+  "CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o"
   "FlyJoyride.pdb"
   "FlyJoyride"
 )

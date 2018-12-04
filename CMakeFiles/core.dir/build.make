@@ -225,6 +225,78 @@ CMakeFiles/core.dir/BlockFactory.cpp.o.provides: CMakeFiles/core.dir/BlockFactor
 CMakeFiles/core.dir/BlockFactory.cpp.o.provides.build: CMakeFiles/core.dir/BlockFactory.cpp.o
 
 
+CMakeFiles/core.dir/FlyingEnemy.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/core.dir/FlyingEnemy.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/FlyingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/FlyingEnemy.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp > CMakeFiles/core.dir/FlyingEnemy.cpp.i
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/FlyingEnemy.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp -o CMakeFiles/core.dir/FlyingEnemy.cpp.s
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.o.requires:
+
+.PHONY : CMakeFiles/core.dir/FlyingEnemy.cpp.o.requires
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.o.provides: CMakeFiles/core.dir/FlyingEnemy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/FlyingEnemy.cpp.o.provides.build
+.PHONY : CMakeFiles/core.dir/FlyingEnemy.cpp.o.provides
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.o.provides.build: CMakeFiles/core.dir/FlyingEnemy.cpp.o
+
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/ShootingEnemy.cpp.o: ShootingEnemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/core.dir/ShootingEnemy.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ShootingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ShootingEnemy.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp > CMakeFiles/core.dir/ShootingEnemy.cpp.i
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ShootingEnemy.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp -o CMakeFiles/core.dir/ShootingEnemy.cpp.s
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.o.requires:
+
+.PHONY : CMakeFiles/core.dir/ShootingEnemy.cpp.o.requires
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.o.provides: CMakeFiles/core.dir/ShootingEnemy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ShootingEnemy.cpp.o.provides.build
+.PHONY : CMakeFiles/core.dir/ShootingEnemy.cpp.o.provides
+
+CMakeFiles/core.dir/ShootingEnemy.cpp.o.provides.build: CMakeFiles/core.dir/ShootingEnemy.cpp.o
+
+
+CMakeFiles/core.dir/EnemyFactory.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/EnemyFactory.cpp.o: EnemyFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/core.dir/EnemyFactory.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/EnemyFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
+
+CMakeFiles/core.dir/EnemyFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/EnemyFactory.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp > CMakeFiles/core.dir/EnemyFactory.cpp.i
+
+CMakeFiles/core.dir/EnemyFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/EnemyFactory.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp -o CMakeFiles/core.dir/EnemyFactory.cpp.s
+
+CMakeFiles/core.dir/EnemyFactory.cpp.o.requires:
+
+.PHONY : CMakeFiles/core.dir/EnemyFactory.cpp.o.requires
+
+CMakeFiles/core.dir/EnemyFactory.cpp.o.provides: CMakeFiles/core.dir/EnemyFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/EnemyFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/core.dir/EnemyFactory.cpp.o.provides
+
+CMakeFiles/core.dir/EnemyFactory.cpp.o.provides.build: CMakeFiles/core.dir/EnemyFactory.cpp.o
+
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/main.cpp.o" \
@@ -233,7 +305,10 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/Character.cpp.o" \
 "CMakeFiles/core.dir/NormalBlock.cpp.o" \
 "CMakeFiles/core.dir/PowerUpBlock.cpp.o" \
-"CMakeFiles/core.dir/BlockFactory.cpp.o"
+"CMakeFiles/core.dir/BlockFactory.cpp.o" \
+"CMakeFiles/core.dir/FlyingEnemy.cpp.o" \
+"CMakeFiles/core.dir/ShootingEnemy.cpp.o" \
+"CMakeFiles/core.dir/EnemyFactory.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -245,9 +320,12 @@ libcore.a: CMakeFiles/core.dir/Character.cpp.o
 libcore.a: CMakeFiles/core.dir/NormalBlock.cpp.o
 libcore.a: CMakeFiles/core.dir/PowerUpBlock.cpp.o
 libcore.a: CMakeFiles/core.dir/BlockFactory.cpp.o
+libcore.a: CMakeFiles/core.dir/FlyingEnemy.cpp.o
+libcore.a: CMakeFiles/core.dir/ShootingEnemy.cpp.o
+libcore.a: CMakeFiles/core.dir/EnemyFactory.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -263,6 +341,9 @@ CMakeFiles/core.dir/requires: CMakeFiles/core.dir/Character.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/NormalBlock.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/PowerUpBlock.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/BlockFactory.cpp.o.requires
+CMakeFiles/core.dir/requires: CMakeFiles/core.dir/FlyingEnemy.cpp.o.requires
+CMakeFiles/core.dir/requires: CMakeFiles/core.dir/ShootingEnemy.cpp.o.requires
+CMakeFiles/core.dir/requires: CMakeFiles/core.dir/EnemyFactory.cpp.o.requires
 
 .PHONY : CMakeFiles/core.dir/requires
 

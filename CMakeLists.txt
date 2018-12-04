@@ -11,6 +11,7 @@ set(CMAKE_C_COMPILER /usr/bin/gcc)
 set(SOURCE_FILES main.cpp Game.cpp Game.h Window.cpp Window.h
         Character.cpp Character.h
         Block.h NormalBlock.cpp NormalBlock.h PowerUpBlock.cpp PowerUpBlock.h BlockFactory.cpp BlockFactory.h
+        Enemy.h FlyingEnemy.cpp FlyingEnemy.h ShootingEnemy.cpp ShootingEnemy.h EnemyFactory.cpp EnemyFactory.h
         Observer.h Subject.h)
 add_executable(FlyJoyride ${SOURCE_FILES})
 add_library(core ${SOURCE_FILES})

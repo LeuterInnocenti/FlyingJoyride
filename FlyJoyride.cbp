@@ -296,6 +296,26 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -321,6 +341,14 @@
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>

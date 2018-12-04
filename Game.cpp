@@ -16,9 +16,9 @@ const float Game::g = 0.7;
 const float Game::jump = 1.8;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)),
-               countBlock(1), blockX(100), isCreated(false), creationRate(1.4f), speed(sf::Vector2f(0.7, 0)),
+               counter(1), blockX(100), isCreated(false), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)),
                windowSize(window.getWindowSize()),
-               player(), playerClock(), blockClock(), speedClock(), factory() {
+               player(), playerClock(), objectClock(), speedClock(), factoryB(), factoryE() {
     reset();
 
     backgroundTexture.loadFromFile("Background.png");
@@ -32,8 +32,10 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)),
     playerTexture3.loadFromFile("frame-2.png");
     player.setPlayerTexture(playerTexture1);
 
+    fEnemyTexture1.loadFromFile("fenemy1.png");
+
     srand((unsigned) time(nullptr));
-    createBlock();
+    createObjects();
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
@@ -43,23 +45,24 @@ Game::~Game() {
 
 void Game::update() {
     window.update();
-    background.move(-speed);
+    background.move(-speed.x, 0);
     shoot();
     getBoundBullet();
     movePlayer();
     if (player.getDeath()) {
         // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
-    deleteBlock();
+    deleteObject();
     collision();
-    createBlock();
-    moveBlock();
+    createObjects();
+    moveObject();
     if (speedClock.getElapsedTime().asSeconds() >= 10) {
         speed.x += speedIncreaser;
         creationRate -= rateIncreaser;
         speedClock.restart();
+        //speed.y += speedIncreaser/2;
     }
 }
 
@@ -86,10 +89,11 @@ void Game::render() {
     player.render(*window.getRenderWindow());
     for (auto &block : blocks)
         window.draw(*block);
+    for (auto &enemy : enemies)
+        window.draw(*enemy);
     for (auto &b : bullets)
         window.draw(b);
     window.endDraw();
-    // TO DO: stessa cosa per enemy
 }
 
 void Game::movePlayer() {
@@ -142,41 +146,81 @@ sf::FloatRect Game::getBoundBullet() {
     return bulletshape;
 }
 
+sf::FloatRect Game::getBoundEnemy() {
+    sf::FloatRect enemyshape;
+    for (int i = 0; i < enemies.size(); i++) {
+        enemyshape = enemies[i]->getGlobalBounds();
+        iter = i;
+    }
+    return enemyshape;
+}
+
 void Game::eraseBullet() {
     bullets.erase(bullets.begin() + ind);
 }
 
-void Game::createBlock() {
-    if (blockClock.getElapsedTime().asSeconds() >= creationRate && countBlock % 6 == 0 && randomCreation() == 1) {
-        std::unique_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
-        randomPos();
-        block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
-        blocks.emplace_back(move(block));
-        isCreated = true;
-        blockClock.restart();
-        countBlock++;
-    }
-    if (blockClock.getElapsedTime().asSeconds() >= creationRate && !isCreated) {
-        std::unique_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
-        randomPos();
-        block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
-        blocks.emplace_back(move(block));
-        blockClock.restart();
-        countBlock++;
-    }
-    isCreated = false;
+void Game::eraseEnemy() {
+    enemies.erase(enemies.begin() + iter);
 }
 
-void Game::moveBlock() {
+void Game::createObjects() {
+    if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
+        if (counter % 4 == 0 && randomCreation() == 1) {
+            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
+            randomPos();
+            if (randomCreation() % 2 != 0)
+                enemy->setEnemySpeedY(speed.y);
+            else
+                enemy->setEnemySpeedY(-speed.y);
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemies.emplace_back(move(enemy));
+            isCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        if (counter % 6 == 0 && randomCreation() == 1) {
+            std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
+            randomPos();
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            blocks.emplace_back(move(block));
+            isCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        if (!isCreated) {
+            std::unique_ptr<Block> block = factoryB.createBlock(BlockType::NormalBlock);
+            randomPos();
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            blocks.emplace_back(move(block));
+            objectClock.restart();
+            counter++;
+        }
+        isCreated = false;
+    }
+}
+
+void Game::moveObject() {
     for (auto &i : blocks) {
-        i->move(-speed.x, speed.y);
+        i->move(-speed.x, 0);
+    }
+    for (auto &j : enemies) {
+        if (j->getPosition().y + j->getGlobalBounds().height >= window.getWindowSize().y - levelGround ||
+            j->getPosition().y <= 0) {
+            j->setEnemySpeedY(-j->getEnemySpeedY());
+        }
+        j->move(-speed.x, j->getEnemySpeedY());
     }
 }
 
-void Game::deleteBlock() {
+void Game::deleteObject() {
     for (int i = 0; i < blocks.size(); ++i) {
         if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0) {
             eraseB(i); // se esce dallo schermo lo cancella
+        }
+    }
+    for (int i = 0; i < enemies.size(); ++i) {
+        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0) {
+            eraseF(i); // se esce dallo schermo lo cancella
         }
     }
 }
@@ -198,6 +242,18 @@ void Game::collision() {
         // se bullet interseca un block viene eliminato
         if (i->getGlobalBounds().intersects(getBoundBullet()))
             eraseBullet();
+        // se bullet interseca un enemy viene eliminato enemy
+        if (i->getGlobalBounds().intersects(getBoundEnemy())) {  // NON FUNZIONA LA GUARDIA
+            eraseEnemy();
+        }
+    }
+    for (auto &j : enemies) {
+        // se character interseca con enemy muore e gameover
+        if (j->getGlobalBounds().intersects(player.getBound())) {
+            player.setPlayerTexture(playerTexture3);
+            player.gameOver(true);
+        }
+
     }
 }
 
