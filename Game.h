@@ -26,7 +26,7 @@ public:
 
     void shoot();
     void moveBullet();
-    bool movePlayer();
+    void movePlayer();
     void eraseBullet();
     void createBullet();
     sf::FloatRect getBoundBullet();
@@ -35,7 +35,7 @@ public:
     void moveBlock();
     void eraseB(int index) { blocks.erase(blocks.begin() + index); }
 
-    void setBlock();
+    void createBlock();
     void collision();
 
     int randomCreation();
@@ -54,31 +54,37 @@ public:
     const std::vector<sf::CircleShape> &getBullets() const;
 
 private:
-    int randomY;
     int maxY;
+    int randomY;
 
     Window window;
+    sf::Clock speedClock;
     sf::Sprite background;
     sf::Texture backgroundTexture;
     static const float levelGround;
-    sf::Clock speedClock;
 
     Character player;
     sf::Clock playerClock;
     sf::CircleShape bullet;
+    sf::Texture playerTexture1;
+    sf::Texture playerTexture2;
+    sf::Texture playerTexture3;
     std::vector<sf::CircleShape> bullets;
+
     int ind;
-    static const float g; // gravity
+    static const float g; // gravità
     static const float jump;
     static const float shootTime;
-
     static const float bulletSpeed;
+    static const float rateIncreaser;
+    static const float speedIncreaser;
 
     Block block;
+    sf::Vector2f speed;
+    sf::Clock blockClock;
     BlockFactory factory;
     std::vector<std::unique_ptr<Block>> blocks;
-    sf::Clock blockClock;
-    sf::Vector2f speed;
+
     int blockX;
     int countBlock;
     bool isCreated;
@@ -86,9 +92,9 @@ private:
     float creationRate;  // frequenza con cui vengono creati i blocchi normali
     sf::Vector2i windowSize;
 
-    unsigned int score;
     sf::Text text;
     sf::Font font;
+    unsigned int score;
 };
 
 #endif //FLYJOYRIDE_GAME_H

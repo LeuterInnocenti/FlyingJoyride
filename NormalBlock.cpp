@@ -5,8 +5,9 @@
 #include "NormalBlock.h"
 
 NormalBlock::NormalBlock() {
-    setFillColor(sf::Color::Red);
-    setSize(sf::Vector2f(100, 80));
+    spriteTexture.loadFromFile("Block.png");
+    setTexture(spriteTexture);
+    setScale(0.1,0.1);
 }
 
 NormalBlock::~NormalBlock() {}

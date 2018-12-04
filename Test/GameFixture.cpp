@@ -30,9 +30,9 @@ TEST_F(GameTest, testAssignment) {
 
 TEST_F(GameTest, testDeletingBlocks) {
     int containerSize = game.getContainerSize();
-    testBlock.setPosition(-testBlock.getSize().x, testBlock.getPosition().y);
+    testBlock.setPosition(-testBlock.getGlobalBounds().width, testBlock.getPosition().y);
     // testBlock ha la minima X per cui dovrà essere eliminato
-    if (testBlock.getPosition().x + testBlock.getSize().x < 0) {
+    if (testBlock.getPosition().x + testBlock.getGlobalBounds().width < 0) {
         game.eraseB(0);
         ASSERT_TRUE(containerSize > game.getContainerSize());
     }
@@ -40,10 +40,9 @@ TEST_F(GameTest, testDeletingBlocks) {
 
 TEST_F(GameTest, testMovingPlayer) {
     float lg = game.getLevelGround();
-    if (game.movePlayer()) {
-        ASSERT_TRUE(testPlayer.getPlayerPosition().y >= 0 &&
-                    testPlayer.getPlayerPosition().y <= (window.getWindowSize().y - lg));
-    }
+    game.movePlayer();
+    ASSERT_TRUE(testPlayer.getPlayerPosition().y >= 0 &&
+                testPlayer.getPlayerPosition().y <= (window.getWindowSize().y - lg));
 }
 
 TEST_F(GameTest, testBullet) {

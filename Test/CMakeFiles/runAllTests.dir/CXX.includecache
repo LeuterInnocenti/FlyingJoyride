@@ -56,22 +56,6 @@ gtest/gtest.h
 ../Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
-../Block.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-../NormalBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
-../Block.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-../PowerUpBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp
 gtest/gtest.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h

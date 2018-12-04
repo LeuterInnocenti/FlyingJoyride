@@ -37,6 +37,10 @@ SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+chrono
+-
+thread
+-
 iostream
 -
 
@@ -83,4 +87,10 @@ SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+chrono
+-
+thread
+-
+unistd.h
+-
 

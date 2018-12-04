@@ -6,12 +6,11 @@
 #include <iostream>
 
 PowerUpBlock::PowerUpBlock() {
-    setFillColor(sf::Color::Yellow);
-    setSize(sf::Vector2f(100, 80));
+    spriteTexture.loadFromFile("PBlock.png");
+    setTexture(spriteTexture);
+    setScale(0.15,0.15);
 }
 
 PowerUpBlock::~PowerUpBlock() {}
 
-void PowerUpBlock::activePowerUp() {
-    std::cout << "PowerUp attivato!" << std::endl;
-}
+void PowerUpBlock::activePowerUp() {}

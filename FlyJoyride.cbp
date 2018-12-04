@@ -312,6 +312,10 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -320,16 +324,14 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CharacterFixture.cpp">
 			<Option target="runAllTests"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp">
-			<Option target="runAllTests"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp">
-			<Option target="runAllTests"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp">
 			<Option target="runAllTests"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp">

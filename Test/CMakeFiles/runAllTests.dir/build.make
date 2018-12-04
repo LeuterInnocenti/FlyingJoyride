@@ -105,57 +105,9 @@ Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o.provides: Test/CMakeFiles
 Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o.provides.build: Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o
 
 
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o: Test/CMakeFiles/runAllTests.dir/flags.make
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o: Test/NormalBlockFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp
-
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.i"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp > CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.i
-
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.s"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp -o CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.s
-
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.requires:
-
-.PHONY : Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.requires
-
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.provides: Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.requires
-	$(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.provides.build
-.PHONY : Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.provides
-
-Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.provides.build: Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o
-
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o: Test/CMakeFiles/runAllTests.dir/flags.make
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o: Test/PowerUpBlockFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.i"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp > CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.i
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.s"
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp -o CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.s
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.requires:
-
-.PHONY : Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.requires
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.provides: Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.requires
-	$(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.provides.build
-.PHONY : Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.provides
-
-Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.provides.build: Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o
-
-
 Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o: Test/CMakeFiles/runAllTests.dir/flags.make
 Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o: Test/WindowFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o"
 	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/WindowFixture.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp
 
 Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.i: cmake_force
@@ -179,7 +131,7 @@ Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o.provides.build: Test/CMakeFi
 
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Test/CMakeFiles/runAllTests.dir/flags.make
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Test/GameFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o"
 	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllTests.dir/GameFixture.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp
 
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.i: cmake_force
@@ -205,8 +157,6 @@ Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o.provides.build: Test/CMakeFile
 runAllTests_OBJECTS = \
 "CMakeFiles/runAllTests.dir/runAllTests.cpp.o" \
 "CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o" \
-"CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o" \
-"CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o" \
 "CMakeFiles/runAllTests.dir/WindowFixture.cpp.o" \
 "CMakeFiles/runAllTests.dir/GameFixture.cpp.o"
 
@@ -215,8 +165,6 @@ runAllTests_EXTERNAL_OBJECTS =
 
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/runAllTests.cpp.o
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o
-Test/runAllTests: Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o
-Test/runAllTests: Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/build.make
@@ -225,7 +173,7 @@ Test/runAllTests: lib/libgtest_maind.a
 Test/runAllTests: libcore.a
 Test/runAllTests: lib/libgtestd.a
 Test/runAllTests: Test/CMakeFiles/runAllTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable runAllTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable runAllTests"
 	cd /Users/Athos/Documents/GitHub/ProvaProgetto/Test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runAllTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,8 +183,6 @@ Test/CMakeFiles/runAllTests.dir/build: Test/runAllTests
 
 Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/runAllTests.cpp.o.requires
 Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o.requires
-Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o.requires
-Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o.requires
 Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o.requires
 Test/CMakeFiles/runAllTests.dir/requires: Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o.requires
 

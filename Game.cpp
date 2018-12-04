@@ -3,11 +3,15 @@
 //
 
 #include "Game.h"
+#include <chrono>
+#include <thread>
 #include <iostream>
 
 const float Game::shootTime = 1.3f;
 const float Game::levelGround = 63.0f;
 const float Game::bulletSpeed = 1.7f;
+const float Game::speedIncreaser = 0.1;
+const float Game::rateIncreaser = 0.120;
 const float Game::g = 0.7;
 const float Game::jump = 1.8;
 
@@ -20,11 +24,16 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)),
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
     background.setTexture(backgroundTexture);
+    background.setTextureRect(sf::IntRect(0, 0, (500 * windowSize.x), windowSize.y + static_cast<int>(levelGround)));
     background.setScale(0.675, 0.95);
 
-    srand((unsigned) time(nullptr));
-    setBlock();
+    playerTexture1.loadFromFile("frame-1.png");
+    playerTexture2.loadFromFile("frame-3.png");
+    playerTexture3.loadFromFile("frame-2.png");
+    player.setPlayerTexture(playerTexture1);
 
+    srand((unsigned) time(nullptr));
+    createBlock();
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
@@ -34,25 +43,22 @@ Game::~Game() {
 
 void Game::update() {
     window.update();
-
+    background.move(-speed);
     shoot();
     getBoundBullet();
-
     movePlayer();
     if (player.getDeath()) {
         // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
         window.setDone();
     }
-
     deleteBlock();
     collision();
-
-    setBlock();
+    createBlock();
     moveBlock();
-
     if (speedClock.getElapsedTime().asSeconds() >= 10) {
-        speed.x += 0.2;
-        creationRate -= 0.1;
+        speed.x += speedIncreaser;
+        creationRate -= rateIncreaser;
         speedClock.restart();
     }
 }
@@ -86,10 +92,16 @@ void Game::render() {
     // TO DO: stessa cosa per enemy
 }
 
-bool Game::movePlayer() {
+void Game::movePlayer() {
     player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y + g);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y - jump);
+        player.setPlayerTexture(playerTexture2);
+        playerTexture2.setSmooth(true);
+    } else if (!sf::Keyboard::isKeyPressed((sf::Keyboard::Space))) {
+        player.setPlayerTexture(playerTexture1);
+        playerTexture1.setSmooth(true);
+    }
     if (player.getPlayerPosition().y + player.getPlayerSize().y >= window.getWindowSize().y - levelGround)
         player.setPlayerPosition(player.getPlayerPosition().x,
                                  window.getWindowSize().y - player.getPlayerSize().y - levelGround);
@@ -134,11 +146,11 @@ void Game::eraseBullet() {
     bullets.erase(bullets.begin() + ind);
 }
 
-void Game::setBlock() {
+void Game::createBlock() {
     if (blockClock.getElapsedTime().asSeconds() >= creationRate && countBlock % 6 == 0 && randomCreation() == 1) {
         std::unique_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
         randomPos();
-        block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
+        block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
         blocks.emplace_back(move(block));
         isCreated = true;
         blockClock.restart();
@@ -147,7 +159,7 @@ void Game::setBlock() {
     if (blockClock.getElapsedTime().asSeconds() >= creationRate && !isCreated) {
         std::unique_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
         randomPos();
-        block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
+        block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
         blocks.emplace_back(move(block));
         blockClock.restart();
         countBlock++;
@@ -163,7 +175,7 @@ void Game::moveBlock() {
 
 void Game::deleteBlock() {
     for (int i = 0; i < blocks.size(); ++i) {
-        if (blocks[i]->getPosition().x + blocks[i]->getSize().x < 0) {
+        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0) {
             eraseB(i); // se esce dallo schermo lo cancella
         }
     }
@@ -172,14 +184,16 @@ void Game::deleteBlock() {
 void Game::collision() {
     for (auto &i : blocks) {
         class NormalBlock *test = dynamic_cast<class NormalBlock *>(i.get());
-        // se character interseca con block muore e gameover
-        if (i->getGlobalBounds().intersects(player.getBound()) && test != nullptr)
-            player.gameOver(true);
-        // se character interseca PowerUpBlock si attiva il potenziamento
-        if (i->getGlobalBounds().intersects(player.getBound()) && test == nullptr) {
-            PowerUpBlock::activePowerUp();
-            player.setColor(sf::Color::Green);
-            // blocks.erase();
+        if (i->getGlobalBounds().intersects(player.getBound())) {
+            // se character interseca con block muore e gameover
+            if (test != nullptr) {
+                player.setPlayerTexture(playerTexture3);
+                player.gameOver(true);
+            }
+            // se character interseca PowerUpBlock si attiva il potenziamento
+            if (test == nullptr) {
+                PowerUpBlock::activePowerUp();
+            }
         }
         // se bullet interseca un block viene eliminato
         if (i->getGlobalBounds().intersects(getBoundBullet()))
@@ -194,7 +208,7 @@ int Game::randomPos() {
 }
 
 int Game::randomCreation() {
-    return (rand() % 4);
+    return (rand() % 2);
 }
 
 // funzioni getter

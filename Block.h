@@ -7,10 +7,13 @@
 
 #include <SFML/Graphics.hpp>
 
-class Block : public sf::RectangleShape {
+class Block : public sf::Sprite {
 public:
     Block() {}
     virtual ~Block() {}
+
+protected:
+    sf::Texture spriteTexture;
 };
 
 #endif //FLYJOYRIDE_BLOCK_H

@@ -5,21 +5,25 @@
 #include "Character.h"
 
 Character::Character() {
-    player.setSize(sf::Vector2f(100, 50));
-    player.setFillColor(sf::Color::Blue);
     player.setPosition(50, 100);
 }
 
 Character::~Character() {}
 
+void Character::setPlayerTexture(sf::Texture &pTexture) {
+    player.setTexture(pTexture);
+    player.setScale(0.10, 0.10);
+}
+
 bool Character::gameOver(bool characterDeath) {
     death();
-    if (characterDeath) {
-        player.setFillColor(sf::Color::White);
-    }
     return characterDeath;
 }
 
 void Character::render(sf::RenderWindow &window) {
     window.draw(player);
+}
+
+sf::Vector2f Character::getPlayerSize() {
+    return sf::Vector2f(player.getGlobalBounds().width, player.getGlobalBounds().height);
 }
