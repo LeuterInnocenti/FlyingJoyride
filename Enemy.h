@@ -11,12 +11,14 @@ class Enemy : public sf::Sprite {
 public:
     Enemy() {}
     virtual ~Enemy() {}
-    virtual float getEnemySpeedY(){return enemySpeedY;};
-    virtual void setEnemySpeedY(float speedY) {enemySpeedY = speedY;};
+    bool getCanShoot() const { return canShoot; }
+    virtual float getEnemySpeedY() { return enemySpeedY; };
+    virtual void setEnemySpeedY(float speedY) { enemySpeedY = speedY; };
 
 protected:
-    sf::Texture spriteTexture;
+    bool canShoot;
     float enemySpeedY;
+    sf::Texture spriteTexture;
 };
 
 #endif //FLYJOYRIDE_ENEMY_H

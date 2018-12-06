@@ -22,8 +22,8 @@ public:
     void render();
     void handleText();
     void increaseScore();
-    Window *GetWindow() { return &window; };
     void reset(); // gestione testo e score
+    Window *GetWindow() { return &window; };
 
     void shoot();
     void moveBullet();
@@ -31,31 +31,33 @@ public:
     void eraseEnemy();
     void eraseBullet();
     void createBullet();
-    sf::FloatRect getBoundBullet();
+    void moveEnemyBullet();
+    void createEnemyBullet();
     sf::FloatRect getBoundEnemy();
+    sf::FloatRect getBoundBullet();
 
+    void moveObject();
     void deleteObject();
-    void moveObject(); //poi diventa moveObject
     void eraseB(int index) { blocks.erase(blocks.begin() + index); }
     void eraseF(int index) { enemies.erase(enemies.begin() + index); }
 
-    void createObjects();
     void collision();
+    void createObjects();
 
-    int randomCreation();
     int randomPos();
+    int randomCreation();
 
     // funzioni getter
-    static const float getShootTime();
-    static const float getLevelGround();
+    int getMaxY() const;
     static const float getG();
     static const float getJump();
-    static const float getBulletSpeed();
-    int getMaxY() const;
-    const sf::Vector2f &getSpeed() const;
     float getCreationRate() const;
-    int getContainerSize() { return static_cast<int>(blocks.size()); };
+    static const float getShootTime();
+    static const float getLevelGround();
+    static const float getBulletSpeed();
+    const sf::Vector2f &getSpeed() const;
     const std::vector<sf::CircleShape> &getBullets() const;
+    int getContainerSize() { return static_cast<int>(blocks.size()); };
 
 private:
     int maxY;
@@ -73,11 +75,15 @@ private:
     sf::Texture playerTexture1;
     sf::Texture playerTexture2;
     sf::Texture playerTexture3;
+    sf::Texture puPlayerTexture1;
+    sf::Texture puPlayerTexture2;
+    sf::Texture puPlayerTexture3;
     std::vector<sf::CircleShape> bullets;
+    std::vector<sf::CircleShape> enemyBullets;
 
     int ind;
     int iter;
-    static const float g; // gravità
+    static const float g;
     static const float jump;
     static const float shootTime;
     static const float bulletSpeed;
@@ -86,19 +92,24 @@ private:
 
     Block block;
     sf::Vector2f speed;
-    sf::Clock objectClock;
     BlockFactory factoryB;
+    sf::Clock objectClock;
+    sf::Clock controlPowerUp;
     std::vector<std::unique_ptr<Block>> blocks;
 
+    sf::Clock enemyClock;
     EnemyFactory factoryE;
-    sf::Texture fEnemyTexture1;
+    sf::Texture fEnemyTexture;
+    sf::Texture sEnemyTexture;
     std::vector<std::unique_ptr<Enemy>> enemies;
 
     int blockX;
     int counter;
     bool isCreated;
+    int tollerance;
+    bool isPowerUpOn;
 
-    float creationRate;  // frequenza con cui vengono creati i blocchi normali
+    float creationRate;
     sf::Vector2i windowSize;
 
     sf::Text text;

@@ -8,6 +8,7 @@ FlyingEnemy::FlyingEnemy() {
     spriteTexture.loadFromFile("fenemy1.png");
     setTexture(spriteTexture);
     setScale(0.13,0.13);
+    canShoot = false;
 }
 
 FlyingEnemy::~FlyingEnemy() {}

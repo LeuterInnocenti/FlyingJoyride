@@ -11,7 +11,6 @@ class ShootingEnemy : public Enemy {
 public:
     ShootingEnemy();
     virtual ~ShootingEnemy();
-    virtual void setEnemyTexture(sf::Texture texture);
 };
 
 #endif //FLYJOYRIDE_SHOOTINGENEMY_H

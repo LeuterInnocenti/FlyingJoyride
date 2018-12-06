@@ -4,11 +4,11 @@
 
 #include "ShootingEnemy.h"
 
-ShootingEnemy::ShootingEnemy() {}
+ShootingEnemy::ShootingEnemy() {
+    spriteTexture.loadFromFile("senemy1.png");
+    setTexture(spriteTexture);
+    setScale(0.13,0.13);
+    canShoot = true;
+}
 
 ShootingEnemy::~ShootingEnemy() {}
-
-void ShootingEnemy::setEnemyTexture(sf::Texture texture) {
-    setTexture(texture);
-    setScale(0.1,0.1);
-}

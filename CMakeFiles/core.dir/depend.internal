@@ -10,14 +10,28 @@ CMakeFiles/core.dir/BlockFactory.cpp.o
 CMakeFiles/core.dir/Character.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp
  /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
+CMakeFiles/core.dir/EnemyFactory.cpp.o
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
+ /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
+CMakeFiles/core.dir/FlyingEnemy.cpp.o
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp
+ /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
 CMakeFiles/core.dir/Game.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
  /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 CMakeFiles/core.dir/NormalBlock.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
@@ -27,6 +41,10 @@ CMakeFiles/core.dir/PowerUpBlock.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp
  /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+CMakeFiles/core.dir/ShootingEnemy.cpp.o
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp
+ /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 CMakeFiles/core.dir/Window.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
  /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
@@ -34,8 +52,12 @@ CMakeFiles/core.dir/main.cpp.o
  /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
+ /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
  /Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp

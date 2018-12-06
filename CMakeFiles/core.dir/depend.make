@@ -10,13 +10,27 @@ CMakeFiles/core.dir/BlockFactory.cpp.o: PowerUpBlock.h
 CMakeFiles/core.dir/Character.cpp.o: Character.cpp
 CMakeFiles/core.dir/Character.cpp.o: Character.h
 
+CMakeFiles/core.dir/EnemyFactory.cpp.o: Enemy.h
+CMakeFiles/core.dir/EnemyFactory.cpp.o: EnemyFactory.cpp
+CMakeFiles/core.dir/EnemyFactory.cpp.o: EnemyFactory.h
+CMakeFiles/core.dir/EnemyFactory.cpp.o: FlyingEnemy.h
+CMakeFiles/core.dir/EnemyFactory.cpp.o: ShootingEnemy.h
+
+CMakeFiles/core.dir/FlyingEnemy.cpp.o: Enemy.h
+CMakeFiles/core.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
+CMakeFiles/core.dir/FlyingEnemy.cpp.o: FlyingEnemy.h
+
 CMakeFiles/core.dir/Game.cpp.o: Block.h
 CMakeFiles/core.dir/Game.cpp.o: BlockFactory.h
 CMakeFiles/core.dir/Game.cpp.o: Character.h
+CMakeFiles/core.dir/Game.cpp.o: Enemy.h
+CMakeFiles/core.dir/Game.cpp.o: EnemyFactory.h
+CMakeFiles/core.dir/Game.cpp.o: FlyingEnemy.h
 CMakeFiles/core.dir/Game.cpp.o: Game.cpp
 CMakeFiles/core.dir/Game.cpp.o: Game.h
 CMakeFiles/core.dir/Game.cpp.o: NormalBlock.h
 CMakeFiles/core.dir/Game.cpp.o: PowerUpBlock.h
+CMakeFiles/core.dir/Game.cpp.o: ShootingEnemy.h
 CMakeFiles/core.dir/Game.cpp.o: Window.h
 
 CMakeFiles/core.dir/NormalBlock.cpp.o: Block.h
@@ -27,15 +41,23 @@ CMakeFiles/core.dir/PowerUpBlock.cpp.o: Block.h
 CMakeFiles/core.dir/PowerUpBlock.cpp.o: PowerUpBlock.cpp
 CMakeFiles/core.dir/PowerUpBlock.cpp.o: PowerUpBlock.h
 
+CMakeFiles/core.dir/ShootingEnemy.cpp.o: Enemy.h
+CMakeFiles/core.dir/ShootingEnemy.cpp.o: ShootingEnemy.cpp
+CMakeFiles/core.dir/ShootingEnemy.cpp.o: ShootingEnemy.h
+
 CMakeFiles/core.dir/Window.cpp.o: Window.cpp
 CMakeFiles/core.dir/Window.cpp.o: Window.h
 
 CMakeFiles/core.dir/main.cpp.o: Block.h
 CMakeFiles/core.dir/main.cpp.o: BlockFactory.h
 CMakeFiles/core.dir/main.cpp.o: Character.h
+CMakeFiles/core.dir/main.cpp.o: Enemy.h
+CMakeFiles/core.dir/main.cpp.o: EnemyFactory.h
+CMakeFiles/core.dir/main.cpp.o: FlyingEnemy.h
 CMakeFiles/core.dir/main.cpp.o: Game.h
 CMakeFiles/core.dir/main.cpp.o: NormalBlock.h
 CMakeFiles/core.dir/main.cpp.o: PowerUpBlock.h
+CMakeFiles/core.dir/main.cpp.o: ShootingEnemy.h
 CMakeFiles/core.dir/main.cpp.o: Window.h
 CMakeFiles/core.dir/main.cpp.o: main.cpp
 
