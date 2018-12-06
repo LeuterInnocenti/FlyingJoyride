@@ -235,6 +235,66 @@ Character.cpp.s:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Character.cpp.s
 .PHONY : Character.cpp.s
 
+EnemyFactory.o: EnemyFactory.cpp.o
+
+.PHONY : EnemyFactory.o
+
+# target to build an object file
+EnemyFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/EnemyFactory.cpp.o
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o
+.PHONY : EnemyFactory.cpp.o
+
+EnemyFactory.i: EnemyFactory.cpp.i
+
+.PHONY : EnemyFactory.i
+
+# target to preprocess a source file
+EnemyFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/EnemyFactory.cpp.i
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.i
+.PHONY : EnemyFactory.cpp.i
+
+EnemyFactory.s: EnemyFactory.cpp.s
+
+.PHONY : EnemyFactory.s
+
+# target to generate assembly for a file
+EnemyFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/EnemyFactory.cpp.s
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.s
+.PHONY : EnemyFactory.cpp.s
+
+FlyingEnemy.o: FlyingEnemy.cpp.o
+
+.PHONY : FlyingEnemy.o
+
+# target to build an object file
+FlyingEnemy.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/FlyingEnemy.cpp.o
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o
+.PHONY : FlyingEnemy.cpp.o
+
+FlyingEnemy.i: FlyingEnemy.cpp.i
+
+.PHONY : FlyingEnemy.i
+
+# target to preprocess a source file
+FlyingEnemy.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/FlyingEnemy.cpp.i
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.i
+.PHONY : FlyingEnemy.cpp.i
+
+FlyingEnemy.s: FlyingEnemy.cpp.s
+
+.PHONY : FlyingEnemy.s
+
+# target to generate assembly for a file
+FlyingEnemy.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/FlyingEnemy.cpp.s
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.s
+.PHONY : FlyingEnemy.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -325,6 +385,36 @@ PowerUpBlock.cpp.s:
 	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.s
 .PHONY : PowerUpBlock.cpp.s
 
+ShootingEnemy.o: ShootingEnemy.cpp.o
+
+.PHONY : ShootingEnemy.o
+
+# target to build an object file
+ShootingEnemy.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ShootingEnemy.cpp.o
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o
+.PHONY : ShootingEnemy.cpp.o
+
+ShootingEnemy.i: ShootingEnemy.cpp.i
+
+.PHONY : ShootingEnemy.i
+
+# target to preprocess a source file
+ShootingEnemy.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ShootingEnemy.cpp.i
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.i
+.PHONY : ShootingEnemy.cpp.i
+
+ShootingEnemy.s: ShootingEnemy.cpp.s
+
+.PHONY : ShootingEnemy.s
+
+# target to generate assembly for a file
+ShootingEnemy.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ShootingEnemy.cpp.s
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.s
+.PHONY : ShootingEnemy.cpp.s
+
 Window.o: Window.cpp.o
 
 .PHONY : Window.o
@@ -404,6 +494,12 @@ help:
 	@echo "... Character.o"
 	@echo "... Character.i"
 	@echo "... Character.s"
+	@echo "... EnemyFactory.o"
+	@echo "... EnemyFactory.i"
+	@echo "... EnemyFactory.s"
+	@echo "... FlyingEnemy.o"
+	@echo "... FlyingEnemy.i"
+	@echo "... FlyingEnemy.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -413,6 +509,9 @@ help:
 	@echo "... PowerUpBlock.o"
 	@echo "... PowerUpBlock.i"
 	@echo "... PowerUpBlock.s"
+	@echo "... ShootingEnemy.o"
+	@echo "... ShootingEnemy.i"
+	@echo "... ShootingEnemy.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"

@@ -179,60 +179,6 @@ GameFixture.cpp.s:
 	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.s
 .PHONY : GameFixture.cpp.s
 
-NormalBlockFixture.o: NormalBlockFixture.cpp.o
-
-.PHONY : NormalBlockFixture.o
-
-# target to build an object file
-NormalBlockFixture.cpp.o:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o
-.PHONY : NormalBlockFixture.cpp.o
-
-NormalBlockFixture.i: NormalBlockFixture.cpp.i
-
-.PHONY : NormalBlockFixture.i
-
-# target to preprocess a source file
-NormalBlockFixture.cpp.i:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.i
-.PHONY : NormalBlockFixture.cpp.i
-
-NormalBlockFixture.s: NormalBlockFixture.cpp.s
-
-.PHONY : NormalBlockFixture.s
-
-# target to generate assembly for a file
-NormalBlockFixture.cpp.s:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.s
-.PHONY : NormalBlockFixture.cpp.s
-
-PowerUpBlockFixture.o: PowerUpBlockFixture.cpp.o
-
-.PHONY : PowerUpBlockFixture.o
-
-# target to build an object file
-PowerUpBlockFixture.cpp.o:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o
-.PHONY : PowerUpBlockFixture.cpp.o
-
-PowerUpBlockFixture.i: PowerUpBlockFixture.cpp.i
-
-.PHONY : PowerUpBlockFixture.i
-
-# target to preprocess a source file
-PowerUpBlockFixture.cpp.i:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.i
-.PHONY : PowerUpBlockFixture.cpp.i
-
-PowerUpBlockFixture.s: PowerUpBlockFixture.cpp.s
-
-.PHONY : PowerUpBlockFixture.s
-
-# target to generate assembly for a file
-PowerUpBlockFixture.cpp.s:
-	cd /Users/Athos/Documents/GitHub/ProvaProgetto && $(MAKE) -f Test/CMakeFiles/runAllTests.dir/build.make Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.s
-.PHONY : PowerUpBlockFixture.cpp.s
-
 WindowFixture.o: WindowFixture.cpp.o
 
 .PHONY : WindowFixture.o
@@ -302,12 +248,6 @@ help:
 	@echo "... GameFixture.o"
 	@echo "... GameFixture.i"
 	@echo "... GameFixture.s"
-	@echo "... NormalBlockFixture.o"
-	@echo "... NormalBlockFixture.i"
-	@echo "... NormalBlockFixture.s"
-	@echo "... PowerUpBlockFixture.o"
-	@echo "... PowerUpBlockFixture.i"
-	@echo "... PowerUpBlockFixture.s"
 	@echo "... WindowFixture.o"
 	@echo "... WindowFixture.i"
 	@echo "... WindowFixture.s"

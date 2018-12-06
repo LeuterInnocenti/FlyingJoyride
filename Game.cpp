@@ -3,28 +3,43 @@
 //
 
 #include "Game.h"
+#include <chrono>
+#include <thread>
 #include <iostream>
 
-const float Game::shootTime = 1.3f;
-const float Game::levelGround = 63.0f;
-const float Game::bulletSpeed = 1.7f;
 const float Game::g = 0.7;
 const float Game::jump = 1.8;
+const float Game::shootTime = 1.3f;
+const float Game::bulletSpeed = 1.7f;
+const float Game::levelGround = 63.0f;
+const float Game::speedIncreaser = 0.1;
+const float Game::rateIncreaser = 0.120;
 
-Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)),
-               countBlock(1), blockX(100), isCreated(false), creationRate(1.4f), speed(sf::Vector2f(0.7, 0)),
-               windowSize(window.getWindowSize()),
-               player(), playerClock(), blockClock(), speedClock(), factory() {
+Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
+               isCreated(false), isPowerUpOn(false),
+               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
+               playerClock(), objectClock(), speedClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
     reset();
-
+   
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
     background.setTexture(backgroundTexture);
+    background.setTextureRect(sf::IntRect(0, 0, (500 * windowSize.x), windowSize.y + static_cast<int>(levelGround)));
     background.setScale(0.675, 0.95);
 
-    srand((unsigned) time(nullptr));
-    setBlock();
+    playerTexture1.loadFromFile("frame-1.png");
+    playerTexture2.loadFromFile("frame-3.png");
+    playerTexture3.loadFromFile("frame-2.png");
+    puPlayerTexture1.loadFromFile("puframe-1.png");
+    puPlayerTexture2.loadFromFile("puframe-2.png");
+    puPlayerTexture3.loadFromFile("puframe-3.png");
+    player.setPlayerTexture(playerTexture1);
 
+    fEnemyTexture.loadFromFile("fenemy1.png");
+    sEnemyTexture.loadFromFile("senemy1.png");
+
+    srand((unsigned) time(nullptr));
+    createObjects();
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
@@ -34,25 +49,26 @@ Game::~Game() {
 
 void Game::update() {
     window.update();
+    background.move(-speed.x, 0);
 
     shoot();
+    moveObject();
+    movePlayer();
+    deleteObject();
+    createObjects();
+    getBoundEnemy();
     getBoundBullet();
 
-    movePlayer();
-    if (player.getDeath()) {
-        // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
-        window.setDone();
-    }
-
-    deleteBlock();
     collision();
 
-    setBlock();
-    moveBlock();
-
+    if (player.getDeath()) {
+        // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(110));
+        window.setDone();
+    }
     if (speedClock.getElapsedTime().asSeconds() >= 10) {
-        speed.x += 0.2;
-        creationRate -= 0.1;
+        speed.x += speedIncreaser;
+        creationRate -= rateIncreaser;
         speedClock.restart();
     }
 }
@@ -80,16 +96,31 @@ void Game::render() {
     player.render(*window.getRenderWindow());
     for (auto &block : blocks)
         window.draw(*block);
+    for (auto &enemy : enemies)
+        window.draw(*enemy);
     for (auto &b : bullets)
         window.draw(b);
+    for (auto &b : enemyBullets)
+        window.draw(b);
     window.endDraw();
-    // TO DO: stessa cosa per enemy
 }
 
-bool Game::movePlayer() {
+void Game::movePlayer() {
     player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y + g);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y - jump);
+        if (isPowerUpOn)
+            player.setPlayerTexture(puPlayerTexture2);
+        else
+            player.setPlayerTexture(playerTexture2);
+        playerTexture2.setSmooth(true);
+    } else if (!sf::Keyboard::isKeyPressed((sf::Keyboard::Space))) {
+        if (isPowerUpOn)
+            player.setPlayerTexture(puPlayerTexture1);
+        else
+            player.setPlayerTexture(playerTexture1);
+        playerTexture1.setSmooth(true);
+    }
     if (player.getPlayerPosition().y + player.getPlayerSize().y >= window.getWindowSize().y - levelGround)
         player.setPlayerPosition(player.getPlayerPosition().x,
                                  window.getWindowSize().y - player.getPlayerSize().y - levelGround);
@@ -103,6 +134,11 @@ void Game::shoot() {
         playerClock.restart();
     }
     moveBullet();
+    if (enemyClock.getElapsedTime().asSeconds() >= (shootTime / 2)) {
+        createEnemyBullet();
+        enemyClock.restart();
+    }
+    moveEnemyBullet();
 }
 
 void Game::createBullet() {
@@ -121,6 +157,25 @@ void Game::moveBullet() {
     }
 }
 
+void Game::createEnemyBullet() {
+    for (auto &j : enemies) {
+        if (j->getCanShoot()) {
+            bullet.setRadius(10);
+            bullet.setFillColor(sf::Color::Red);
+            bullet.setPosition(j->getPosition().x, j->getPosition().y + j->getGlobalBounds().height / 2);
+            enemyBullets.emplace_back(sf::CircleShape(bullet));
+        }
+    }
+}
+
+void Game::moveEnemyBullet() {
+    for (size_t j = 0; j < enemyBullets.size(); ++j) {
+        enemyBullets[j].move(-bulletSpeed, 0);
+        if (enemyBullets[j].getPosition().x >= window.getWindowSize().x + 2 * player.getPlayerSize().x)
+            enemyBullets.erase(enemyBullets.begin() + j);
+    }
+}
+
 sf::FloatRect Game::getBoundBullet() {
     sf::FloatRect bulletshape;
     for (int i = 0; i < bullets.size(); i++) {
@@ -130,41 +185,95 @@ sf::FloatRect Game::getBoundBullet() {
     return bulletshape;
 }
 
+sf::FloatRect Game::getBoundEnemy() {
+    sf::FloatRect enemyshape;
+    for (int i = 0; i < enemies.size(); i++) {
+        enemyshape = enemies[i]->getGlobalBounds();
+        iter = i;
+    }
+    return enemyshape;
+}
+
 void Game::eraseBullet() {
     bullets.erase(bullets.begin() + ind);
 }
 
-void Game::setBlock() {
-    if (blockClock.getElapsedTime().asSeconds() >= creationRate && countBlock % 6 == 0 && randomCreation() == 1) {
-        std::unique_ptr<Block> block = factory.createBlock(BlockType::PowerUpBlock);
-        randomPos();
-        block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
-        blocks.emplace_back(move(block));
-        isCreated = true;
-        blockClock.restart();
-        countBlock++;
-    }
-    if (blockClock.getElapsedTime().asSeconds() >= creationRate && !isCreated) {
-        std::unique_ptr<Block> block = factory.createBlock(BlockType::NormalBlock);
-        randomPos();
-        block->setPosition(sf::Vector2f(windowSize.x + 2 * block->getSize().x, randomY));
-        blocks.emplace_back(move(block));
-        blockClock.restart();
-        countBlock++;
-    }
-    isCreated = false;
+void Game::eraseEnemy() {
+    enemies.erase(enemies.begin() + iter);
 }
 
-void Game::moveBlock() {
+void Game::createObjects() {
+    if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
+        if (counter % 4 == 0 && randomCreation() == 1) {
+            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
+            randomPos();
+            if (randomCreation() % 2 != 0)
+                enemy->setEnemySpeedY(speed.y);
+            else
+                enemy->setEnemySpeedY(-speed.y);
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemies.emplace_back(move(enemy));
+            isCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        if (counter % 7 == 0 && randomCreation() == 1) {
+            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
+            randomPos();
+            if (randomCreation() % 2 != 0)
+                enemy->setEnemySpeedY(speed.y);
+            else
+                enemy->setEnemySpeedY(-speed.y);
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemies.emplace_back(move(enemy));
+            isCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
+        if (counter % 6 == 0 && randomCreation() == 1 && !isPowerUpOn) {
+            std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
+            randomPos();
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            blocks.emplace_back(move(block));
+            isCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        if (!isCreated) {
+            std::unique_ptr<Block> block = factoryB.createBlock(BlockType::NormalBlock);
+            randomPos();
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            blocks.emplace_back(move(block));
+            objectClock.restart();
+            counter++;
+        }
+        isCreated = false;
+    }
+}
+
+void Game::moveObject() {
     for (auto &i : blocks) {
-        i->move(-speed.x, speed.y);
+        i->move(-speed.x, 0);
+    }
+    for (auto &j : enemies) {
+        if (j->getPosition().y + j->getGlobalBounds().height >= window.getWindowSize().y - levelGround ||
+            j->getPosition().y <= 0) {
+            j->setEnemySpeedY(-j->getEnemySpeedY());
+        }
+        j->move(-speed.x, j->getEnemySpeedY());
     }
 }
 
-void Game::deleteBlock() {
+void Game::deleteObject() {
     for (int i = 0; i < blocks.size(); ++i) {
-        if (blocks[i]->getPosition().x + blocks[i]->getSize().x < 0) {
+        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0) {
             eraseB(i); // se esce dallo schermo lo cancella
+        }
+    }
+    for (int i = 0; i < enemies.size(); ++i) {
+        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0) {
+            eraseF(i); // se esce dallo schermo lo cancella
         }
     }
 }
@@ -172,18 +281,42 @@ void Game::deleteBlock() {
 void Game::collision() {
     for (auto &i : blocks) {
         class NormalBlock *test = dynamic_cast<class NormalBlock *>(i.get());
-        // se character interseca con block muore e gameover
-        if (i->getGlobalBounds().intersects(player.getBound()) && test != nullptr)
-            player.gameOver(true);
-        // se character interseca PowerUpBlock si attiva il potenziamento
-        if (i->getGlobalBounds().intersects(player.getBound()) && test == nullptr) {
-            PowerUpBlock::activePowerUp();
-            player.setColor(sf::Color::Green);
-            // blocks.erase();
+        if (i->getGlobalBounds().intersects(player.getBound())) {
+            // se character interseca con block muore e gameover
+            if (test != nullptr) {
+                if (isPowerUpOn)
+                    player.setPlayerTexture(puPlayerTexture3);
+                else
+                    player.setPlayerTexture(playerTexture3);
+                player.gameOver(true);
+            }
+            // se character interseca PowerUpBlock si attiva il potenziamento
+            if (test == nullptr) {
+                PowerUpBlock::activePowerUp();
+                isPowerUpOn = true;
+            }
         }
         // se bullet interseca un block viene eliminato
         if (i->getGlobalBounds().intersects(getBoundBullet()))
             eraseBullet();
+        // se bullet interseca un enemy viene eliminato enemy
+        if (i->getGlobalBounds().intersects(getBoundEnemy())) { // NON FUNZIONA
+            std::cout << "intersezione" << std::endl;
+            eraseEnemy();
+        }
+    }
+    for (auto &j : enemies) {
+        if (j->getGlobalBounds().intersects(player.getBound())) {
+            // se character ha PowerUp e interseca enemy perde il potenziamento
+            if (isPowerUpOn) {
+                isPowerUpOn = false;
+                controlPowerUp.restart();
+            } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
+                // se character non ha PowerUp e interseca enemy muore
+                player.setPlayerTexture(playerTexture3);
+                player.gameOver(true);
+            }
+        }
     }
 }
 
@@ -194,7 +327,7 @@ int Game::randomPos() {
 }
 
 int Game::randomCreation() {
-    return (rand() % 4);
+    return (rand() % 2);
 }
 
 // funzioni getter

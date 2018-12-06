@@ -6,6 +6,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/NormalBlock.cpp.o"
   "CMakeFiles/core.dir/PowerUpBlock.cpp.o"
   "CMakeFiles/core.dir/BlockFactory.cpp.o"
+  "CMakeFiles/core.dir/FlyingEnemy.cpp.o"
+  "CMakeFiles/core.dir/ShootingEnemy.cpp.o"
+  "CMakeFiles/core.dir/EnemyFactory.cpp.o"
   "libcore.pdb"
   "libcore.a"
 )

@@ -225,6 +225,78 @@ CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides: CMakeFiles/FlyJoyride.dir
 CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
 
 
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: CMakeFiles/FlyJoyride.dir/flags.make
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp
+
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp > CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.i
+
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp -o CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.s
+
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.requires:
+
+.PHONY : CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.requires
+
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.provides: CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.provides.build
+.PHONY : CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.provides
+
+CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o
+
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o: CMakeFiles/FlyJoyride.dir/flags.make
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o: ShootingEnemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp > CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.i
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp -o CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.s
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.requires:
+
+.PHONY : CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.requires
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.provides: CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.provides.build
+.PHONY : CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.provides
+
+CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o
+
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: CMakeFiles/FlyJoyride.dir/flags.make
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: EnemyFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp > CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.i
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp -o CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.s
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.requires:
+
+.PHONY : CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.requires
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.provides: CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.provides
+
+CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.provides.build: CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o
+
+
 # Object files for target FlyJoyride
 FlyJoyride_OBJECTS = \
 "CMakeFiles/FlyJoyride.dir/main.cpp.o" \
@@ -233,7 +305,10 @@ FlyJoyride_OBJECTS = \
 "CMakeFiles/FlyJoyride.dir/Character.cpp.o" \
 "CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o" \
 "CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o" \
-"CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o"
+"CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o" \
+"CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o" \
+"CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o" \
+"CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o"
 
 # External object files for target FlyJoyride
 FlyJoyride_EXTERNAL_OBJECTS =
@@ -245,9 +320,12 @@ FlyJoyride: CMakeFiles/FlyJoyride.dir/Character.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o
+FlyJoyride: CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o
+FlyJoyride: CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o
+FlyJoyride: CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o
 FlyJoyride: CMakeFiles/FlyJoyride.dir/build.make
 FlyJoyride: CMakeFiles/FlyJoyride.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FlyJoyride"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable FlyJoyride"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FlyJoyride.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +340,9 @@ CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/Character.cpp.o.re
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o.requires
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o.requires
 CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o.requires
+CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o.requires
+CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o.requires
+CMakeFiles/FlyJoyride.dir/requires: CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o.requires
 
 .PHONY : CMakeFiles/FlyJoyride.dir/requires
 

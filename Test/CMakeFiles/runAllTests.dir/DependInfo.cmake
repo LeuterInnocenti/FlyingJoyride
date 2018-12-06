@@ -6,8 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CharacterFixture.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/CharacterFixture.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/NormalBlockFixture.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/NormalBlockFixture.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/PowerUpBlockFixture.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/PowerUpBlockFixture.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/WindowFixture.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/runAllTests.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CMakeFiles/runAllTests.dir/runAllTests.cpp.o"
   )
