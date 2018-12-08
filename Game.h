@@ -33,8 +33,6 @@ public:
     void createBullet();
     void moveEnemyBullet();
     void createEnemyBullet();
-    sf::FloatRect getBoundEnemy();
-    sf::FloatRect getBoundBullet();
 
     void moveObject();
     void deleteObject();
@@ -66,6 +64,7 @@ private:
     Window window;
     sf::Clock speedClock;
     sf::Sprite background;
+    sf::Vector2i windowSize;
     sf::Texture backgroundTexture;
     static const float levelGround;
 
@@ -83,6 +82,13 @@ private:
 
     int ind;
     int iter;
+    int blockX;
+    int counter;
+    int tollerance;
+    bool isCreated;
+    bool isPowerUpOn;
+    bool isEnemyCreated;
+    float creationRate;
     static const float g;
     static const float jump;
     static const float shootTime;
@@ -102,15 +108,6 @@ private:
     sf::Texture fEnemyTexture;
     sf::Texture sEnemyTexture;
     std::vector<std::unique_ptr<Enemy>> enemies;
-
-    int blockX;
-    int counter;
-    bool isCreated;
-    int tollerance;
-    bool isPowerUpOn;
-
-    float creationRate;
-    sf::Vector2i windowSize;
 
     sf::Text text;
     sf::Font font;
