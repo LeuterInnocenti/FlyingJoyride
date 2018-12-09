@@ -27,10 +27,9 @@ private:
     void create();
 
     sf::RenderWindow window;
-    bool done;
     sf::Vector2u windowSize;
     std::string windowTitle;
-
+    bool done;
 };
 
 #endif //FLYJOYRIDE_WINDOW_H

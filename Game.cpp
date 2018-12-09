@@ -4,7 +4,6 @@
 
 #include "Game.h"
 #include <chrono>
-#include <thread>
 #include <iostream>
 
 const float Game::g = 0.7;
@@ -17,9 +16,10 @@ const float Game::rateIncreaser = 0.120;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
                isCreated(false), isPowerUpOn(false), isEnemyCreated(false),
-               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
+               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2), score(0),
                playerClock(), objectClock(), speedClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
-    reset();
+
+    font.loadFromFile("arial.ttf");
 
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
@@ -29,22 +29,22 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(wind
 
     playerTexture1.loadFromFile("frame-1.png");
     playerTexture2.loadFromFile("frame-3.png");
-    playerTexture3.loadFromFile("frame-2.png");
     puPlayerTexture1.loadFromFile("puframe-1.png");
     puPlayerTexture2.loadFromFile("puframe-2.png");
-    puPlayerTexture3.loadFromFile("puframe-3.png");
     player.setPlayerTexture(playerTexture1);
 
     fEnemyTexture.loadFromFile("fenemy1.png");
     sEnemyTexture.loadFromFile("senemy1.png");
 
     srand((unsigned) time(nullptr));
-    createObjects();
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
 Game::~Game() {
     blocks.clear();
+    enemies.clear();
+    bullets.clear();
+    enemyBullets.clear();
 }
 
 void Game::update() {
@@ -59,9 +59,11 @@ void Game::update() {
 
     collision();
 
+    handleText();
+
+    increaseScore();
+
     if (player.getDeath()) {
-        // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
-        //std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
     if (speedClock.getElapsedTime().asSeconds() >= 10) {
@@ -75,22 +77,23 @@ void Game::increaseScore() {}
 
 // gestione del testo
 void Game::handleText() {
-    font.loadFromFile("arial.ttf");
     text.setFont(font);
-    text.setString("");
-    text.setFillColor(sf::Color::White);
+    text.setString("Score : ");
+    text.setFillColor(sf::Color::Black);
     text.setCharacterSize(25);
-    text.setPosition(15200, 50);
-}
-
-void Game::reset() {
-    //handleText();
-    score = 0;
+    text.setPosition(10, 5);
+    scoreText.setFont(font);
+    scoreText.setFillColor(sf::Color::Black);
+    scoreText.setCharacterSize(25);
+    scoreText.setPosition(100, 6);
+    scoreText.setString(std::to_string(score));
 }
 
 void Game::render() {
     window.beginDraw();
     window.draw(background);
+    window.draw(text);
+    window.draw(scoreText);
     player.render(*window.getRenderWindow());
     for (auto &block : blocks)
         window.draw(*block);
@@ -132,7 +135,7 @@ void Game::shoot() {
         playerClock.restart();
     }
     moveBullet();
-    if (enemyClock.getElapsedTime().asSeconds() >= (shootTime / 2)) {
+    if (enemyClock.getElapsedTime().asSeconds() >= shootTime) {
         createEnemyBullet();
         enemyClock.restart();
     }
@@ -184,20 +187,7 @@ void Game::eraseEnemy() {
 
 void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
-        if (counter % 4 == 0 && randomCreation() == 1 && !isEnemyCreated) {
-            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
-            randomPos();
-            if (randomCreation() % 2 != 0)
-                enemy->setEnemySpeedY(speed.y);
-            else
-                enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
-            enemies.emplace_back(move(enemy));
-            isCreated = true;
-            objectClock.restart();
-            counter++;
-        }
-        if (counter % 7 == 0 && randomCreation() == 1) {
+        if (counter % 5 == 0 && randomCreation() == 1) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
             randomPos();
             if (randomCreation() % 2 != 0)
@@ -211,8 +201,22 @@ void Game::createObjects() {
             objectClock.restart();
             counter++;
         }
+        if (counter % 2 == 0 && randomCreation() == 1 && !isEnemyCreated) {
+            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
+            randomPos();
+            if (randomCreation() % 2 != 0)
+                enemy->setEnemySpeedY(speed.y);
+            else
+                enemy->setEnemySpeedY(-speed.y);
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemies.emplace_back(move(enemy));
+            isCreated = true;
+            isEnemyCreated = true;
+            objectClock.restart();
+            counter++;
+        }
         // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
-        if (counter % 6 == 0 && randomCreation() == 1 && !isPowerUpOn) {
+        if (counter % 7 == 0 && randomCreation() == 1 && !isPowerUpOn && !isEnemyCreated) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
             randomPos();
             block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
@@ -304,6 +308,7 @@ void Game::collision() {
             if (l.getGlobalBounds().intersects(enemies[k]->getGlobalBounds())) {
                 iter = k;
                 eraseEnemy();
+                score += 5;
             }
         }
     }

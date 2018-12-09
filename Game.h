@@ -22,7 +22,6 @@ public:
     void render();
     void handleText();
     void increaseScore();
-    void reset(); // gestione testo e score
     Window *GetWindow() { return &window; };
 
     void shoot();
@@ -73,10 +72,8 @@ private:
     sf::CircleShape bullet;
     sf::Texture playerTexture1;
     sf::Texture playerTexture2;
-    sf::Texture playerTexture3;
     sf::Texture puPlayerTexture1;
     sf::Texture puPlayerTexture2;
-    sf::Texture puPlayerTexture3;
     std::vector<sf::CircleShape> bullets;
     std::vector<sf::CircleShape> enemyBullets;
 
@@ -109,8 +106,9 @@ private:
     sf::Texture sEnemyTexture;
     std::vector<std::unique_ptr<Enemy>> enemies;
 
-    sf::Text text;
     sf::Font font;
+    sf::Text text;
+    sf::Text scoreText;
     unsigned int score;
 };
 

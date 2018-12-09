@@ -41,7 +41,7 @@ void Window::destroy() {
 }
 
 void Window::beginDraw() {
-    window.clear(sf::Color::Black);
+    window.clear(sf::Color::White);
 }
 
 void Window::endDraw() {
@@ -50,6 +50,7 @@ void Window::endDraw() {
 
 void Window::draw(sf::Drawable &drawable) {
     window.draw(drawable);
+
 }
 
 sf::RenderWindow *Window::getRenderWindow() {
