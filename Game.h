@@ -31,12 +31,11 @@ public:
     void eraseBullet();
     void createBullet();
     void moveEnemyBullet();
+    void eraseEnemyBullet();
     void createEnemyBullet();
 
     void moveObject();
     void deleteObject();
-    void eraseB(int index) { blocks.erase(blocks.begin() + index); }
-    void eraseF(int index) { enemies.erase(enemies.begin() + index); }
 
     void collision();
     void createObjects();
@@ -56,6 +55,8 @@ public:
     const std::vector<sf::CircleShape> &getBullets() const;
     int getContainerSize() { return static_cast<int>(blocks.size()); };
 
+    // funzione per test
+    void eraseB(int index) { blocks.erase(blocks.begin() + index); }
 private:
     int maxY;
     int randomY;
@@ -81,6 +82,7 @@ private:
     int iter;
     int blockX;
     int counter;
+    int iterator;
     int tollerance;
     bool isCreated;
     bool isPowerUpOn;

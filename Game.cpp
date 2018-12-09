@@ -185,6 +185,10 @@ void Game::eraseEnemy() {
     enemies.erase(enemies.begin() + iter);
 }
 
+void Game::eraseEnemyBullet() {
+    enemyBullets.erase(enemyBullets.begin() + iterator);
+}
+
 void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
         if (counter % 5 == 0 && randomCreation() == 1) {
@@ -253,14 +257,20 @@ void Game::moveObject() {
 
 void Game::deleteObject() {
     for (int i = 0; i < blocks.size(); ++i) {
-        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0) {
-            eraseB(i); // se esce dallo schermo lo cancella
-        }
+        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0)
+            blocks.erase(blocks.begin() + i); // se esce dallo schermo lo cancella
     }
     for (int i = 0; i < enemies.size(); ++i) {
-        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0) {
-            eraseF(i); // se esce dallo schermo lo cancella
-        }
+        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0)
+            enemies.erase(enemies.begin() + i); // se esce dallo schermo lo cancella
+    }
+    for (int i = 0; i < enemyBullets.size(); ++i) {
+        if (enemyBullets[i].getPosition().x + enemyBullets[i].getGlobalBounds().width < 0)
+            enemyBullets.erase(enemyBullets.begin() + i); // se esce dallo schermo lo cancella
+    }
+    for (int i = 0; i < bullets.size(); ++i) {
+        if (bullets[i].getPosition().x > windowSize.x)
+            bullets.erase(bullets.begin() + i); // se esce dallo schermo lo cancella
     }
 }
 
@@ -291,6 +301,13 @@ void Game::collision() {
                 eraseBullet();
             }
         }
+        for (int m = 0; m < enemyBullets.size(); m++) {
+            // se enemyBullet interseca un block viene eliminato
+            if (i->getGlobalBounds().intersects(enemyBullets[m].getGlobalBounds())) {
+                iterator = m;
+                eraseEnemyBullet();
+            }
+        }
     }
     for (int k = 0; k < enemies.size(); k++) {
         if (enemies[k]->getGlobalBounds().intersects(player.getBound())) {
@@ -311,6 +328,15 @@ void Game::collision() {
                 score += 5;
             }
         }
+        /*
+        for (int m = 0; m < enemyBullets.size(); m++) {
+            // se enemyBullet interseca un enemy viene eliminato
+            if (enemies[k]->getGlobalBounds().intersects(enemyBullets[m].getGlobalBounds()) &&
+                !enemies[k]->getCanShoot()) {
+                iterator = m;
+                eraseEnemyBullet();
+            }
+        }*/
     }
     for (auto &z : enemyBullets) {
         if (player.getBound().intersects(z.getGlobalBounds())) {
