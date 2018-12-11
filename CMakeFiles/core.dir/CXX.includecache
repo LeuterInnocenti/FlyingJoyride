@@ -67,6 +67,8 @@ Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 chrono
 -
+thread
+-
 iostream
 -
 

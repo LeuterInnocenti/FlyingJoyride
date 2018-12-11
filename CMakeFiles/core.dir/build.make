@@ -297,6 +297,30 @@ CMakeFiles/core.dir/EnemyFactory.cpp.o.provides: CMakeFiles/core.dir/EnemyFactor
 CMakeFiles/core.dir/EnemyFactory.cpp.o.provides.build: CMakeFiles/core.dir/EnemyFactory.cpp.o
 
 
+CMakeFiles/core.dir/Achievement.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Achievement.cpp.o: Achievement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/core.dir/Achievement.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Achievement.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp
+
+CMakeFiles/core.dir/Achievement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Achievement.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp > CMakeFiles/core.dir/Achievement.cpp.i
+
+CMakeFiles/core.dir/Achievement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Achievement.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp -o CMakeFiles/core.dir/Achievement.cpp.s
+
+CMakeFiles/core.dir/Achievement.cpp.o.requires:
+
+.PHONY : CMakeFiles/core.dir/Achievement.cpp.o.requires
+
+CMakeFiles/core.dir/Achievement.cpp.o.provides: CMakeFiles/core.dir/Achievement.cpp.o.requires
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievement.cpp.o.provides.build
+.PHONY : CMakeFiles/core.dir/Achievement.cpp.o.provides
+
+CMakeFiles/core.dir/Achievement.cpp.o.provides.build: CMakeFiles/core.dir/Achievement.cpp.o
+
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/main.cpp.o" \
@@ -308,7 +332,8 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/BlockFactory.cpp.o" \
 "CMakeFiles/core.dir/FlyingEnemy.cpp.o" \
 "CMakeFiles/core.dir/ShootingEnemy.cpp.o" \
-"CMakeFiles/core.dir/EnemyFactory.cpp.o"
+"CMakeFiles/core.dir/EnemyFactory.cpp.o" \
+"CMakeFiles/core.dir/Achievement.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -323,9 +348,10 @@ libcore.a: CMakeFiles/core.dir/BlockFactory.cpp.o
 libcore.a: CMakeFiles/core.dir/FlyingEnemy.cpp.o
 libcore.a: CMakeFiles/core.dir/ShootingEnemy.cpp.o
 libcore.a: CMakeFiles/core.dir/EnemyFactory.cpp.o
+libcore.a: CMakeFiles/core.dir/Achievement.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -344,6 +370,7 @@ CMakeFiles/core.dir/requires: CMakeFiles/core.dir/BlockFactory.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/FlyingEnemy.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/ShootingEnemy.cpp.o.requires
 CMakeFiles/core.dir/requires: CMakeFiles/core.dir/EnemyFactory.cpp.o.requires
+CMakeFiles/core.dir/requires: CMakeFiles/core.dir/Achievement.cpp.o.requires
 
 .PHONY : CMakeFiles/core.dir/requires
 

@@ -276,6 +276,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -293,6 +301,10 @@
 			<Option target="FlyJoyride"/>
 		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
