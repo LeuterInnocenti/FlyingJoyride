@@ -3,6 +3,8 @@
 //
 
 #include "Game.h"
+#include "Achievement.h"
+
 #include <chrono>
 #include <thread>
 #include <iostream>
@@ -16,11 +18,12 @@ const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
-               isCreated(false), isPowerUpOn(false),
-               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), n(1),
+               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2), score(0),
                playerClock(), objectClock(), speedClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
-    reset();
-   
+
+    font.loadFromFile("arial.ttf");
+
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
     background.setTexture(backgroundTexture);
@@ -28,66 +31,72 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(wind
     background.setScale(0.675, 0.95);
 
     playerTexture1.loadFromFile("frame-1.png");
-    playerTexture2.loadFromFile("frame-3.png");
-    playerTexture3.loadFromFile("frame-2.png");
+    playerTexture2.loadFromFile("frame-2.png");
+    playerTexture3.loadFromFile("frame-3.png");
     puPlayerTexture1.loadFromFile("puframe-1.png");
     puPlayerTexture2.loadFromFile("puframe-2.png");
-    puPlayerTexture3.loadFromFile("puframe-3.png");
     player.setPlayerTexture(playerTexture1);
 
     fEnemyTexture.loadFromFile("fenemy1.png");
     sEnemyTexture.loadFromFile("senemy1.png");
 
     srand((unsigned) time(nullptr));
-    createObjects();
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
 }
 
 Game::~Game() {
     blocks.clear();
+    enemies.clear();
+    bullets.clear();
+    enemyBullets.clear();
 }
 
 void Game::update() {
     window.update();
     background.move(-speed.x, 0);
 
-    shoot();
-    moveObject();
-    movePlayer();
-    deleteObject();
-    createObjects();
-    getBoundEnemy();
-    getBoundBullet();
-
-    collision();
-
     if (player.getDeath()) {
-        // std::cout<<"Il tuo punteggio è: "<<score<<std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
-    if (speedClock.getElapsedTime().asSeconds() >= 10) {
-        speed.x += speedIncreaser;
-        creationRate -= rateIncreaser;
+    createObjects();
+    shoot();
+    collision();
+    moveObject();
+    movePlayer();
+    deleteObject();
+    handleText();
+    setScore(score);
+    if (speedClock.getElapsedTime().asSeconds() >= 1.0f) {
+        // ogni secondo score aumenta di 1
+        score++;
+        notify();
         speedClock.restart();
+    }
+    if (score >= n * 20) {
+        speed.x += speedIncreaser;
+        if (score <= 200)
+            creationRate -= rateIncreaser;
+        n++;
     }
 }
 
-void Game::increaseScore() {}
-
 // gestione del testo
 void Game::handleText() {
-    font.loadFromFile("arial.ttf");
     text.setFont(font);
-    text.setString("");
-    text.setFillColor(sf::Color::White);
+    text.setString("Score : ");
+    text.setFillColor(sf::Color::Black);
     text.setCharacterSize(25);
-    text.setPosition(15200, 50);
+    text.setPosition(10, 5);
+    scoreText.setFont(font);
+    scoreText.setFillColor(sf::Color::Black);
+    scoreText.setCharacterSize(25);
+    scoreText.setPosition(100, 6);
+    scoreText.setString(std::to_string(score));
 }
 
-void Game::reset() {
-    //handleText();
-    score = 0;
+void Game::setAchievementString() {
+
 }
 
 void Game::render() {
@@ -102,6 +111,8 @@ void Game::render() {
         window.draw(b);
     for (auto &b : enemyBullets)
         window.draw(b);
+    window.draw(text);
+    window.draw(scoreText);
     window.endDraw();
 }
 
@@ -134,7 +145,7 @@ void Game::shoot() {
         playerClock.restart();
     }
     moveBullet();
-    if (enemyClock.getElapsedTime().asSeconds() >= (shootTime / 2)) {
+    if (enemyClock.getElapsedTime().asSeconds() >= shootTime) {
         createEnemyBullet();
         enemyClock.restart();
     }
@@ -150,16 +161,13 @@ void Game::createBullet() {
 }
 
 void Game::moveBullet() {
-    for (size_t j = 0; j < bullets.size(); ++j) {
+    for (int j = 0; j < bullets.size(); ++j)
         bullets[j].move(bulletSpeed, 0);
-        if (bullets[j].getPosition().x >= window.getWindowSize().x + 2 * player.getPlayerSize().x)
-            bullets.erase(bullets.begin() + j);
-    }
 }
 
 void Game::createEnemyBullet() {
     for (auto &j : enemies) {
-        if (j->getCanShoot()) {
+        if (j->getCanShoot() && j->getPosition().x <= window.getWindowSize().x) {
             bullet.setRadius(10);
             bullet.setFillColor(sf::Color::Red);
             bullet.setPosition(j->getPosition().x, j->getPosition().y + j->getGlobalBounds().height / 2);
@@ -169,55 +177,13 @@ void Game::createEnemyBullet() {
 }
 
 void Game::moveEnemyBullet() {
-    for (size_t j = 0; j < enemyBullets.size(); ++j) {
+    for (int j = 0; j < enemyBullets.size(); ++j)
         enemyBullets[j].move(-bulletSpeed, 0);
-        if (enemyBullets[j].getPosition().x >= window.getWindowSize().x + 2 * player.getPlayerSize().x)
-            enemyBullets.erase(enemyBullets.begin() + j);
-    }
-}
-
-sf::FloatRect Game::getBoundBullet() {
-    sf::FloatRect bulletshape;
-    for (int i = 0; i < bullets.size(); i++) {
-        bulletshape = bullets[i].getGlobalBounds();
-        ind = i;
-    }
-    return bulletshape;
-}
-
-sf::FloatRect Game::getBoundEnemy() {
-    sf::FloatRect enemyshape;
-    for (int i = 0; i < enemies.size(); i++) {
-        enemyshape = enemies[i]->getGlobalBounds();
-        iter = i;
-    }
-    return enemyshape;
-}
-
-void Game::eraseBullet() {
-    bullets.erase(bullets.begin() + ind);
-}
-
-void Game::eraseEnemy() {
-    enemies.erase(enemies.begin() + iter);
 }
 
 void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
-        if (counter % 4 == 0 && randomCreation() == 1) {
-            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
-            randomPos();
-            if (randomCreation() % 2 != 0)
-                enemy->setEnemySpeedY(speed.y);
-            else
-                enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
-            enemies.emplace_back(move(enemy));
-            isCreated = true;
-            objectClock.restart();
-            counter++;
-        }
-        if (counter % 7 == 0 && randomCreation() == 1) {
+        if (counter % 5 == 0 && randomCreation() == 1) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
             randomPos();
             if (randomCreation() % 2 != 0)
@@ -227,11 +193,26 @@ void Game::createObjects() {
             enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
             enemies.emplace_back(move(enemy));
             isCreated = true;
+            isEnemyCreated = true;
+            objectClock.restart();
+            counter++;
+        }
+        if (counter % 2 == 0 && randomCreation() == 1 && !isEnemyCreated) {
+            std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
+            randomPos();
+            if (randomCreation() % 2 != 0)
+                enemy->setEnemySpeedY(speed.y);
+            else
+                enemy->setEnemySpeedY(-speed.y);
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemies.emplace_back(move(enemy));
+            isCreated = true;
+            isEnemyCreated = true;
             objectClock.restart();
             counter++;
         }
         // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
-        if (counter % 6 == 0 && randomCreation() == 1 && !isPowerUpOn) {
+        if (counter % 7 == 0 && randomCreation() == 1 && !isPowerUpOn && !isEnemyCreated) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
             randomPos();
             block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
@@ -249,13 +230,13 @@ void Game::createObjects() {
             counter++;
         }
         isCreated = false;
+        isEnemyCreated = false;
     }
 }
 
 void Game::moveObject() {
-    for (auto &i : blocks) {
+    for (auto &i : blocks)
         i->move(-speed.x, 0);
-    }
     for (auto &j : enemies) {
         if (j->getPosition().y + j->getGlobalBounds().height >= window.getWindowSize().y - levelGround ||
             j->getPosition().y <= 0) {
@@ -266,53 +247,88 @@ void Game::moveObject() {
 }
 
 void Game::deleteObject() {
+    // se un oggetto esce dallo schermo viene eliminato
     for (int i = 0; i < blocks.size(); ++i) {
-        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0) {
-            eraseB(i); // se esce dallo schermo lo cancella
-        }
+        if (blocks[i]->getPosition().x + blocks[i]->getGlobalBounds().width < 0)
+            blocks.erase(blocks.begin() + i);
     }
     for (int i = 0; i < enemies.size(); ++i) {
-        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0) {
-            eraseF(i); // se esce dallo schermo lo cancella
-        }
+        if (enemies[i]->getPosition().x + enemies[i]->getGlobalBounds().width < 0)
+            enemies.erase(enemies.begin() + i);
+    }
+    for (int i = 0; i < enemyBullets.size(); ++i) {
+        if (enemyBullets[i].getPosition().x + enemyBullets[i].getGlobalBounds().width < 0)
+            enemyBullets.erase(enemyBullets.begin() + i);
+    }
+    for (int i = 0; i < bullets.size(); ++i) {
+        if (bullets[i].getPosition().x > windowSize.x)
+            bullets.erase(bullets.begin() + i);
     }
 }
 
 void Game::collision() {
-    for (auto &i : blocks) {
-        class NormalBlock *test = dynamic_cast<class NormalBlock *>(i.get());
-        if (i->getGlobalBounds().intersects(player.getBound())) {
-            // se character interseca con block muore e gameover
+    for (int i = 0; i < blocks.size(); i++) {
+        class NormalBlock *test = dynamic_cast<class NormalBlock *>(blocks[i].get());
+        if (blocks[i]->getGlobalBounds().intersects(player.getBound())) {
             if (test != nullptr) {
-                if (isPowerUpOn)
-                    player.setPlayerTexture(puPlayerTexture3);
-                else
+                // se character ha PowerUp e interseca normalBlock perde il potenziamento
+                if (isPowerUpOn) {
+                    isPowerUpOn = false;
+                    controlPowerUp.restart();
+                } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
+                    // se character non ha PowerUp e interseca normalBlock muore
                     player.setPlayerTexture(playerTexture3);
-                player.gameOver(true);
+                    player.gameOver(true);
+                }
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
             if (test == nullptr) {
                 PowerUpBlock::activePowerUp();
                 isPowerUpOn = true;
+                blocks.erase(blocks.begin() + i);
             }
         }
-        // se bullet interseca un block viene eliminato
-        if (i->getGlobalBounds().intersects(getBoundBullet()))
-            eraseBullet();
-        // se bullet interseca un enemy viene eliminato enemy
-        if (i->getGlobalBounds().intersects(getBoundEnemy())) { // NON FUNZIONA
-            std::cout << "intersezione" << std::endl;
-            eraseEnemy();
+        for (int j = 0; j < bullets.size(); j++) {
+            // se bullet interseca un block viene eliminato
+            if (blocks[i]->getGlobalBounds().intersects(bullets[j].getGlobalBounds()))
+                bullets.erase(bullets.begin() + j);
+        }
+        for (int m = 0; m < enemyBullets.size(); m++) {
+            // se enemyBullet interseca un block viene eliminato
+            if (blocks[i]->getGlobalBounds().intersects(enemyBullets[m].getGlobalBounds()))
+                enemyBullets.erase(enemyBullets.begin() + m);
         }
     }
-    for (auto &j : enemies) {
-        if (j->getGlobalBounds().intersects(player.getBound())) {
+    for (int k = 0; k < enemies.size(); k++) {
+        if (enemies[k]->getGlobalBounds().intersects(player.getBound())) {
             // se character ha PowerUp e interseca enemy perde il potenziamento
             if (isPowerUpOn) {
                 isPowerUpOn = false;
                 controlPowerUp.restart();
             } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                 // se character non ha PowerUp e interseca enemy muore
+                player.setPlayerTexture(playerTexture3);
+                player.gameOver(true);
+            }
+        }
+        // se bullet interseca un enemy viene eliminato enemy
+        for (int l = 0; l < bullets.size(); l++) {
+            if (bullets[l].getGlobalBounds().intersects(enemies[k]->getGlobalBounds())) {
+                enemies.erase(enemies.begin() + k);
+                bullets.erase(bullets.begin() + l);
+                score += 5;
+                notify();
+            }
+        }
+    }
+    for (int z = 0; z < enemyBullets.size(); z++) {
+        if (player.getBound().intersects(enemyBullets[z].getGlobalBounds())) {
+            // se character ha PowerUp e interseca enemyBullet perde il potenziamento
+            if (isPowerUpOn) {
+                isPowerUpOn = false;
+                controlPowerUp.restart();
+            } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
+                // se character non ha PowerUp e interseca enemyBullet muore
                 player.setPlayerTexture(playerTexture3);
                 player.gameOver(true);
             }
@@ -328,6 +344,25 @@ int Game::randomPos() {
 
 int Game::randomCreation() {
     return (rand() % 2);
+}
+
+// funzioni observer
+void Game::subscribe(Observer *o) {
+    observers.push_back(o);
+}
+
+void Game::unsubscribe(Observer *o) {
+    observers.remove(o);
+}
+
+void Game::setScore(unsigned int score) {
+    Game::score = score;
+    notify();
+}
+
+void Game::notify() {
+    for (auto itr = std::begin(observers); itr != std::end(observers); itr++)
+        (*itr)->update();
 }
 
 // funzioni getter
@@ -348,3 +383,7 @@ float Game::getCreationRate() const { return creationRate; }
 int Game::getMaxY() const { return maxY; }
 
 const std::vector<sf::CircleShape> &Game::getBullets() const { return bullets; }
+
+int Game::getContainerSize() { return static_cast<int>(blocks.size()); };
+
+unsigned int Game::getScore() const { return score; }

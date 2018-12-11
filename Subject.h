@@ -9,9 +9,10 @@
 
 class Subject {
 public:
-    virtual void foo2() = 0;
+    virtual void subscribe(Observer *o) = 0;
+    virtual void unsubscribe(Observer *o) = 0;
+    virtual void notify() = 0;
 
-protected:
     virtual ~Subject() {}
 };
 

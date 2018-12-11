@@ -175,6 +175,36 @@ gtest/fast:
 	$(MAKE) -f Test/lib/googletest/CMakeFiles/gtest.dir/build.make Test/lib/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+Achievement.o: Achievement.cpp.o
+
+.PHONY : Achievement.o
+
+# target to build an object file
+Achievement.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievement.cpp.o
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Achievement.cpp.o
+.PHONY : Achievement.cpp.o
+
+Achievement.i: Achievement.cpp.i
+
+.PHONY : Achievement.i
+
+# target to preprocess a source file
+Achievement.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievement.cpp.i
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Achievement.cpp.i
+.PHONY : Achievement.cpp.i
+
+Achievement.s: Achievement.cpp.s
+
+.PHONY : Achievement.s
+
+# target to generate assembly for a file
+Achievement.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievement.cpp.s
+	$(MAKE) -f CMakeFiles/FlyJoyride.dir/build.make CMakeFiles/FlyJoyride.dir/Achievement.cpp.s
+.PHONY : Achievement.cpp.s
+
 BlockFactory.o: BlockFactory.cpp.o
 
 .PHONY : BlockFactory.o
@@ -488,6 +518,9 @@ help:
 	@echo "... runAllTests"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... Achievement.o"
+	@echo "... Achievement.i"
+	@echo "... Achievement.s"
 	@echo "... BlockFactory.o"
 	@echo "... BlockFactory.i"
 	@echo "... BlockFactory.s"

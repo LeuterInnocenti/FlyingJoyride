@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/FlyingEnemy.cpp.o"
   "CMakeFiles/core.dir/ShootingEnemy.cpp.o"
   "CMakeFiles/core.dir/EnemyFactory.cpp.o"
+  "CMakeFiles/core.dir/Achievement.cpp.o"
   "libcore.pdb"
   "libcore.a"
 )

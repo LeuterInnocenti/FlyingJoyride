@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp
+Achievement.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
+iostream
+-
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
+fstream
+-
+iostream
+-
+Game.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+Observer.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
+DisplayElement.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 SFML/Graphics.hpp
 -
@@ -32,6 +50,10 @@ Character.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
+-
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h
+SFML/Graphics/RenderWindow.hpp
 -
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
@@ -65,6 +87,8 @@ Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+Achievement.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
 chrono
 -
 thread
@@ -73,6 +97,8 @@ iostream
 -
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+list
+-
 string
 -
 Block.h
@@ -81,6 +107,8 @@ Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 Window.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
+Subject.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 BlockFactory.h
@@ -97,6 +125,8 @@ NormalBlock.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp
 PowerUpBlock.h
@@ -116,6 +146,10 @@ ShootingEnemy.h
 Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
+Observer.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
 Window.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
@@ -127,10 +161,10 @@ SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+Achievement.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
 chrono
 -
 thread
--
-unistd.h
 -
 
