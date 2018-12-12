@@ -5,10 +5,9 @@
 #include "Achievement.h"
 #include <iostream>
 
-Achievement::Achievement(Game *g) : game(g), point(0), a(0), b(0), c(0) {
+Achievement::Achievement(Game *g) : game(g), point(0), kill(0), a(0), b(0), c(0), d(0) {
     attach();
     loadAch();
-    font.loadFromFile("arial.ttf");
 }
 
 Achievement::~Achievement() {
@@ -24,24 +23,27 @@ void Achievement::loadAch() {
 }
 
 void Achievement::draw() {
-    achievement.setFont(font);
-    achievement.setFillColor(sf::Color::White);
-    achievement.setCharacterSize(25);
-    achievement.setPosition(500, 6);
-    if (point >= 7 && a == 0) {
-        achievement.setString(string[0]);
-        std::cout << string[0] << std::endl;
+    if (point >= 3 && a == 0) {
+        game->setAchievementString(string[0]);
         a++;
     }
     if (point >= 50 && b == 0) {
-        achievement.setString(string[1]);
-        std::cout << string[1] << std::endl;
+        game->setAchievementString(string[1]);
         b++;
+    }
+    if (point >= 100 && c == 0) {
+        game->setAchievementString(string[2]);
+        c++;
+    }
+    if (kill >= 5 && d == 0) {
+        game->setAchievementString(string[3]);
+        d++;
     }
 }
 
 void Achievement::update() {
     point = game->getScore();
+    kill = game->getKilled();
     draw();
 }
 

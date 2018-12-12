@@ -33,8 +33,10 @@ Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: EnemyFactory.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: FlyingEnemy.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Game.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: NormalBlock.h
+Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Observer.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: PowerUpBlock.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: ShootingEnemy.h
+Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Subject.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Test/GameFixture.cpp
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Window.h
 Test/CMakeFiles/runAllTests.dir/GameFixture.cpp.o: Test/lib/googletest/include/gtest/gtest-death-test.h

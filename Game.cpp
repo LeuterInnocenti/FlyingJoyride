@@ -3,14 +3,11 @@
 //
 
 #include "Game.h"
-#include "Achievement.h"
 
 #include <chrono>
 #include <thread>
 #include <iostream>
 
-const float Game::g = 0.7;
-const float Game::jump = 1.8;
 const float Game::shootTime = 1.3f;
 const float Game::bulletSpeed = 1.7f;
 const float Game::levelGround = 63.0f;
@@ -18,12 +15,11 @@ const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
-               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), n(1),
-               counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2), score(0),
-               playerClock(), objectClock(), speedClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), n(1), killed(0), score(0), jump(1.8),
+               g(0.7), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
+               playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
 
     font.loadFromFile("arial.ttf");
-
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
     background.setTexture(backgroundTexture);
@@ -35,6 +31,9 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(wind
     playerTexture3.loadFromFile("frame-3.png");
     puPlayerTexture1.loadFromFile("puframe-1.png");
     puPlayerTexture2.loadFromFile("puframe-2.png");
+    dePlayerTexture1.loadFromFile("deframe-1.png");
+    dePlayerTexture2.loadFromFile("deframe-2.png");
+    dePlayerTexture3.loadFromFile("deframe-3.png");
     player.setPlayerTexture(playerTexture1);
 
     fEnemyTexture.loadFromFile("fenemy1.png");
@@ -54,8 +53,10 @@ Game::~Game() {
 void Game::update() {
     window.update();
     background.move(-speed.x, 0);
+    achievementText.move(-speed.x, 0);
 
     if (player.getDeath()) {
+        player.setPlayerTexture(playerTexture3);
         std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
@@ -66,18 +67,26 @@ void Game::update() {
     movePlayer();
     deleteObject();
     handleText();
+
     setScore(score);
-    if (speedClock.getElapsedTime().asSeconds() >= 1.0f) {
+    setKilled(killed);
+
+    if (scoreClock.getElapsedTime().asSeconds() >= 1.0f) {
         // ogni secondo score aumenta di 1
         score++;
         notify();
-        speedClock.restart();
+        scoreClock.restart();
     }
     if (score >= n * 20) {
         speed.x += speedIncreaser;
         if (score <= 200)
             creationRate -= rateIncreaser;
         n++;
+    }
+    if (isDefectOn && defectClock.getElapsedTime().asSeconds() >= 10.0f) {
+        isDefectOn = false;
+        jump = -jump;
+        g = -g;
     }
 }
 
@@ -95,13 +104,19 @@ void Game::handleText() {
     scoreText.setString(std::to_string(score));
 }
 
-void Game::setAchievementString() {
-
+void Game::setAchievementString(sf::String string) {
+    achievementText.setFont(font);
+    achievementText.setString(string);
+    achievementText.setCharacterSize(40);
+    achievementText.setFillColor(sf::Color::Red);
+    achievementText.setStyle(sf::Text::Bold);
+    achievementText.setPosition(windowSize.x, windowSize.y / 2);
 }
 
 void Game::render() {
     window.beginDraw();
     window.draw(background);
+    window.draw(achievementText);
     player.render(*window.getRenderWindow());
     for (auto &block : blocks)
         window.draw(*block);
@@ -122,12 +137,16 @@ void Game::movePlayer() {
         player.setPlayerPosition(player.getPlayerPosition().x, player.getPlayerPosition().y - jump);
         if (isPowerUpOn)
             player.setPlayerTexture(puPlayerTexture2);
+        else if (isDefectOn)
+            player.setPlayerTexture(dePlayerTexture2);
         else
             player.setPlayerTexture(playerTexture2);
         playerTexture2.setSmooth(true);
     } else if (!sf::Keyboard::isKeyPressed((sf::Keyboard::Space))) {
         if (isPowerUpOn)
             player.setPlayerTexture(puPlayerTexture1);
+        else if (isDefectOn)
+            player.setPlayerTexture(dePlayerTexture1);
         else
             player.setPlayerTexture(playerTexture1);
         playerTexture1.setSmooth(true);
@@ -178,7 +197,7 @@ void Game::createEnemyBullet() {
 
 void Game::moveEnemyBullet() {
     for (int j = 0; j < enemyBullets.size(); ++j)
-        enemyBullets[j].move(-bulletSpeed, 0);
+        enemyBullets[j].move(-speed.x * 1.5f, 0);
 }
 
 void Game::createObjects() {
@@ -212,7 +231,7 @@ void Game::createObjects() {
             counter++;
         }
         // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
-        if (counter % 7 == 0 && randomCreation() == 1 && !isPowerUpOn && !isEnemyCreated) {
+        if (counter % 7 == 0 && randomCreation() == 1 && !isPowerUpOn && !isEnemyCreated && !isDefectOn) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
             randomPos();
             block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
@@ -283,8 +302,17 @@ void Game::collision() {
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
             if (test == nullptr) {
-                PowerUpBlock::activePowerUp();
-                isPowerUpOn = true;
+                if (randomCreation() == 0) {
+                    isDefectOn = true;
+                    jump = -jump;
+                    g = -g;
+                    defectClock.restart();
+                } else {
+                    PowerUpBlock::activePowerUp();
+                    isPowerUpOn = true;
+                }
+                score += 10;
+                notify();
                 blocks.erase(blocks.begin() + i);
             }
         }
@@ -317,6 +345,7 @@ void Game::collision() {
                 enemies.erase(enemies.begin() + k);
                 bullets.erase(bullets.begin() + l);
                 score += 5;
+                killed++;
                 notify();
             }
         }
@@ -360,6 +389,11 @@ void Game::setScore(unsigned int score) {
     notify();
 }
 
+void Game::setKilled(unsigned int killed) {
+    Game::killed = killed;
+    notify();
+}
+
 void Game::notify() {
     for (auto itr = std::begin(observers); itr != std::end(observers); itr++)
         (*itr)->update();
@@ -369,10 +403,6 @@ void Game::notify() {
 const float Game::getShootTime() { return shootTime; }
 
 const float Game::getLevelGround() { return levelGround; }
-
-const float Game::getG() { return g; }
-
-const float Game::getJump() { return jump; }
 
 const float Game::getBulletSpeed() { return bulletSpeed; }
 
@@ -387,3 +417,5 @@ const std::vector<sf::CircleShape> &Game::getBullets() const { return bullets; }
 int Game::getContainerSize() { return static_cast<int>(blocks.size()); };
 
 unsigned int Game::getScore() const { return score; }
+
+unsigned int Game::getKilled() const { return killed; }

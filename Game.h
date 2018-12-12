@@ -45,8 +45,6 @@ public:
     // funzioni getter
     int getMaxY() const;
     int getContainerSize();
-    static const float getG();
-    static const float getJump();
     float getCreationRate() const;
     static const float getShootTime();
     static const float getLevelGround();
@@ -59,19 +57,20 @@ public:
 
     // funzioni per observer
     void setScore(unsigned int score);
+    void setKilled(unsigned int killed);
     unsigned int getScore() const;
+    unsigned int getKilled() const;
     void notify() override;
     void unsubscribe(Observer *o) override;
     void subscribe(Observer *o) override;
-    Window &getWindow() { return window; }
+    void setAchievementString(sf::String string);
 
-    void setAchievementString();
 private:
     int maxY;
     int randomY;
 
     Window window;
-    sf::Clock speedClock;
+    sf::Clock scoreClock;
     sf::Sprite background;
     sf::Vector2i windowSize;
     sf::Texture backgroundTexture;
@@ -85,6 +84,9 @@ private:
     sf::Texture playerTexture3;
     sf::Texture puPlayerTexture1;
     sf::Texture puPlayerTexture2;
+    sf::Texture dePlayerTexture1;
+    sf::Texture dePlayerTexture2;
+    sf::Texture dePlayerTexture3;
     std::vector<sf::CircleShape> bullets;
     std::vector<sf::CircleShape> enemyBullets;
 
@@ -93,11 +95,12 @@ private:
     int counter;
     int tollerance;
     bool isCreated;
+    bool isDefectOn;
     bool isPowerUpOn;
     bool isEnemyCreated;
     float creationRate;
-    static const float g;
-    static const float jump;
+    float g;
+    float jump;
     static const float shootTime;
     static const float bulletSpeed;
     static const float rateIncreaser;
@@ -106,6 +109,7 @@ private:
     sf::Vector2f speed;
     BlockFactory factoryB;
     sf::Clock objectClock;
+    sf::Clock defectClock;
     sf::Clock controlPowerUp;
     std::vector<std::unique_ptr<Block>> blocks;
 
@@ -118,9 +122,10 @@ private:
     sf::Font font;
     sf::Text text;
     sf::Text scoreText;
+    sf::Text achievementText;
     unsigned int score;
+    unsigned int killed;
     std::list<Observer*> observers;
-    
 };
 
 #endif //FLYJOYRIDE_GAME_H

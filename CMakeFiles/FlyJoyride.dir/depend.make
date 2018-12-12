@@ -37,11 +37,9 @@ CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
 CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: FlyingEnemy.h
 
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: Achievement.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Block.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: BlockFactory.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Character.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: DisplayElement.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: EnemyFactory.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: FlyingEnemy.h

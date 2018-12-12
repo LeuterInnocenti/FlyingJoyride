@@ -15,8 +15,6 @@ protected:
 
 TEST_F(GameTest, testSettingConst) {
     ASSERT_EQ(1.7f, game.getBulletSpeed());
-    ASSERT_EQ(0.7f, game.getG());
-    ASSERT_EQ(1.8f, game.getJump());
     ASSERT_EQ(63.0f, game.getLevelGround());
     ASSERT_EQ(1.3f, game.getShootTime());
 }
