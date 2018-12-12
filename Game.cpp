@@ -414,7 +414,13 @@ int Game::getMaxY() const { return maxY; }
 
 const std::vector<sf::CircleShape> &Game::getBullets() const { return bullets; }
 
-int Game::getContainerSize() { return static_cast<int>(blocks.size()); };
+int Game::getBlocksContainerSize() { return static_cast<int>(blocks.size()); };
+
+int Game::getBulletsContainerSize() { return static_cast<int>(bullets.size()); };
+
+int Game::getEnemiesContainerSize() { return static_cast<int>(enemies.size()); };
+
+int Game::getEnemiesBulletsContainerSize() { return static_cast<int>(enemyBullets.size()); };
 
 unsigned int Game::getScore() const { return score; }
 

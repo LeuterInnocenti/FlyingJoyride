@@ -44,22 +44,22 @@ public:
 
     // funzioni getter
     int getMaxY() const;
-    int getContainerSize();
+    int getBlocksContainerSize();
+    int getBulletsContainerSize();
+    int getEnemiesContainerSize();
+    int getEnemiesBulletsContainerSize();
     float getCreationRate() const;
     static const float getShootTime();
     static const float getLevelGround();
     static const float getBulletSpeed();
     const sf::Vector2f &getSpeed() const;
     const std::vector<sf::CircleShape> &getBullets() const;
-
-    // funzioni per test
-    void eraseB(int index) { blocks.erase(blocks.begin() + index); }
+    unsigned int getScore() const;
+    unsigned int getKilled() const;
 
     // funzioni per observer
     void setScore(unsigned int score);
     void setKilled(unsigned int killed);
-    unsigned int getScore() const;
-    unsigned int getKilled() const;
     void notify() override;
     void unsubscribe(Observer *o) override;
     void subscribe(Observer *o) override;
