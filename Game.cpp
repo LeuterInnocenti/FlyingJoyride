@@ -15,10 +15,11 @@ const float Game::levelGround = 63.0f;
 const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
 
-Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
-               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), n(1), killed(0), score(0), jump(1.8),
-               g(0.7), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
-               playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), factoryB(), factoryE() {
+Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(), score(0),
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false), killed(0), jump(1.8),
+               g(0.7), n(1), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
+               playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
+               factoryB(), factoryE() {
 
     font.loadFromFile("arial.ttf");
     backgroundTexture.loadFromFile("Background.png");
@@ -61,21 +62,23 @@ void Game::update() {
         file << std::endl;
         file << "Score: " << score;
         file.close();
-        player.setPlayerTexture(playerTexture3);
         std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
 
     createObjects();
     moveObject();
-    shoot();
-    collision();
     movePlayer();
     deleteObject();
     handleText();
 
     setScore(score);
     setKilled(killed);
+
+    if (!speedPowerUp) {
+        collision();
+        shoot();
+    }
 
     if (scoreClock.getElapsedTime().asSeconds() >= 1.0f) {
         // ogni secondo score aumenta di 1
@@ -93,6 +96,10 @@ void Game::update() {
         isDefectOn = false;
         jump = -jump;
         g = -g;
+    }
+    if (speedPowerUp && speedClock.getElapsedTime().asSeconds() >= 5.0f) {
+        speedPowerUp = false;
+        speed.x /= 20;
     }
     // se uccide 10 nemici ottiene PowerUp
     if (killed == 10)
@@ -173,7 +180,7 @@ void Game::shoot() {
         playerClock.restart();
     }
     moveBullet();
-    if (enemyClock.getElapsedTime().asSeconds() >= shootTime) {
+    if (enemyClock.getElapsedTime().asSeconds() >= shootTime * 1.5f) {
         createEnemyBullet();
         enemyClock.restart();
     }
@@ -240,7 +247,8 @@ void Game::createObjects() {
             counter++;
         }
         // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
-        if (counter % 7 == 0 && randomCreation() == 1 && !isPowerUpOn && !isEnemyCreated && !isDefectOn) {
+        if (counter % 7 == 0 && randomCreation() == 1 &&
+            !isPowerUpOn && !isEnemyCreated && !isDefectOn && !speedPowerUp) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
             randomPos();
             block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
@@ -305,7 +313,10 @@ void Game::collision() {
                     controlPowerUp.restart();
                 } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                     // se character non ha PowerUp e interseca normalBlock muore
-                    player.setPlayerTexture(playerTexture3);
+                    if (isDefectOn)
+                        player.setPlayerTexture(dePlayerTexture3);
+                    else
+                        player.setPlayerTexture(playerTexture3);
                     player.gameOver(true);
                 }
             }
@@ -316,11 +327,16 @@ void Game::collision() {
                     jump = -jump;
                     g = -g;
                     defectClock.restart();
-                }
-                /*else if (randomPowerUp() == 0) { // si attiva il terzo powerUp }*/
-                else {
-                    isPowerUpOn = true;
+                } else if (randomPowerUp() == 0) {
+                    // si attiva il terzo powerUp
+                    speedPowerUp = true;
+                    speed.x *= 20;
+                    score += 50;
+                    notify();
+                    speedClock.restart();
+                } else {
                     // si attiva powerUp doppia vita
+                    isPowerUpOn = true;
                 }
                 score += 10;
                 notify();
@@ -346,7 +362,10 @@ void Game::collision() {
                 controlPowerUp.restart();
             } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                 // se character non ha PowerUp e interseca enemy muore
-                player.setPlayerTexture(playerTexture3);
+                if (isDefectOn)
+                    player.setPlayerTexture(dePlayerTexture3);
+                else
+                    player.setPlayerTexture(playerTexture3);
                 player.gameOver(true);
             }
         }
@@ -369,7 +388,10 @@ void Game::collision() {
                 controlPowerUp.restart();
             } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                 // se character non ha PowerUp e interseca enemyBullet muore
-                player.setPlayerTexture(playerTexture3);
+                if (isDefectOn)
+                    player.setPlayerTexture(dePlayerTexture3);
+                else
+                    player.setPlayerTexture(playerTexture3);
                 player.gameOver(true);
             }
         }

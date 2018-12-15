@@ -159,7 +159,6 @@ TEST_F(GameTest, testCollisionPlayerFlyingEnemy) {
     }
 }
 
-// Bullet - Enemy
 TEST_F(GameTest, testCollisionBulletShootingEnemy) {
     std::unique_ptr<Enemy> testEnemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
     game.randomPos();

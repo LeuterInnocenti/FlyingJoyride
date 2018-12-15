@@ -106,6 +106,7 @@ private:
     bool isCreated;
     bool isDefectOn;
     bool isPowerUpOn;
+    bool speedPowerUp;
     float creationRate;
     bool isEnemyCreated;
     static const int textSize;
@@ -116,6 +117,7 @@ private:
 
     sf::Vector2f speed;
     BlockFactory factoryB;
+    sf::Clock speedClock;
     sf::Clock objectClock;
     sf::Clock defectClock;
     sf::Clock controlPowerUp;
