@@ -11,24 +11,30 @@ protected:
     Window window;
     Enemy testEnemy;
     Block testBlock;
-    class NormalBlock testNormalBlock;
-    class ShootingEnemy testShootingEnemy;
-    class FlyingEnemy testFlyingEnemy;
     Character testPlayer;
+
     sf::CircleShape testEnemyBullet;
     sf::CircleShape testBullet;
+
     std::vector<sf::CircleShape> bullets;
     std::vector<std::unique_ptr<Block>> blocks;
     std::vector<std::unique_ptr<Enemy>> enemies;
     std::vector<sf::CircleShape> enemyBullets;
+
     sf::Texture testPlayerTexture;
 
+    BlockFactory factoryB;
+    EnemyFactory factoryE;
+
+    bool collision = false;
 };
 
 TEST_F(GameTest, testSettingConst) {
     ASSERT_EQ(1.7f, game.getBulletSpeed());
     ASSERT_EQ(63.0f, game.getLevelGround());
     ASSERT_EQ(1.3f, game.getShootTime());
+    ASSERT_EQ(0.120f, game.getRateIncreaser());
+    ASSERT_EQ(0.1f, game.getSpeedIncreaser());
 }
 
 TEST_F(GameTest, testAssignment) {
@@ -80,30 +86,6 @@ TEST_F(GameTest, testDeletingBullets) {
     }
 }
 
-TEST_F(GameTest, testCollisionPlayerNormalBlock) {
-    testPlayerTexture.loadFromFile("frame-1.png");
-    testPlayer.setPlayerTexture(testPlayerTexture);
-    testNormalBlock.setPosition(100,100);
-    testPlayer.setPlayerPosition(100, 100);
-    ASSERT_TRUE(testNormalBlock.getGlobalBounds().intersects(testPlayer.getBound()));
-}
-
-TEST_F(GameTest, testCollisionPlayerShootingEnemy) {
-    testPlayerTexture.loadFromFile("frame-1.png");
-    testPlayer.setPlayerTexture(testPlayerTexture);
-    testShootingEnemy.setPosition(100,100);
-    testPlayer.setPlayerPosition(100, 100);
-    ASSERT_TRUE(testShootingEnemy.getGlobalBounds().intersects(testPlayer.getBound()));
-}
-
-TEST_F(GameTest, testCollisionPlayerFlyingEnemy) {
-    testPlayerTexture.loadFromFile("frame-1.png");
-    testPlayer.setPlayerTexture(testPlayerTexture);
-    testFlyingEnemy.setPosition(100,100);
-    testPlayer.setPlayerPosition(100, 100);
-    ASSERT_TRUE(testFlyingEnemy.getGlobalBounds().intersects(testPlayer.getBound()));
-}
-
 TEST_F(GameTest, testMovingPlayer) {
     float lg = game.getLevelGround();
     game.movePlayer();
@@ -115,4 +97,76 @@ TEST_F(GameTest, testBullet) {
     game.createBullet();
     ASSERT_EQ(sf::Color::Black, game.getBullets()[0].getFillColor());
     ASSERT_EQ(10, game.getBullets()[0].getRadius());
+}
+
+TEST_F(GameTest, testCollisionPlayerNormalBlock) {
+    std::unique_ptr<Block> testBlock = factoryB.createBlock(BlockType::NormalBlock);
+    game.randomPos();
+    testBlock->setPosition(sf::Vector2f(2 * game.getWindowSize().x, game.getRandomY()));
+    testPlayerTexture.loadFromFile("frame-1.png");
+    testPlayer.setPlayerTexture(testPlayerTexture);
+    testPlayer.setPlayerPosition(game.getWindowSize().x, game.getRandomY());
+    testBlock->move(-game.getSpeed().x, 0);
+    if (testBlock->getGlobalBounds().intersects(testPlayer.getBound())) {
+        if (game.getIsPowerUpOn())
+            ASSERT_FALSE(game.getIsPowerUpOn());
+        else
+            ASSERT_TRUE(collision);
+    }
+}
+
+TEST_F(GameTest, testCollisionPlayerPowerUpBlock) {
+    std::unique_ptr<Block> testBlock = factoryB.createBlock(BlockType::PowerUpBlock);
+    game.randomPos();
+    testBlock->setPosition(sf::Vector2f(2 * game.getWindowSize().x, game.getRandomY()));
+    testPlayerTexture.loadFromFile("frame-1.png");
+    testPlayer.setPlayerTexture(testPlayerTexture);
+    testPlayer.setPlayerPosition(game.getWindowSize().x, game.getRandomY());
+    testBlock->move(-game.getSpeed().x, 0);
+    if (testBlock->getGlobalBounds().intersects(testPlayer.getBound()))
+        ASSERT_EQ(true, game.getIsPowerUpOn());
+}
+
+TEST_F(GameTest, testCollisionPlayerShootingEnemy) {
+    std::unique_ptr<Enemy> testEnemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
+    game.randomPos();
+    testEnemy->setPosition(sf::Vector2f(2 * game.getWindowSize().x, game.getRandomY()));
+    testPlayerTexture.loadFromFile("frame-1.png");
+    testPlayer.setPlayerTexture(testPlayerTexture);
+    testPlayer.setPlayerPosition(game.getWindowSize().x, game.getRandomY());
+    testEnemy->move(-game.getSpeed().x, 0);
+    if (testEnemy->getGlobalBounds().intersects(testPlayer.getBound())) {
+        if (game.getIsPowerUpOn())
+            ASSERT_FALSE(game.getIsPowerUpOn());
+        else
+            ASSERT_TRUE(collision);
+    }
+}
+
+TEST_F(GameTest, testCollisionPlayerFlyingEnemy) {
+    std::unique_ptr<Enemy> testEnemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
+    game.randomPos();
+    testEnemy->setPosition(sf::Vector2f(2 * game.getWindowSize().x, game.getRandomY()));
+    testPlayerTexture.loadFromFile("frame-1.png");
+    testPlayer.setPlayerTexture(testPlayerTexture);
+    testPlayer.setPlayerPosition(game.getWindowSize().x, game.getRandomY());
+    testEnemy->move(-game.getSpeed().x, 0);
+    if (testEnemy->getGlobalBounds().intersects(testPlayer.getBound())) {
+        if (game.getIsPowerUpOn())
+            ASSERT_FALSE(game.getIsPowerUpOn());
+        else
+            ASSERT_TRUE(collision);
+    }
+}
+
+// Bullet - Enemy
+TEST_F(GameTest, testCollisionBulletShootingEnemy) {
+    std::unique_ptr<Enemy> testEnemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
+    game.randomPos();
+    testEnemy->setPosition(sf::Vector2f(2 * game.getWindowSize().x, game.getRandomY()));
+    testBullet.setPosition(game.getWindowSize().x, game.getRandomY());
+    testEnemy->move(-game.getSpeed().x, 0);
+    testBullet.move(game.getSpeed().x, 0);
+    if (testEnemy->getGlobalBounds().intersects(testBullet.getGlobalBounds()))
+        ASSERT_TRUE(collision);
 }
