@@ -19,6 +19,6 @@ int main() {
     while (!game.GetWindow()->isDone()) {
         game.render();
         game.update();
-        std::this_thread::sleep_for(std::chrono::milliseconds(MS_PER_FRAME));
+        //std::this_thread::sleep_for(std::chrono::milliseconds(MS_PER_FRAME));
     }
 }

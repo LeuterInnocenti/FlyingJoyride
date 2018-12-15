@@ -14,7 +14,7 @@ Achievement::~Achievement() {
     detach();
 }
 
-// carica la stringa indicata da string[index]
+// carica la stringa
 void Achievement::loadAch() {
     std::ifstream in("achievements.txt");
     int j = 0;

@@ -4,9 +4,9 @@
     <generated>
       <config projectName="FlyJoyride" targetName="gtest" />
       <config projectName="FlyJoyride" targetName="core" />
-      <config projectName="FlyJoyride" targetName="runAllTests" />
-      <config projectName="FlyJoyride" targetName="gtest_main" />
       <config projectName="FlyJoyride" targetName="FlyJoyride" />
+      <config projectName="FlyJoyride" targetName="gtest_main" />
+      <config projectName="FlyJoyride" targetName="runAllTests" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -17,10 +17,14 @@
   <component name="ChangeListManager">
     <list default="true" id="662df83b-ada6-4c57-bab5-8436fab25d9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Achievement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Achievement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/GameFixture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GameFixture.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/runAllTests" beforeDir="false" afterPath="$PROJECT_DIR$/Test/runAllTests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -39,11 +43,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GameFixture.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#52#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="26" />
+            <state relative-caret-position="1980">
+              <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
               <folding>
                 <element signature="e#105#120#0" expanded="true" />
               </folding>
@@ -54,8 +70,8 @@
       <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="286" selection-start-line="286" selection-end-line="286" />
+            <state relative-caret-position="975">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#52#69#0" expanded="true" />
               </folding>
@@ -63,32 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Character.cpp">
+      <file leaf-file-name="score.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/score.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Character.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Character.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFixture.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="93" column="43" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
-              <folding>
-                <element signature="e#52#76#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -157,19 +152,20 @@
         <option value="$PROJECT_DIR$/ShootingEnemy.cpp" />
         <option value="$PROJECT_DIR$/ShootingEnemy.h" />
         <option value="$PROJECT_DIR$/Enemy.h" />
-        <option value="$PROJECT_DIR$/Window.cpp" />
-        <option value="$PROJECT_DIR$/Window.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Observer.h" />
         <option value="$PROJECT_DIR$/Subject.h" />
         <option value="$PROJECT_DIR$/DisplayElement.h" />
         <option value="$PROJECT_DIR$/Achievement.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/achievements.txt" />
-        <option value="$PROJECT_DIR$/Achievement.cpp" />
-        <option value="$PROJECT_DIR$/Game.cpp" />
-        <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/Test/GameFixture.cpp" />
+        <option value="$PROJECT_DIR$/Achievement.cpp" />
+        <option value="$PROJECT_DIR$/Game.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Window.h" />
+        <option value="$PROJECT_DIR$/Window.cpp" />
+        <option value="$PROJECT_DIR$/score.txt" />
+        <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
   </component>
@@ -195,11 +191,6 @@
             <path>
               <item name="FlyJoyride" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProvaProgetto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlyJoyride" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProvaProgetto" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,7 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.TestFlyJoyride">
+  <component name="RunManager" selected="Application.FlyJoyride">
     <configuration name="TestFlyJoyride" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FlyJoyride" TARGET_NAME="runAllTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FlyJoyride" RUN_TARGET_NAME="runAllTests" TEST_MODE="SUITE_TEST" />
     <list>
       <item itemvalue="Application.FlyJoyride" />
@@ -302,7 +293,8 @@
       <workItem from="1543424248999" duration="13600000" />
       <workItem from="1543519628133" duration="61468000" />
       <workItem from="1544192489379" duration="58996000" />
-      <workItem from="1544536136689" duration="18895000" />
+      <workItem from="1544536136689" duration="39858000" />
+      <workItem from="1544873082069" duration="3439000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1540910290566</created>
@@ -322,39 +314,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 07m 35s.xml">
+    <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 38m 25s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 13m 27s.xml">
+    <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 39m 59s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 14m 46s.xml">
+    <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 52m 59s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 15m 23s.xml">
+    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 10m 15s.xml">
+      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 30m 23s.xml">
+      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 40m 30s.xml">
+      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 40m 38s.xml">
+      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.15 at 10h 23m 25s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 19m 22s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.15 at 10h 36m 24s.xml">
+      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 21m 29s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 26m 39s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 29m 01s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 30m 02s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.12 at 16h 30m 27s.xml">
+    <history-entry file="TestFlyJoyride - 2018.12.15 at 10h 43m 40s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394535000" />
+    <option name="totallyTimeSpent" value="418937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,11 +363,11 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.29388404" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.48803827" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.48" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32854864" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32615384" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45773524" />
+      <window_info anchor="bottom" x="10" y="210" width="1259" height="349" id="Run" order="2" weight="0.29076922" />
       <window_info id="Structure" order="1" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32854864" />
       <window_info id="Favorites" order="2" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
@@ -434,10 +426,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DisplayElement.h">
+    <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="960">
+          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+          <folding>
+            <element signature="e#52#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -445,9 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#166#184#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,16 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlockFactory.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#52#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -574,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding>
-            <element signature="e#133#151#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,9 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#52#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,9 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#121#139#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,9 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#52#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -673,57 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Window.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Window.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Subject.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#52#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Achievement.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding>
-            <element signature="e#166#184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Achievement.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#52#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/achievements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -738,6 +661,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Character.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Enemy.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -745,37 +675,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="26" />
-          <folding>
-            <element signature="e#105#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/lib/googletest/include/gtest/gtest.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="5240">
+          <caret line="410" column="17" selection-start-line="410" selection-start-column="17" selection-end-line="410" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.cpp">
+    <entry file="file://$PROJECT_DIR$/Subject.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="286" selection-start-line="286" selection-end-line="286" />
-          <folding>
-            <element signature="e#52#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Character.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -786,13 +696,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
+    <entry file="file://$PROJECT_DIR$/Achievement.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="93" column="43" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Achievement.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#52#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding>
+            <element signature="e#52#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#52#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="132" column="35" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+          <folding>
+            <element signature="e#105#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#52#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>

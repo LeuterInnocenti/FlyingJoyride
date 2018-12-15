@@ -93,6 +93,8 @@ thread
 -
 iostream
 -
+fstream
+-
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 list

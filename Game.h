@@ -33,29 +33,34 @@ public:
     void moveEnemyBullet();
     void createEnemyBullet();
 
-    void moveObject();
-    void deleteObject();
-
     void collision();
     void createObjects();
+
+    void moveObject();
+    void deleteObject();
 
     int randomPos();
     int randomCreation();
 
     // funzioni getter
     int getMaxY() const;
+    int getRandomY() const;
+    bool getIsPowerUpOn() const;
     int getBlocksContainerSize();
+    unsigned int getScore() const;
+    float getCreationRate() const;
     int getBulletsContainerSize();
     int getEnemiesContainerSize();
-    int getEnemiesBulletsContainerSize();
-    float getCreationRate() const;
+    unsigned int getKilled() const;
     static const float getShootTime();
     static const float getLevelGround();
     static const float getBulletSpeed();
     const sf::Vector2f &getSpeed() const;
+    int getEnemiesBulletsContainerSize();
+    static const float getRateIncreaser();
+    static const float getSpeedIncreaser();
+    const sf::Vector2i &getWindowSize() const;
     const std::vector<sf::CircleShape> &getBullets() const;
-    unsigned int getScore() const;
-    unsigned int getKilled() const;
 
     // funzioni per observer
     void setScore(unsigned int score);
@@ -91,16 +96,16 @@ private:
     std::vector<sf::CircleShape> enemyBullets;
 
     int n;
+    float g;
+    float jump;
     int blockX;
     int counter;
     int tollerance;
     bool isCreated;
     bool isDefectOn;
     bool isPowerUpOn;
-    bool isEnemyCreated;
     float creationRate;
-    float g;
-    float jump;
+    bool isEnemyCreated;
     static const float shootTime;
     static const float bulletSpeed;
     static const float rateIncreaser;

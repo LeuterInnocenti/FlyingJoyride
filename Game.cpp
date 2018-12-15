@@ -7,6 +7,7 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
+#include <fstream>
 
 const float Game::shootTime = 1.3f;
 const float Game::bulletSpeed = 1.7f;
@@ -57,13 +58,20 @@ void Game::update() {
 
     if (player.getDeath()) {
         player.setPlayerTexture(playerTexture3);
-        std::this_thread::sleep_for(std::chrono::milliseconds(110));
+        std::ofstream file;
+        file.open("score.txt", std::ios::out | std::ios::app);
+        file << std::endl;
+        file << "Score: " << score;
+        file.close();
+
+        std::this_thread::sleep_for(std::chrono::seconds(3));
         window.setDone();
     }
+
     createObjects();
+    moveObject();
     shoot();
     collision();
-    moveObject();
     movePlayer();
     deleteObject();
     handleText();
@@ -425,3 +433,13 @@ int Game::getEnemiesBulletsContainerSize() { return static_cast<int>(enemyBullet
 unsigned int Game::getScore() const { return score; }
 
 unsigned int Game::getKilled() const { return killed; }
+
+const float Game::getRateIncreaser() { return rateIncreaser; }
+
+const float Game::getSpeedIncreaser() { return speedIncreaser; }
+
+int Game::getRandomY() const { return randomY; }
+
+const sf::Vector2i &Game::getWindowSize() const { return windowSize; }
+
+bool Game::getIsPowerUpOn() const { return isPowerUpOn; }
