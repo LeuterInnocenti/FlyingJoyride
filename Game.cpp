@@ -7,8 +7,8 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
-#include <fstream>
 
+const int Game::textSize = 30;
 const float Game::shootTime = 1.3f;
 const float Game::bulletSpeed = 1.7f;
 const float Game::levelGround = 63.0f;
@@ -54,17 +54,15 @@ Game::~Game() {
 void Game::update() {
     window.update();
     background.move(-speed.x, 0);
-    achievementText.move(-speed.x, 0);
+    achievementText.move(-speed.x * 1.5f, 0);
 
     if (player.getDeath()) {
-        player.setPlayerTexture(playerTexture3);
-        std::ofstream file;
         file.open("score.txt", std::ios::out | std::ios::app);
         file << std::endl;
         file << "Score: " << score;
         file.close();
-
-        std::this_thread::sleep_for(std::chrono::seconds(3));
+        player.setPlayerTexture(playerTexture3);
+        std::this_thread::sleep_for(std::chrono::milliseconds(110));
         window.setDone();
     }
 
@@ -87,7 +85,7 @@ void Game::update() {
     }
     if (score >= n * 20) {
         speed.x += speedIncreaser;
-        if (score <= 200)
+        if (score <= 150)
             creationRate -= rateIncreaser;
         n++;
     }
@@ -96,6 +94,9 @@ void Game::update() {
         jump = -jump;
         g = -g;
     }
+    // se uccide 10 nemici ottiene PowerUp
+    if (killed == 10)
+        isPowerUpOn = true;
 }
 
 // gestione del testo
@@ -108,7 +109,7 @@ void Game::handleText() {
     scoreText.setFont(font);
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(25);
-    scoreText.setPosition(100, 6);
+    scoreText.setPosition(100, 5);
     scoreText.setString(std::to_string(score));
 }
 
@@ -162,8 +163,8 @@ void Game::movePlayer() {
     if (player.getPlayerPosition().y + player.getPlayerSize().y >= window.getWindowSize().y - levelGround)
         player.setPlayerPosition(player.getPlayerPosition().x,
                                  window.getWindowSize().y - player.getPlayerSize().y - levelGround);
-    if (player.getPlayerPosition().y <= 0)
-        player.setPlayerPosition(player.getPlayerPosition().x, 0);
+    if (player.getPlayerPosition().y <= textSize)
+        player.setPlayerPosition(player.getPlayerPosition().x, textSize);
 }
 
 void Game::shoot() {
@@ -310,14 +311,16 @@ void Game::collision() {
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
             if (test == nullptr) {
-                if (randomCreation() == 0) {
+                if (randomPowerUp() == 1) {
                     isDefectOn = true;
                     jump = -jump;
                     g = -g;
                     defectClock.restart();
-                } else {
-                    PowerUpBlock::activePowerUp();
+                }
+                /*else if (randomPowerUp() == 0) { // si attiva il terzo powerUp }*/
+                else {
                     isPowerUpOn = true;
+                    // si attiva powerUp doppia vita
                 }
                 score += 10;
                 notify();
@@ -380,6 +383,10 @@ int Game::randomPos() {
 }
 
 int Game::randomCreation() {
+    return (rand() % 2);
+}
+
+int Game::randomPowerUp() {
     return (rand() % 2);
 }
 

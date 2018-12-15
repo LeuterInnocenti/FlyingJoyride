@@ -7,6 +7,7 @@
 
 #include <list>
 #include <string>
+#include <fstream>
 
 #include "Block.h"
 #include "Enemy.h"
@@ -41,6 +42,7 @@ public:
 
     int randomPos();
     int randomCreation();
+    int randomPowerUp();
 
     // funzioni getter
     int getMaxY() const;
@@ -106,6 +108,7 @@ private:
     bool isPowerUpOn;
     float creationRate;
     bool isEnemyCreated;
+    static const int textSize;
     static const float shootTime;
     static const float bulletSpeed;
     static const float rateIncreaser;
@@ -131,6 +134,8 @@ private:
     unsigned int score;
     unsigned int killed;
     std::list<Observer*> observers;
+
+    std::ofstream file;
 };
 
 #endif //FLYJOYRIDE_GAME_H

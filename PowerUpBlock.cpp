@@ -12,5 +12,3 @@ PowerUpBlock::PowerUpBlock() {
 }
 
 PowerUpBlock::~PowerUpBlock() {}
-
-void PowerUpBlock::activePowerUp() {}
