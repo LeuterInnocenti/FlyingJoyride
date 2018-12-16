@@ -102,6 +102,7 @@ private:
     float jump;
     int blockX;
     int counter;
+    int textCount;
     int tollerance;
     bool isCreated;
     bool isDefectOn;
@@ -132,6 +133,7 @@ private:
     sf::Font font;
     sf::Text text;
     sf::Text scoreText;
+    sf::Text gameOver;
     sf::Text achievementText;
     unsigned int score;
     unsigned int killed;

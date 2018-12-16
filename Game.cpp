@@ -18,7 +18,7 @@ const float Game::rateIncreaser = 0.120;
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(), score(0),
                isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false), killed(0), jump(1.8),
                g(0.7), n(1), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
-               playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
+               textCount(0), playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
                factoryB(), factoryE() {
 
     font.loadFromFile("arial.ttf");
@@ -57,13 +57,12 @@ void Game::update() {
     background.move(-speed.x, 0);
     achievementText.move(-speed.x * 1.5f, 0);
 
-    if (player.getDeath()) {
+    if (player.getDeath() && textCount == 0) {
         file.open("score.txt", std::ios::out | std::ios::app);
         file << std::endl;
         file << "Score: " << score;
         file.close();
-        std::this_thread::sleep_for(std::chrono::milliseconds(110));
-        window.setDone();
+        textCount++;
     }
 
     createObjects();
@@ -79,8 +78,7 @@ void Game::update() {
         collision();
         shoot();
     }
-
-    if (scoreClock.getElapsedTime().asSeconds() >= 1.0f) {
+    if (scoreClock.getElapsedTime().asSeconds() >= 1.0f && !player.getDeath()) {
         // ogni secondo score aumenta di 1
         score++;
         notify();
@@ -97,7 +95,7 @@ void Game::update() {
         jump = -jump;
         g = -g;
     }
-    if (speedPowerUp && speedClock.getElapsedTime().asSeconds() >= 5.0f) {
+    if (speedPowerUp && speedClock.getElapsedTime().asSeconds() >= 3.0f) {
         speedPowerUp = false;
         speed.x /= 20;
     }
@@ -113,11 +111,18 @@ void Game::handleText() {
     text.setFillColor(sf::Color::Black);
     text.setCharacterSize(25);
     text.setPosition(10, 5);
+
     scoreText.setFont(font);
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(25);
     scoreText.setPosition(100, 5);
     scoreText.setString(std::to_string(score));
+
+    gameOver.setFont(font);
+    gameOver.setString("Game Over !");
+    gameOver.setFillColor(sf::Color::Blue);
+    gameOver.setCharacterSize(150);
+    gameOver.setPosition(110, 200);
 }
 
 void Game::setAchievementString(sf::String string) {
@@ -132,18 +137,29 @@ void Game::setAchievementString(sf::String string) {
 void Game::render() {
     window.beginDraw();
     window.draw(background);
-    window.draw(achievementText);
-    player.render(*window.getRenderWindow());
-    for (auto &block : blocks)
-        window.draw(*block);
-    for (auto &enemy : enemies)
-        window.draw(*enemy);
-    for (auto &b : bullets)
-        window.draw(b);
-    for (auto &b : enemyBullets)
-        window.draw(b);
-    window.draw(text);
-    window.draw(scoreText);
+    if (!player.getDeath()) {
+        window.draw(achievementText);
+        player.render(*window.getRenderWindow());
+        for (auto &block : blocks)
+            window.draw(*block);
+        for (auto &enemy : enemies)
+            window.draw(*enemy);
+        for (auto &b : bullets)
+            window.draw(b);
+        for (auto &b : enemyBullets)
+            window.draw(b);
+        window.draw(text);
+        window.draw(scoreText);
+    } else {
+        //std::this_thread::sleep_for(std::chrono::milliseconds(120));
+        text.setCharacterSize(50);
+        scoreText.setCharacterSize(50);
+        text.setPosition(420, 450);
+        scoreText.setPosition(595, 450);
+        window.draw(gameOver);
+        window.draw(text);
+        window.draw(scoreText);
+    }
     window.endDraw();
 }
 
@@ -333,6 +349,7 @@ void Game::collision() {
                     speed.x *= 20;
                     score += 50;
                     notify();
+                    enemyBullets.clear();
                     speedClock.restart();
                 } else {
                     // si attiva powerUp doppia vita

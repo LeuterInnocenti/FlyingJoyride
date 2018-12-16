@@ -16,14 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="662df83b-ada6-4c57-bab5-8436fab25d9e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/GameFixture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/GameFixture.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/runAllTests" beforeDir="false" afterPath="$PROJECT_DIR$/Test/runAllTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score.txt" afterDir="false" />
     </list>
@@ -44,6 +39,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="e#52#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameFixture.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,7 +66,7 @@
       <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="-294">
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#52#69#0" expanded="true" />
@@ -71,8 +78,8 @@
       <file leaf-file-name="score.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/score.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            <state relative-caret-position="480">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -96,6 +103,7 @@
       <find>random</find>
       <find>death</find>
       <find>eraseB</find>
+      <find>speed.x *</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +147,6 @@
         <option value="$PROJECT_DIR$/Observer.h" />
         <option value="$PROJECT_DIR$/Subject.h" />
         <option value="$PROJECT_DIR$/DisplayElement.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Window.h" />
         <option value="$PROJECT_DIR$/Window.cpp" />
         <option value="$PROJECT_DIR$/PowerUpBlock.cpp" />
@@ -149,12 +156,13 @@
         <option value="$PROJECT_DIR$/Achievement.h" />
         <option value="$PROJECT_DIR$/Achievement.cpp" />
         <option value="$PROJECT_DIR$/achievements.txt" />
-        <option value="$PROJECT_DIR$/Game.h" />
         <option value="$APPLICATION_CONFIG_DIR$/clion.vmoptions" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Test/GameFixture.cpp" />
-        <option value="$PROJECT_DIR$/Game.cpp" />
+        <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/score.txt" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
   </component>
@@ -288,7 +296,7 @@
       <workItem from="1543519628133" duration="61468000" />
       <workItem from="1544192489379" duration="58996000" />
       <workItem from="1544536136689" duration="39858000" />
-      <workItem from="1544873082069" duration="28783000" />
+      <workItem from="1544873082069" duration="40231000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1540910290566</created>
@@ -308,9 +316,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 39m 59s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 52m 59s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -338,9 +343,12 @@
     <history-entry file="TestFlyJoyride - 2018.12.15 at 20h 23m 35s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.16 at 02h 50m 42s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="444281000" />
+    <option name="totallyTimeSpent" value="455729000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,12 +365,12 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.2915012" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.47049442" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.46923077" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.31692308" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32535884" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3276923" />
-      <window_info anchor="bottom" x="10" y="210" width="1259" height="349" id="Run" order="2" weight="0.31897926" />
+      <window_info anchor="bottom" x="10" y="210" width="1259" height="349" id="Run" order="2" weight="0.31846154" />
       <window_info id="Structure" order="1" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32854864" />
       <window_info id="Favorites" order="2" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
@@ -441,6 +449,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#105#120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding>
-            <element signature="e#52#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Window.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -726,15 +727,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="340">
+          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+          <folding>
+            <element signature="e#105#120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/clion.vmoptions">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="300">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#52#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,16 +755,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/clion.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/score.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="480">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="-294">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#52#69#0" expanded="true" />
