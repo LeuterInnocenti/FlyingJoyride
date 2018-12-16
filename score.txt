@@ -25,3 +25,9 @@ Score: 117
 Score: 263
 Score: 196
 Score: 169
+Score: 111
+Score: 241
+Score: 100
+Score: 156
+Score: 153
+Score: 128
