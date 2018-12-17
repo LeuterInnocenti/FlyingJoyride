@@ -50,7 +50,6 @@ void Window::endDraw() {
 
 void Window::draw(sf::Drawable &drawable) {
     window.draw(drawable);
-
 }
 
 sf::RenderWindow *Window::getRenderWindow() {

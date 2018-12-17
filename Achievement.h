@@ -26,9 +26,7 @@ public:
 
 protected:
     char string[MAX_LINES][MAX_LINES_LEN];
-    unsigned int point, a, b, c;
-    sf::Text achievement;
-    sf::Font font;
+    unsigned int point, kill, a, b, c, d, e;
     Game* game;
 };
 

@@ -39,7 +39,11 @@ Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
+list
+-
 string
+-
+fstream
 -
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
@@ -47,6 +51,8 @@ Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 Window.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
+Subject.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 BlockFactory.h
@@ -60,6 +66,8 @@ SFML/Graphics.hpp
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
@@ -67,6 +75,10 @@ Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+
+/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
+Observer.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/CharacterFixture.cpp
 gtest/gtest.h
