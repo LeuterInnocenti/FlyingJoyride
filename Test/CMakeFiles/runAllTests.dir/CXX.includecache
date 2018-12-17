@@ -61,6 +61,8 @@ EnemyFactory.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
 SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
+SFML/Audio.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Audio.hpp
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 Block.h
@@ -80,27 +82,11 @@ Enemy.h
 Observer.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/CharacterFixture.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
-../Character.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/GameFixture.cpp
 gtest/gtest.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
 ../Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
-../Window.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/runAllTests.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="FlyJoyride" targetName="FlyJoyride" />
-      <config projectName="FlyJoyride" targetName="runAllTests" />
       <config projectName="FlyJoyride" targetName="gtest" />
-      <config projectName="FlyJoyride" targetName="gtest_main" />
       <config projectName="FlyJoyride" targetName="core" />
+      <config projectName="FlyJoyride" targetName="runAllTests" />
+      <config projectName="FlyJoyride" targetName="gtest_main" />
+      <config projectName="FlyJoyride" targetName="FlyJoyride" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -16,10 +16,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="662df83b-ada6-4c57-bab5-8436fab25d9e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/FlyJoyride.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/core.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/core.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlyJoyride.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/FlyJoyride.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CMakeFiles/runAllTests.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/deframe-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/fenemy1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Test/fenemy1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/fenemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/frame-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Test/frame-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/frame-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/lib/googletest/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Test/lib/googletest/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/runAllTests" beforeDir="false" afterPath="$PROJECT_DIR$/Test/runAllTests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deframe-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frame-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/puframe-3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/score.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -27,11 +80,24 @@
     <ignored path="$PROJECT_DIR$/Test/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/Test/lib/googletest/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
@@ -39,35 +105,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="1575">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
               <folding>
-                <element signature="e#52#69#0" expanded="true" />
+                <element signature="e#105#120#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameFixture.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2400">
-              <caret line="160" selection-start-line="160" selection-end-line="160" />
-              <folding>
-                <element signature="e#52#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#52#69#0" expanded="true" />
               </folding>
@@ -75,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.txt" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/score.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            <state relative-caret-position="325">
+              <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -104,6 +158,9 @@
       <find>death</find>
       <find>eraseB</find>
       <find>speed.x *</find>
+      <find>score += 10</find>
+      <find>thread</find>
+      <find>chrono</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,18 +216,12 @@
         <option value="$APPLICATION_CONFIG_DIR$/clion.vmoptions" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Test/GameFixture.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/score.txt" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Game.cpp" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -182,65 +233,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="FlyJoyride" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProvaProgetto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlyJoyride" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProvaProgetto" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Source Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
-              <item name="Test" type="cbb8eebc:String" user="Test" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Project Non-Source Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
-              <item name="Test" type="cbb8eebc:String" user="Test" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Changed Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ProvaProgetto" type="cbb8eebc:String" user="ProvaProgetto" />
             </path>
           </expand>
           <select />
@@ -250,10 +249,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -268,7 +268,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.FlyJoyride">
-    <configuration name="TestFlyJoyride" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FlyJoyride" TARGET_NAME="runAllTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FlyJoyride" RUN_TARGET_NAME="runAllTests" TEST_MODE="SUITE_TEST" />
+    <configuration name="TestFlyJoyride" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FlyJoyride" TARGET_NAME="runAllTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FlyJoyride" RUN_TARGET_NAME="runAllTests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.FlyJoyride" />
       <item itemvalue="Google Test.TestFlyJoyride" />
@@ -296,7 +301,9 @@
       <workItem from="1543519628133" duration="61468000" />
       <workItem from="1544192489379" duration="58996000" />
       <workItem from="1544536136689" duration="39858000" />
-      <workItem from="1544873082069" duration="40231000" />
+      <workItem from="1544873082069" duration="52148000" />
+      <workItem from="1545051832269" duration="5083000" />
+      <workItem from="1545059025466" duration="1492000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1540910290566</created>
@@ -316,24 +323,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFlyJoyride - 2018.12.14 at 22h 52m 59s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 10m 15s.xml">
-      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 30m 23s.xml">
-      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 40m 30s.xml">
-      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.14 at 23h 40m 38s.xml">
-      <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TestFlyJoyride - 2018.12.15 at 10h 23m 25s.xml">
-      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="GameTest_testCollisionBulletShootingEnemy - 2018.12.15 at 10h 36m 24s.xml">
       <configuration name="GameTest.testCollisionBulletShootingEnemy" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -346,9 +335,27 @@
     <history-entry file="TestFlyJoyride - 2018.12.16 at 02h 50m 42s.xml">
       <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.16 at 15h 34m 36s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.16 at 16h 55m 06s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.16 at 16h 55m 45s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.17 at 14h 07m 51s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.17 at 16h 27m 18s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TestFlyJoyride - 2018.12.17 at 16h 28m 51s.xml">
+      <configuration name="TestFlyJoyride" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455729000" />
+    <option name="totallyTimeSpent" value="474221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,24 +370,26 @@
     <frame x="0" y="23" width="1280" height="724" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.2915012" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.46923077" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.31692308" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32535884" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3276923" />
-      <window_info anchor="bottom" x="10" y="210" width="1259" height="349" id="Run" order="2" weight="0.31846154" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920255" weight="0.2907916" />
       <window_info id="Structure" order="1" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32854864" />
       <window_info id="Favorites" order="2" sideWeight="0.50079745" side_tool="true" weight="0.29308975" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
+      <window_info active="true" anchor="bottom" x="10" y="210" width="1259" height="349" id="Run" order="2" visible="true" weight="0.32618684" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39846155" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.3154671" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32854864" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32535884" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3276923" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.46707505" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32956383" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,60 +420,26 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="11" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Achievement.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Achievement.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#52#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#105#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#52#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NormalBlockFactory.h" />
     <entry file="file://$PROJECT_DIR$/NormalBlockFactory.cpp" />
     <entry file="file://$PROJECT_DIR$/PowerUpBlockFactory.h" />
@@ -480,13 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="1647" column="24" selection-start-line="1647" selection-start-column="24" selection-end-line="1647" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockFactory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -718,27 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
-          <folding>
-            <element signature="e#105#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
             <element signature="e#52#69#0" expanded="true" />
           </folding>
@@ -747,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/GameFixture.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#52#76#0" expanded="true" />
           </folding>
@@ -762,17 +713,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="e#105#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4948" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/score.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        <state relative-caret-position="325">
+          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#52#69#0" expanded="true" />
           </folding>

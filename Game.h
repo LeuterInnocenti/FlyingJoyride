@@ -17,6 +17,7 @@
 #include "BlockFactory.h"
 #include "EnemyFactory.h"
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 
 class Game : public Subject {
 public:
@@ -43,6 +44,8 @@ public:
     int randomPos();
     int randomCreation();
     int randomPowerUp();
+
+    void fireAnimation();
 
     // funzioni getter
     int getMaxY() const;
@@ -77,6 +80,7 @@ private:
     int randomY;
 
     Window window;
+    sf::Music music;
     sf::Clock scoreClock;
     sf::Sprite background;
     sf::Vector2i windowSize;
@@ -86,19 +90,22 @@ private:
     Character player;
     sf::Clock playerClock;
     sf::CircleShape bullet;
+    sf::SoundBuffer shootBuffer;
+    sf::Sound shootSound;
     sf::Texture playerTexture1;
     sf::Texture playerTexture2;
-    sf::Texture playerTexture3;
     sf::Texture puPlayerTexture1;
     sf::Texture puPlayerTexture2;
     sf::Texture dePlayerTexture1;
     sf::Texture dePlayerTexture2;
-    sf::Texture dePlayerTexture3;
+    sf::Texture fireTexture1;
+    sf::Texture fireTexture2;
+    sf::Sprite fireSprite;
     std::vector<sf::CircleShape> bullets;
     std::vector<sf::CircleShape> enemyBullets;
 
-    int n;
     float g;
+    int n, m;
     float jump;
     int blockX;
     int counter;
@@ -117,21 +124,28 @@ private:
     static const float speedIncreaser;
 
     sf::Vector2f speed;
+    sf::Vector2f oldSpeed;
     BlockFactory factoryB;
+    sf::Clock fireClock;
     sf::Clock speedClock;
     sf::Clock objectClock;
     sf::Clock defectClock;
     sf::Clock controlPowerUp;
     std::vector<std::unique_ptr<Block>> blocks;
+    sf::SoundBuffer powerUpBuffer;
+    sf::Sound powerUpSound;
 
     sf::Clock enemyClock;
     EnemyFactory factoryE;
     sf::Texture fEnemyTexture;
     sf::Texture sEnemyTexture;
     std::vector<std::unique_ptr<Enemy>> enemies;
+    sf::SoundBuffer enemyDeadBuffer;
+    sf::Sound enemyDeadSound;
 
-    sf::Font font;
     sf::Text text;
+    sf::Font font1;
+    sf::Font font2;
     sf::Text scoreText;
     sf::Text gameOver;
     sf::Text achievementText;

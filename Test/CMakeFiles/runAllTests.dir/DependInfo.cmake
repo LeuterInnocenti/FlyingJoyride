@@ -13,9 +13,9 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/Library/Frameworks/SFML.framework"
   "Test/lib/googletest/include"
   "Test/lib/googletest"
-  "/Library/Frameworks/SFML.framework"
   )
 
 # Targets to which this target links.
