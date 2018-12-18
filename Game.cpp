@@ -15,13 +15,15 @@ const float Game::levelGround = 63.0f;
 const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
 
-Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(), score(0),
-               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false), killed(0), jump(1.8),
-               g(0.7), n(1), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)), tollerance(2),
-               textCount(0), playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
+Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),
+               killed(0), jump(1.8), g(0.7), n(1), m(0), counter(1), blockX(100), creationRate(1.4f),
+               speed(sf::Vector2f(0.7, 0.8)), textCount(0), tollerance(2), score(0),
+               playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
                factoryB(), factoryE() {
 
-    font.loadFromFile("arial.ttf");
+    font1.loadFromFile("arial.ttf");
+    font2.loadFromFile("comic.ttf");
     backgroundTexture.loadFromFile("Background.png");
     backgroundTexture.setRepeated(true);
     background.setTexture(backgroundTexture);
@@ -30,16 +32,28 @@ Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(wind
 
     playerTexture1.loadFromFile("frame-1.png");
     playerTexture2.loadFromFile("frame-2.png");
-    playerTexture3.loadFromFile("frame-3.png");
     puPlayerTexture1.loadFromFile("puframe-1.png");
     puPlayerTexture2.loadFromFile("puframe-2.png");
     dePlayerTexture1.loadFromFile("deframe-1.png");
     dePlayerTexture2.loadFromFile("deframe-2.png");
-    dePlayerTexture3.loadFromFile("deframe-3.png");
+    fireTexture1.loadFromFile("fire1.png");
+    fireTexture2.loadFromFile("fire2.png");
+    fireSprite.setScale(0.3, 0.3);
     player.setPlayerTexture(playerTexture1);
 
     fEnemyTexture.loadFromFile("fenemy1.png");
     sEnemyTexture.loadFromFile("senemy1.png");
+    shootBuffer.loadFromFile("shoot.wav");
+    powerUpBuffer.loadFromFile("powerup.wav");
+    enemyDeadBuffer.loadFromFile("enemydead.wav");
+    shootSound.setBuffer(shootBuffer);
+    shootSound.setVolume(20.0f);
+    powerUpSound.setBuffer(powerUpBuffer);
+    enemyDeadSound.setBuffer(enemyDeadBuffer);
+
+    music.openFromFile("marioMusic.ogg");
+    music.setLoop(true);
+    music.play();
 
     srand((unsigned) time(nullptr));
     maxY = static_cast<int>(windowSize.y - (levelGround + blockX));
@@ -63,6 +77,9 @@ void Game::update() {
         file << "Score: " << score;
         file.close();
         textCount++;
+        music.openFromFile("mariodie.ogg");
+        music.setLoop(false);
+        music.play();
     }
 
     createObjects();
@@ -75,11 +92,16 @@ void Game::update() {
     setKilled(killed);
 
     if (!speedPowerUp) {
-        collision();
+        if(!player.getDeath())
+            collision();
         shoot();
-    }
-    if (scoreClock.getElapsedTime().asSeconds() >= 1.0f && !player.getDeath()) {
-        // ogni secondo score aumenta di 1
+        if (scoreClock.getElapsedTime().asSeconds() >= 1.0f && !player.getDeath()) {
+            // ogni secondo score aumenta di 1
+            score++;
+            notify();
+            scoreClock.restart();
+        }
+    } else if (scoreClock.getElapsedTime().asSeconds() >= 0.1 && !player.getDeath()) {
         score++;
         notify();
         scoreClock.restart();
@@ -95,30 +117,35 @@ void Game::update() {
         jump = -jump;
         g = -g;
     }
-    if (speedPowerUp && speedClock.getElapsedTime().asSeconds() >= 3.0f) {
+    if (speedPowerUp && speedClock.getElapsedTime().asSeconds() >= 5.0f) {
         speedPowerUp = false;
-        speed.x /= 20;
+        speed = oldSpeed;
     }
-    // se uccide 10 nemici ottiene PowerUp
-    if (killed == 10)
-        isPowerUpOn = true;
+    if (score >= 200 && !speedPowerUp && m == 0) {
+        music.openFromFile("marioSpeed.ogg");
+        music.setLoop(true);
+        music.play();
+        m++;
+    }
+    if (speedPowerUp)
+        fireAnimation();
 }
 
 // gestione del testo
 void Game::handleText() {
-    text.setFont(font);
+    text.setFont(font1);
     text.setString("Score : ");
     text.setFillColor(sf::Color::Black);
     text.setCharacterSize(25);
     text.setPosition(10, 5);
 
-    scoreText.setFont(font);
+    scoreText.setFont(font1);
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(25);
     scoreText.setPosition(100, 5);
     scoreText.setString(std::to_string(score));
 
-    gameOver.setFont(font);
+    gameOver.setFont(font2);
     gameOver.setString("Game Over !");
     gameOver.setFillColor(sf::Color::Blue);
     gameOver.setCharacterSize(150);
@@ -126,7 +153,7 @@ void Game::handleText() {
 }
 
 void Game::setAchievementString(sf::String string) {
-    achievementText.setFont(font);
+    achievementText.setFont(font2);
     achievementText.setString(string);
     achievementText.setCharacterSize(40);
     achievementText.setFillColor(sf::Color::Red);
@@ -139,6 +166,8 @@ void Game::render() {
     window.draw(background);
     if (!player.getDeath()) {
         window.draw(achievementText);
+        if (speedPowerUp)
+            window.draw(fireSprite);
         player.render(*window.getRenderWindow());
         for (auto &block : blocks)
             window.draw(*block);
@@ -151,7 +180,6 @@ void Game::render() {
         window.draw(text);
         window.draw(scoreText);
     } else {
-        //std::this_thread::sleep_for(std::chrono::milliseconds(120));
         text.setCharacterSize(50);
         scoreText.setCharacterSize(50);
         text.setPosition(420, 450);
@@ -193,6 +221,7 @@ void Game::movePlayer() {
 void Game::shoot() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && playerClock.getElapsedTime().asSeconds() >= shootTime) {
         createBullet();
+        shootSound.play();
         playerClock.restart();
     }
     moveBullet();
@@ -262,7 +291,7 @@ void Game::createObjects() {
             objectClock.restart();
             counter++;
         }
-        // !isPowerUpOn = se sono attivi PowerUp non crea PowerUpBlock
+        // se è già attivo un PowerUp non viene creato un PowerUpBlock
         if (counter % 7 == 0 && randomCreation() == 1 &&
             !isPowerUpOn && !isEnemyCreated && !isDefectOn && !speedPowerUp) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
@@ -329,25 +358,24 @@ void Game::collision() {
                     controlPowerUp.restart();
                 } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                     // se character non ha PowerUp e interseca normalBlock muore
-                    if (isDefectOn)
-                        player.setPlayerTexture(dePlayerTexture3);
-                    else
-                        player.setPlayerTexture(playerTexture3);
                     player.gameOver(true);
                 }
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
             if (test == nullptr) {
-                if (randomPowerUp() == 1) {
+                int random = randomPowerUp();
+                if (random == 1) {
                     isDefectOn = true;
                     jump = -jump;
                     g = -g;
                     defectClock.restart();
-                } else if (randomPowerUp() == 0) {
+                } else if (random == 0) {
                     // si attiva il terzo powerUp
                     speedPowerUp = true;
-                    speed.x *= 20;
-                    score += 50;
+                    oldSpeed = speed;
+                    fireSprite.setTexture(fireTexture1);
+                    fireSprite.setPosition(player.getPlayerPosition() + player.getPlayerSize());
+                    speed.x = 10.0f;
                     notify();
                     enemyBullets.clear();
                     speedClock.restart();
@@ -355,6 +383,7 @@ void Game::collision() {
                     // si attiva powerUp doppia vita
                     isPowerUpOn = true;
                 }
+                powerUpSound.play();
                 score += 10;
                 notify();
                 blocks.erase(blocks.begin() + i);
@@ -379,10 +408,6 @@ void Game::collision() {
                 controlPowerUp.restart();
             } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                 // se character non ha PowerUp e interseca enemy muore
-                if (isDefectOn)
-                    player.setPlayerTexture(dePlayerTexture3);
-                else
-                    player.setPlayerTexture(playerTexture3);
                 player.gameOver(true);
             }
         }
@@ -393,6 +418,7 @@ void Game::collision() {
                 bullets.erase(bullets.begin() + l);
                 score += 5;
                 killed++;
+                enemyDeadSound.play();
                 notify();
             }
         }
@@ -405,17 +431,22 @@ void Game::collision() {
                 controlPowerUp.restart();
             } else if (controlPowerUp.getElapsedTime().asSeconds() >= tollerance) {
                 // se character non ha PowerUp e interseca enemyBullet muore
-                if (isDefectOn)
-                    player.setPlayerTexture(dePlayerTexture3);
-                else
-                    player.setPlayerTexture(playerTexture3);
                 player.gameOver(true);
             }
         }
     }
 }
 
-// funzione randomica per settare coordinata Y del blocco
+void Game::fireAnimation() {
+    fireSprite.setPosition(player.getPlayerPosition().x - player.getPlayerSize().x / 2, player.getPlayerPosition().y);
+    if (fireClock.getElapsedTime().asSeconds() >= 0.2f) {
+        fireSprite.setTexture(fireTexture2);
+        fireClock.restart();
+    } else if (fireClock.getElapsedTime().asSeconds() >= 0.1) {
+        fireSprite.setTexture(fireTexture1);
+    }
+}
+
 int Game::randomPos() {
     randomY = rand() % maxY;
     return randomY;
@@ -426,10 +457,9 @@ int Game::randomCreation() {
 }
 
 int Game::randomPowerUp() {
-    return (rand() % 2);
+    return (rand() % 3);
 }
 
-// funzioni observer
 void Game::subscribe(Observer *o) {
     observers.push_back(o);
 }
@@ -453,7 +483,6 @@ void Game::notify() {
         (*itr)->update();
 }
 
-// funzioni getter
 const float Game::getShootTime() { return shootTime; }
 
 const float Game::getLevelGround() { return levelGround; }

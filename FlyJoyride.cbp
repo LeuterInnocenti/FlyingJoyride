@@ -136,9 +136,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
 					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
-					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
@@ -161,9 +161,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest/include"/>
 					<Add directory="/Users/Athos/Documents/GitHub/ProvaProgetto/Test/lib/googletest"/>
-					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>

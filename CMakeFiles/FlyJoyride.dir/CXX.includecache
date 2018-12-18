@@ -6,35 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp
-Achievement.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
-iostream
--
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
-fstream
--
-iostream
--
-Game.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
-Observer.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
-DisplayElement.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 SFML/Graphics.hpp
 -
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp
-BlockFactory.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
-NormalBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
-PowerUpBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
 Block.h
@@ -44,29 +18,13 @@ PowerUpBlock.h
 NormalBlock.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp
-Character.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
--
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h
-SFML/Graphics/RenderWindow.hpp
 -
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 SFML/Graphics.hpp
 -
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
-EnemyFactory.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
-FlyingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
-ShootingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
 Enemy.h
@@ -75,10 +33,6 @@ FlyingEnemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
 ShootingEnemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp
-FlyingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
 Enemy.h
@@ -117,10 +71,8 @@ EnemyFactory.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
 SFML/Graphics.hpp
 /Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp
-NormalBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
+SFML/Audio.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Audio.hpp
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 Block.h
@@ -128,19 +80,9 @@ Block.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp
-PowerUpBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
-iostream
--
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp
-ShootingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 Enemy.h
@@ -150,21 +92,7 @@ Enemy.h
 Observer.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
-Window.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp
--
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp
-Game.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
-Achievement.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.h
-chrono
--
-thread
 -
 
