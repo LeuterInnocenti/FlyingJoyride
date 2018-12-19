@@ -63,10 +63,6 @@ Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp
 Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
-chrono
--
-thread
--
 iostream
 -
 
@@ -77,24 +73,24 @@ string
 -
 fstream
 -
+SFML/Graphics.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
+SFML/Audio.hpp
+/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Audio.hpp
+BlockFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
+EnemyFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
+Subject.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 Window.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
-Subject.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
-BlockFactory.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
-EnemyFactory.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
-SFML/Graphics.hpp
-/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Graphics.hpp
-SFML/Audio.hpp
-/Users/Athos/Documents/GitHub/ProvaProgetto/SFML/Audio.hpp
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 Block.h
@@ -114,6 +110,10 @@ Enemy.h
 Observer.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
+Window.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp
 -
@@ -126,5 +126,7 @@ Achievement.h
 chrono
 -
 thread
+-
+time.h
 -
 

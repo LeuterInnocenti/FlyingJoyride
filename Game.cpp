@@ -4,8 +4,6 @@
 
 #include "Game.h"
 
-#include <chrono>
-#include <thread>
 #include <iostream>
 
 const int Game::textSize = 30;
@@ -16,9 +14,9 @@ const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
-               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),
-               killed(0), jump(1.8), g(0.7), n(1), m(0), counter(1), blockX(100), creationRate(1.4f),
-               speed(sf::Vector2f(0.7, 0.8)), textCount(0), tollerance(2), score(0),
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),killed(0), jump(1.8),
+               g(0.7), n(1), count(0), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)),
+               textCount(0), tollerance(2), score(0), creationLimit(150), speedLimit(20),
                playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
                factoryB(), factoryE() {
 
@@ -92,7 +90,7 @@ void Game::update() {
     setKilled(killed);
 
     if (!speedPowerUp) {
-        if(!player.getDeath())
+        if (!player.getDeath())
             collision();
         shoot();
         if (scoreClock.getElapsedTime().asSeconds() >= 1.0f && !player.getDeath()) {
@@ -106,9 +104,11 @@ void Game::update() {
         notify();
         scoreClock.restart();
     }
-    if (score >= n * 20) {
+    // ogni volta che score è multiplo di speedLimit aumenta speed
+    if (score >= n * speedLimit) {
         speed.x += speedIncreaser;
-        if (score <= 150)
+        if (score <= creationLimit)
+            // oltre creationLimit i blocchi sarebbero troppo vicini
             creationRate -= rateIncreaser;
         n++;
     }
@@ -121,11 +121,11 @@ void Game::update() {
         speedPowerUp = false;
         speed = oldSpeed;
     }
-    if (score >= 200 && !speedPowerUp && m == 0) {
+    if (score >= 200 && !speedPowerUp && count == 0) {
         music.openFromFile("marioSpeed.ogg");
         music.setLoop(true);
         music.play();
-        m++;
+        count++;
     }
     if (speedPowerUp)
         fireAnimation();
