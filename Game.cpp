@@ -265,12 +265,11 @@ void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
         if (counter % 5 == 0 && randomCreation() == 1) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
-            randomPos();
             if (randomCreation() % 2 != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             enemies.emplace_back(move(enemy));
             isCreated = true;
             isEnemyCreated = true;
@@ -279,12 +278,11 @@ void Game::createObjects() {
         }
         if (counter % 2 == 0 && randomCreation() == 1 && !isEnemyCreated) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
-            randomPos();
             if (randomCreation() % 2 != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             enemies.emplace_back(move(enemy));
             isCreated = true;
             isEnemyCreated = true;
@@ -295,8 +293,7 @@ void Game::createObjects() {
         if (counter % 7 == 0 && randomCreation() == 1 &&
             !isPowerUpOn && !isEnemyCreated && !isDefectOn && !speedPowerUp) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
-            randomPos();
-            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             blocks.emplace_back(move(block));
             isCreated = true;
             objectClock.restart();
@@ -304,8 +301,7 @@ void Game::createObjects() {
         }
         if (!isCreated) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::NormalBlock);
-            randomPos();
-            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             blocks.emplace_back(move(block));
             objectClock.restart();
             counter++;
@@ -448,8 +444,7 @@ void Game::fireAnimation() {
 }
 
 int Game::randomPos() {
-    randomY = rand() % maxY;
-    return randomY;
+    return (rand() % maxY);
 }
 
 int Game::randomCreation() {
@@ -512,8 +507,6 @@ unsigned int Game::getKilled() const { return killed; }
 const float Game::getRateIncreaser() { return rateIncreaser; }
 
 const float Game::getSpeedIncreaser() { return speedIncreaser; }
-
-int Game::getRandomY() const { return randomY; }
 
 const sf::Vector2i &Game::getWindowSize() const { return windowSize; }
 

@@ -50,6 +50,7 @@ public:
 
     void fireAnimation();
 
+    // funzioni getter
     int getMaxY() const;
     int getRandomY() const;
     bool getIsPowerUpOn() const;
@@ -146,7 +147,6 @@ private:
     std::vector<std::unique_ptr<Enemy>> enemies;
 
     int maxY;
-    int randomY;
     int n;
     int count;
     int blockX;

@@ -88,12 +88,6 @@ gtest/gtest.h
 ../Game.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Game.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/WindowFixture.cpp
-gtest/gtest.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Test/gtest/gtest.h
-../Window.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp
 -

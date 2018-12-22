@@ -110,10 +110,6 @@ Enemy.h
 Observer.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp
-Window.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Window.h
 SFML/Graphics.hpp
 -
