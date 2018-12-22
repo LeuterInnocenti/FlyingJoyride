@@ -284,6 +284,10 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -308,6 +312,10 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
+		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp">
+			<Option target="core"/>
+			<Option target="FlyJoyride"/>
+		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -320,14 +328,6 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
@@ -336,31 +336,7 @@
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
 		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp">
-			<Option target="core"/>
-			<Option target="FlyJoyride"/>
-		</Unit>
-		<Unit filename="/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h">
 			<Option target="core"/>
 			<Option target="FlyJoyride"/>
 		</Unit>

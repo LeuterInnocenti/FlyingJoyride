@@ -5,14 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Achievement.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Block.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/BlockFactory.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Character.cpp.o"
+  "/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Enemy.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/EnemyFactory.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/FlyingEnemy.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Game.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Game.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/NormalBlock.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/PowerUpBlock.cpp.o"
-  "/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/ShootingEnemy.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/Window.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/Window.cpp.o"
   "/Users/Athos/Documents/GitHub/ProvaProgetto/main.cpp" "/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles/core.dir/main.cpp.o"
   )

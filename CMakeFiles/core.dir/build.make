@@ -109,35 +109,22 @@ CMakeFiles/core.dir/Character.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Character.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Character.cpp -o CMakeFiles/core.dir/Character.cpp.s
 
-CMakeFiles/core.dir/NormalBlock.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/NormalBlock.cpp.o: NormalBlock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/core.dir/NormalBlock.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/NormalBlock.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp
+CMakeFiles/core.dir/Block.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Block.cpp.o: Block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/core.dir/Block.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Block.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp
 
-CMakeFiles/core.dir/NormalBlock.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/NormalBlock.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp > CMakeFiles/core.dir/NormalBlock.cpp.i
+CMakeFiles/core.dir/Block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Block.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp > CMakeFiles/core.dir/Block.cpp.i
 
-CMakeFiles/core.dir/NormalBlock.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/NormalBlock.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.cpp -o CMakeFiles/core.dir/NormalBlock.cpp.s
-
-CMakeFiles/core.dir/PowerUpBlock.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/PowerUpBlock.cpp.o: PowerUpBlock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/core.dir/PowerUpBlock.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/PowerUpBlock.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp
-
-CMakeFiles/core.dir/PowerUpBlock.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/PowerUpBlock.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp > CMakeFiles/core.dir/PowerUpBlock.cpp.i
-
-CMakeFiles/core.dir/PowerUpBlock.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/PowerUpBlock.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.cpp -o CMakeFiles/core.dir/PowerUpBlock.cpp.s
+CMakeFiles/core.dir/Block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Block.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp -o CMakeFiles/core.dir/Block.cpp.s
 
 CMakeFiles/core.dir/BlockFactory.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/BlockFactory.cpp.o: BlockFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/core.dir/BlockFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/core.dir/BlockFactory.cpp.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/BlockFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp
 
 CMakeFiles/core.dir/BlockFactory.cpp.i: cmake_force
@@ -148,35 +135,22 @@ CMakeFiles/core.dir/BlockFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/BlockFactory.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp -o CMakeFiles/core.dir/BlockFactory.cpp.s
 
-CMakeFiles/core.dir/FlyingEnemy.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/core.dir/FlyingEnemy.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/FlyingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp
+CMakeFiles/core.dir/Enemy.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Enemy.cpp.o: Enemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/core.dir/Enemy.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Enemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp
 
-CMakeFiles/core.dir/FlyingEnemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/FlyingEnemy.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp > CMakeFiles/core.dir/FlyingEnemy.cpp.i
+CMakeFiles/core.dir/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Enemy.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp > CMakeFiles/core.dir/Enemy.cpp.i
 
-CMakeFiles/core.dir/FlyingEnemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/FlyingEnemy.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.cpp -o CMakeFiles/core.dir/FlyingEnemy.cpp.s
-
-CMakeFiles/core.dir/ShootingEnemy.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/ShootingEnemy.cpp.o: ShootingEnemy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/core.dir/ShootingEnemy.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ShootingEnemy.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp
-
-CMakeFiles/core.dir/ShootingEnemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ShootingEnemy.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp > CMakeFiles/core.dir/ShootingEnemy.cpp.i
-
-CMakeFiles/core.dir/ShootingEnemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ShootingEnemy.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.cpp -o CMakeFiles/core.dir/ShootingEnemy.cpp.s
+CMakeFiles/core.dir/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Enemy.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp -o CMakeFiles/core.dir/Enemy.cpp.s
 
 CMakeFiles/core.dir/EnemyFactory.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/EnemyFactory.cpp.o: EnemyFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/core.dir/EnemyFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/core.dir/EnemyFactory.cpp.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/EnemyFactory.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
 
 CMakeFiles/core.dir/EnemyFactory.cpp.i: cmake_force
@@ -189,7 +163,7 @@ CMakeFiles/core.dir/EnemyFactory.cpp.s: cmake_force
 
 CMakeFiles/core.dir/Achievement.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Achievement.cpp.o: Achievement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/core.dir/Achievement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/core.dir/Achievement.cpp.o"
 	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Achievement.cpp.o -c /Users/Athos/Documents/GitHub/ProvaProgetto/Achievement.cpp
 
 CMakeFiles/core.dir/Achievement.cpp.i: cmake_force
@@ -206,11 +180,9 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/Game.cpp.o" \
 "CMakeFiles/core.dir/Window.cpp.o" \
 "CMakeFiles/core.dir/Character.cpp.o" \
-"CMakeFiles/core.dir/NormalBlock.cpp.o" \
-"CMakeFiles/core.dir/PowerUpBlock.cpp.o" \
+"CMakeFiles/core.dir/Block.cpp.o" \
 "CMakeFiles/core.dir/BlockFactory.cpp.o" \
-"CMakeFiles/core.dir/FlyingEnemy.cpp.o" \
-"CMakeFiles/core.dir/ShootingEnemy.cpp.o" \
+"CMakeFiles/core.dir/Enemy.cpp.o" \
 "CMakeFiles/core.dir/EnemyFactory.cpp.o" \
 "CMakeFiles/core.dir/Achievement.cpp.o"
 
@@ -221,16 +193,14 @@ libcore.a: CMakeFiles/core.dir/main.cpp.o
 libcore.a: CMakeFiles/core.dir/Game.cpp.o
 libcore.a: CMakeFiles/core.dir/Window.cpp.o
 libcore.a: CMakeFiles/core.dir/Character.cpp.o
-libcore.a: CMakeFiles/core.dir/NormalBlock.cpp.o
-libcore.a: CMakeFiles/core.dir/PowerUpBlock.cpp.o
+libcore.a: CMakeFiles/core.dir/Block.cpp.o
 libcore.a: CMakeFiles/core.dir/BlockFactory.cpp.o
-libcore.a: CMakeFiles/core.dir/FlyingEnemy.cpp.o
-libcore.a: CMakeFiles/core.dir/ShootingEnemy.cpp.o
+libcore.a: CMakeFiles/core.dir/Enemy.cpp.o
 libcore.a: CMakeFiles/core.dir/EnemyFactory.cpp.o
 libcore.a: CMakeFiles/core.dir/Achievement.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Athos/Documents/GitHub/ProvaProgetto/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 

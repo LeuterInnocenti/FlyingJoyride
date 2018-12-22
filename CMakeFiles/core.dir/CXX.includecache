@@ -24,17 +24,21 @@ Observer.h
 DisplayElement.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/DisplayElement.h
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.cpp
+Block.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
 SFML/Graphics.hpp
 -
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.cpp
+BlockFactory.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/BlockFactory.h
 Block.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-PowerUpBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
-NormalBlock.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 SFML/Graphics.hpp
@@ -44,19 +48,19 @@ SFML/Graphics.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.cpp
+Enemy.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
+
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 SFML/Graphics.hpp
 -
 
+/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.cpp
+EnemyFactory.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
-Enemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
-FlyingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
-ShootingEnemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/FlyingEnemy.h
+/Users/Athos/Documents/GitHub/ProvaProgetto/EnemyFactory.h
 Enemy.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 
@@ -92,19 +96,7 @@ Window.h
 Character.h
 /Users/Athos/Documents/GitHub/ProvaProgetto/Character.h
 
-/Users/Athos/Documents/GitHub/ProvaProgetto/NormalBlock.h
-Block.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-
 /Users/Athos/Documents/GitHub/ProvaProgetto/Observer.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/PowerUpBlock.h
-Block.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Block.h
-
-/Users/Athos/Documents/GitHub/ProvaProgetto/ShootingEnemy.h
-Enemy.h
-/Users/Athos/Documents/GitHub/ProvaProgetto/Enemy.h
 
 /Users/Athos/Documents/GitHub/ProvaProgetto/Subject.h
 Observer.h

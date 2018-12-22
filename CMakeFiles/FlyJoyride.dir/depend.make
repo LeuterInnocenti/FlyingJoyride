@@ -9,60 +9,38 @@ CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Character.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: DisplayElement.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: EnemyFactory.h
-CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: FlyingEnemy.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Game.h
-CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: NormalBlock.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Observer.h
-CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: PowerUpBlock.h
-CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: ShootingEnemy.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Subject.h
 CMakeFiles/FlyJoyride.dir/Achievement.cpp.o: Window.h
+
+CMakeFiles/FlyJoyride.dir/Block.cpp.o: Block.cpp
+CMakeFiles/FlyJoyride.dir/Block.cpp.o: Block.h
 
 CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: Block.h
 CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: BlockFactory.cpp
 CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: BlockFactory.h
-CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: NormalBlock.h
-CMakeFiles/FlyJoyride.dir/BlockFactory.cpp.o: PowerUpBlock.h
 
 CMakeFiles/FlyJoyride.dir/Character.cpp.o: Character.cpp
 CMakeFiles/FlyJoyride.dir/Character.cpp.o: Character.h
 
+CMakeFiles/FlyJoyride.dir/Enemy.cpp.o: Enemy.cpp
+CMakeFiles/FlyJoyride.dir/Enemy.cpp.o: Enemy.h
+
 CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: EnemyFactory.cpp
 CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: EnemyFactory.h
-CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: FlyingEnemy.h
-CMakeFiles/FlyJoyride.dir/EnemyFactory.cpp.o: ShootingEnemy.h
-
-CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: Enemy.h
-CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: FlyingEnemy.cpp
-CMakeFiles/FlyJoyride.dir/FlyingEnemy.cpp.o: FlyingEnemy.h
 
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Block.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: BlockFactory.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Character.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: EnemyFactory.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: FlyingEnemy.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Game.cpp
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Game.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: NormalBlock.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Observer.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: PowerUpBlock.h
-CMakeFiles/FlyJoyride.dir/Game.cpp.o: ShootingEnemy.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Subject.h
 CMakeFiles/FlyJoyride.dir/Game.cpp.o: Window.h
-
-CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o: Block.h
-CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o: NormalBlock.cpp
-CMakeFiles/FlyJoyride.dir/NormalBlock.cpp.o: NormalBlock.h
-
-CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o: Block.h
-CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o: PowerUpBlock.cpp
-CMakeFiles/FlyJoyride.dir/PowerUpBlock.cpp.o: PowerUpBlock.h
-
-CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o: Enemy.h
-CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o: ShootingEnemy.cpp
-CMakeFiles/FlyJoyride.dir/ShootingEnemy.cpp.o: ShootingEnemy.h
 
 CMakeFiles/FlyJoyride.dir/Window.cpp.o: Window.cpp
 CMakeFiles/FlyJoyride.dir/Window.cpp.o: Window.h
@@ -74,12 +52,8 @@ CMakeFiles/FlyJoyride.dir/main.cpp.o: Character.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: DisplayElement.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Enemy.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: EnemyFactory.h
-CMakeFiles/FlyJoyride.dir/main.cpp.o: FlyingEnemy.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Game.h
-CMakeFiles/FlyJoyride.dir/main.cpp.o: NormalBlock.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Observer.h
-CMakeFiles/FlyJoyride.dir/main.cpp.o: PowerUpBlock.h
-CMakeFiles/FlyJoyride.dir/main.cpp.o: ShootingEnemy.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Subject.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: Window.h
 CMakeFiles/FlyJoyride.dir/main.cpp.o: main.cpp

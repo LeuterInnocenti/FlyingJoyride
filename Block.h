@@ -9,11 +9,13 @@
 
 class Block : public sf::Sprite {
 public:
-    Block() {}
-    virtual ~Block() {}
+    Block();
+    ~Block();
+    void setIsPowerUpBlock();
+    bool getIsPowerUpBlock() const;
 
 protected:
-    sf::Texture spriteTexture;
+    bool isPowerUp;
 };
 
 #endif //FLYJOYRIDE_BLOCK_H

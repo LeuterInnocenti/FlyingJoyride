@@ -5,7 +5,7 @@
 #include "Achievement.h"
 #include <iostream>
 
-Achievement::Achievement(Game *g) : game(g), point(0), kill(0), a(0), b(0), c(0), d(0), e(0) {
+Achievement::Achievement(Game *g) : game(g), point(0), kill(0), a(0), b(0), c(0), d(0), e(0), f(0) {
     attach();
     loadAch();
 }
@@ -42,6 +42,10 @@ void Achievement::draw() {
     if (kill >= 15 && e == 0) {
         game->setAchievementString(string[4]);
         e++;
+    }
+    if (point >= 200 && f == 0) {
+        game->setAchievementString(string[5]);
+        f++;
     }
 }
 

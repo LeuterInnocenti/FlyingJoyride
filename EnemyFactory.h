@@ -6,16 +6,18 @@
 #define FLYJOYRIDE_ENEMYFACTORY_H
 
 #include "Enemy.h"
-#include "FlyingEnemy.h"
-#include "ShootingEnemy.h"
 
 enum EnemyType { FlyingEnemy, ShootingEnemy };
 
 class EnemyFactory {
 public:
     EnemyFactory();
-    ~EnemyFactory();
+    virtual ~EnemyFactory();
     std::unique_ptr<Enemy> createEnemy(EnemyType type);
+
+private:
+    sf::Texture flyingEnemyTexture;
+    sf::Texture shootingEnemyTexture;
 };
 
 #endif //FLYJOYRIDE_ENEMYFACTORY_H

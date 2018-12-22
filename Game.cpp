@@ -7,16 +7,19 @@
 #include <iostream>
 
 const int Game::textSize = 30;
+const unsigned int Game::creationLimit = 150;
+const unsigned int Game::speedMultiplier = 20;
 const float Game::shootTime = 1.3f;
 const float Game::bulletSpeed = 1.7f;
 const float Game::levelGround = 63.0f;
 const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
+const float Game::speedLimit = 10.0f;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
-               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),killed(0), jump(1.8),
+               isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),
                g(0.7), n(1), count(0), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)),
-               textCount(0), tollerance(2), score(0), creationLimit(150), speedLimit(20),
+               textCount(0), tollerance(2), score(0), killed(0), jump(1.8),
                playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
                factoryB(), factoryE() {
 
@@ -105,7 +108,7 @@ void Game::update() {
         scoreClock.restart();
     }
     // ogni volta che score è multiplo di speedLimit aumenta speed
-    if (score >= n * speedLimit) {
+    if (score >= n * speedMultiplier && speed.x != speedLimit) {
         speed.x += speedIncreaser;
         if (score <= creationLimit)
             // oltre creationLimit i blocchi sarebbero troppo vicini
@@ -265,7 +268,7 @@ void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
         if (counter % 5 == 0 && randomCreation() == 1) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
-            if (randomCreation() % 2 != 0)
+            if (randomCreation() != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
@@ -278,7 +281,7 @@ void Game::createObjects() {
         }
         if (counter % 2 == 0 && randomCreation() == 1 && !isEnemyCreated) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
-            if (randomCreation() % 2 != 0)
+            if (randomCreation() != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
@@ -289,7 +292,6 @@ void Game::createObjects() {
             objectClock.restart();
             counter++;
         }
-        // se è già attivo un PowerUp non viene creato un PowerUpBlock
         if (counter % 7 == 0 && randomCreation() == 1 &&
             !isPowerUpOn && !isEnemyCreated && !isDefectOn && !speedPowerUp) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
@@ -345,9 +347,8 @@ void Game::deleteObject() {
 
 void Game::collision() {
     for (int i = 0; i < blocks.size(); i++) {
-        class NormalBlock *test = dynamic_cast<class NormalBlock *>(blocks[i].get());
         if (blocks[i]->getGlobalBounds().intersects(player.getBound())) {
-            if (test != nullptr) {
+            if (!blocks[i]->getIsPowerUpBlock()) {
                 // se character ha PowerUp e interseca normalBlock perde il potenziamento
                 if (isPowerUpOn) {
                     isPowerUpOn = false;
@@ -358,9 +359,10 @@ void Game::collision() {
                 }
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
-            if (test == nullptr) {
+            if (blocks[i]->getIsPowerUpBlock()) {
                 int random = randomPowerUp();
                 if (random == 1) {
+                    // si attiva la gravità inversa
                     isDefectOn = true;
                     jump = -jump;
                     g = -g;

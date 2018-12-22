@@ -52,7 +52,6 @@ public:
 
     // funzioni getter
     int getMaxY() const;
-    int getRandomY() const;
     bool getIsPowerUpOn() const;
     int getBlocksContainerSize();
     unsigned int getScore() const;
@@ -157,7 +156,6 @@ private:
     float g;
     float jump;
     float creationRate;
-    float speedLimit;
 
     bool isCreated;
     bool isDefectOn;
@@ -166,7 +164,6 @@ private:
     bool isEnemyCreated;
 
     unsigned int score;
-    unsigned int creationLimit;
     unsigned int killed;
 
     static const int textSize;
@@ -175,6 +172,9 @@ private:
     static const float rateIncreaser;
     static const float speedIncreaser;
     static const float levelGround;
+    static const unsigned int creationLimit;
+    static const unsigned int speedMultiplier;
+    static const float speedLimit;
 };
 
 #endif //FLYJOYRIDE_GAME_H
