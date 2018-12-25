@@ -4,21 +4,22 @@
 
 #include "Game.h"
 
-#include <chrono>
-#include <thread>
 #include <iostream>
 
 const int Game::textSize = 30;
+const unsigned int Game::creationLimit = 150;
+const unsigned int Game::speedMultiplier = 20;
 const float Game::shootTime = 1.3f;
 const float Game::bulletSpeed = 1.7f;
 const float Game::levelGround = 63.0f;
 const float Game::speedIncreaser = 0.1;
 const float Game::rateIncreaser = 0.120;
+const float Game::speedLimit = 10.0f;
 
 Game::Game() : window("FlyingJoyride", sf::Vector2u(1080, 720)), windowSize(window.getWindowSize()), player(),
                isCreated(false), isPowerUpOn(false), isEnemyCreated(false), speedPowerUp(false),
-               killed(0), jump(1.8), g(0.7), n(1), m(0), counter(1), blockX(100), creationRate(1.4f),
-               speed(sf::Vector2f(0.7, 0.8)), textCount(0), tollerance(2), score(0),
+               g(0.7), n(1), count(0), counter(1), blockX(100), creationRate(1.4f), speed(sf::Vector2f(0.7, 0.8)),
+               textCount(0), tollerance(2), score(0), killed(0), jump(1.8),
                playerClock(), objectClock(), scoreClock(), controlPowerUp(), enemyClock(), defectClock(),
                factoryB(), factoryE() {
 
@@ -92,7 +93,7 @@ void Game::update() {
     setKilled(killed);
 
     if (!speedPowerUp) {
-        if(!player.getDeath())
+        if (!player.getDeath())
             collision();
         shoot();
         if (scoreClock.getElapsedTime().asSeconds() >= 1.0f && !player.getDeath()) {
@@ -106,9 +107,11 @@ void Game::update() {
         notify();
         scoreClock.restart();
     }
-    if (score >= n * 20) {
+    // ogni volta che score è multiplo di speedLimit aumenta speed
+    if (score >= n * speedMultiplier && speed.x != speedLimit) {
         speed.x += speedIncreaser;
-        if (score <= 150)
+        if (score <= creationLimit)
+            // oltre creationLimit i blocchi sarebbero troppo vicini
             creationRate -= rateIncreaser;
         n++;
     }
@@ -121,11 +124,11 @@ void Game::update() {
         speedPowerUp = false;
         speed = oldSpeed;
     }
-    if (score >= 200 && !speedPowerUp && m == 0) {
+    if (score >= 200 && !speedPowerUp && count == 0) {
         music.openFromFile("marioSpeed.ogg");
         music.setLoop(true);
         music.play();
-        m++;
+        count++;
     }
     if (speedPowerUp)
         fireAnimation();
@@ -265,12 +268,11 @@ void Game::createObjects() {
     if (objectClock.getElapsedTime().asSeconds() >= creationRate) {
         if (counter % 5 == 0 && randomCreation() == 1) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::ShootingEnemy);
-            randomPos();
-            if (randomCreation() % 2 != 0)
+            if (randomCreation() != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             enemies.emplace_back(move(enemy));
             isCreated = true;
             isEnemyCreated = true;
@@ -279,24 +281,21 @@ void Game::createObjects() {
         }
         if (counter % 2 == 0 && randomCreation() == 1 && !isEnemyCreated) {
             std::unique_ptr<Enemy> enemy = factoryE.createEnemy(EnemyType::FlyingEnemy);
-            randomPos();
-            if (randomCreation() % 2 != 0)
+            if (randomCreation() != 0)
                 enemy->setEnemySpeedY(speed.y);
             else
                 enemy->setEnemySpeedY(-speed.y);
-            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            enemy->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             enemies.emplace_back(move(enemy));
             isCreated = true;
             isEnemyCreated = true;
             objectClock.restart();
             counter++;
         }
-        // se è già attivo un PowerUp non viene creato un PowerUpBlock
         if (counter % 7 == 0 && randomCreation() == 1 &&
             !isPowerUpOn && !isEnemyCreated && !isDefectOn && !speedPowerUp) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::PowerUpBlock);
-            randomPos();
-            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             blocks.emplace_back(move(block));
             isCreated = true;
             objectClock.restart();
@@ -304,8 +303,7 @@ void Game::createObjects() {
         }
         if (!isCreated) {
             std::unique_ptr<Block> block = factoryB.createBlock(BlockType::NormalBlock);
-            randomPos();
-            block->setPosition(sf::Vector2f(2 * windowSize.x, randomY));
+            block->setPosition(sf::Vector2f(2 * windowSize.x, randomPos()));
             blocks.emplace_back(move(block));
             objectClock.restart();
             counter++;
@@ -349,9 +347,8 @@ void Game::deleteObject() {
 
 void Game::collision() {
     for (int i = 0; i < blocks.size(); i++) {
-        class NormalBlock *test = dynamic_cast<class NormalBlock *>(blocks[i].get());
         if (blocks[i]->getGlobalBounds().intersects(player.getBound())) {
-            if (test != nullptr) {
+            if (!blocks[i]->getIsPowerUpBlock()) {
                 // se character ha PowerUp e interseca normalBlock perde il potenziamento
                 if (isPowerUpOn) {
                     isPowerUpOn = false;
@@ -362,9 +359,10 @@ void Game::collision() {
                 }
             }
             // se character interseca PowerUpBlock si attiva il potenziamento
-            if (test == nullptr) {
+            if (blocks[i]->getIsPowerUpBlock()) {
                 int random = randomPowerUp();
                 if (random == 1) {
+                    // si attiva la gravità inversa
                     isDefectOn = true;
                     jump = -jump;
                     g = -g;
@@ -448,8 +446,7 @@ void Game::fireAnimation() {
 }
 
 int Game::randomPos() {
-    randomY = rand() % maxY;
-    return randomY;
+    return (rand() % maxY);
 }
 
 int Game::randomCreation() {
@@ -512,8 +509,6 @@ unsigned int Game::getKilled() const { return killed; }
 const float Game::getRateIncreaser() { return rateIncreaser; }
 
 const float Game::getSpeedIncreaser() { return speedIncreaser; }
-
-int Game::getRandomY() const { return randomY; }
 
 const sf::Vector2i &Game::getWindowSize() const { return windowSize; }
 

@@ -9,11 +9,12 @@
 
 class Enemy : public sf::Sprite {
 public:
-    Enemy() {}
+    Enemy();
     virtual ~Enemy() {}
-    bool getCanShoot() const { return canShoot; }
-    virtual float getEnemySpeedY() { return enemySpeedY; };
-    virtual void setEnemySpeedY(float speedY) { enemySpeedY = speedY; };
+    bool getCanShoot() const;
+    void setCanShoot();
+    virtual float getEnemySpeedY();
+    virtual void setEnemySpeedY(float speedY);
 
 protected:
     bool canShoot;

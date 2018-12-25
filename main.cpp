@@ -7,6 +7,7 @@
 
 #include <chrono>
 #include <thread>
+#include <time.h>
 
 int main() {
 
@@ -17,8 +18,9 @@ int main() {
     int MS_PER_FRAME = 1 / FPS;
 
     while (!game.GetWindow()->isDone()) {
+        double start = clock() / CLOCKS_PER_SEC;
         game.render();
         game.update();
-        //std::this_thread::sleep_for(std::chrono::milliseconds(MS_PER_FRAME));
+        std::this_thread::sleep_for(std::chrono::milliseconds((int) start + MS_PER_FRAME - (clock() / CLOCKS_PER_SEC)));
     }
 }

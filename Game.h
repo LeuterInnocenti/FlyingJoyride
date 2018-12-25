@@ -9,15 +9,18 @@
 #include <string>
 #include <fstream>
 
+#include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
+
+#include "BlockFactory.h"
+#include "EnemyFactory.h"
+
+#include "Subject.h"
+
 #include "Block.h"
 #include "Enemy.h"
 #include "Window.h"
-#include "Subject.h"
 #include "Character.h"
-#include "BlockFactory.h"
-#include "EnemyFactory.h"
-#include "SFML/Graphics.hpp"
-#include "SFML/Audio.hpp"
 
 class Game : public Subject {
 public:
@@ -49,7 +52,6 @@ public:
 
     // funzioni getter
     int getMaxY() const;
-    int getRandomY() const;
     bool getIsPowerUpOn() const;
     int getBlocksContainerSize();
     unsigned int getScore() const;
@@ -76,84 +78,103 @@ public:
     void setAchievementString(sf::String string);
 
 private:
-    int maxY;
-    int randomY;
+    std::ofstream file;
 
     Window window;
-    sf::Music music;
-    sf::Clock scoreClock;
-    sf::Sprite background;
-    sf::Vector2i windowSize;
-    sf::Texture backgroundTexture;
-    static const float levelGround;
-
     Character player;
-    sf::Clock playerClock;
-    sf::CircleShape bullet;
-    sf::SoundBuffer shootBuffer;
+
+    BlockFactory factoryB;
+    EnemyFactory factoryE;
+
+    std::list<Observer*> observers;
+
+    sf::Music music;
+
     sf::Sound shootSound;
+    sf::Sound enemyDeadSound;
+    sf::Sound powerUpSound;
+
+    sf::SoundBuffer shootBuffer;
+    sf::SoundBuffer enemyDeadBuffer;
+    sf::SoundBuffer powerUpBuffer;
+
+    sf::Clock scoreClock;
+    sf::Clock playerClock;
+    sf::Clock fireClock;
+    sf::Clock speedClock;
+    sf::Clock objectClock;
+    sf::Clock defectClock;
+    sf::Clock controlPowerUp;
+    sf::Clock enemyClock;
+
+    sf::Vector2i windowSize;
+    sf::Vector2f speed;
+    sf::Vector2f oldSpeed;
+
+    sf::CircleShape bullet;
+
+    sf::Sprite background;
+    sf::Sprite fireSprite;
+
+    sf::Font font1;
+    sf::Font font2;
+
+    sf::Text scoreText;
+    sf::Text gameOver;
+    sf::Text achievementText;
+    sf::Text text;
+
+    sf::Texture backgroundTexture;
+
     sf::Texture playerTexture1;
     sf::Texture playerTexture2;
     sf::Texture puPlayerTexture1;
     sf::Texture puPlayerTexture2;
     sf::Texture dePlayerTexture1;
     sf::Texture dePlayerTexture2;
+
     sf::Texture fireTexture1;
     sf::Texture fireTexture2;
-    sf::Sprite fireSprite;
+
+    sf::Texture fEnemyTexture;
+    sf::Texture sEnemyTexture;
+
     std::vector<sf::CircleShape> bullets;
     std::vector<sf::CircleShape> enemyBullets;
 
-    float g;
-    int n, m;
-    float jump;
+    std::vector<std::unique_ptr<Block>> blocks;
+    std::vector<std::unique_ptr<Enemy>> enemies;
+
+    int maxY;
+    int n;
+    int count;
     int blockX;
     int counter;
     int textCount;
     int tollerance;
+
+    float g;
+    float jump;
+    float creationRate;
+
     bool isCreated;
     bool isDefectOn;
     bool isPowerUpOn;
     bool speedPowerUp;
-    float creationRate;
     bool isEnemyCreated;
+
+    unsigned int score;
+    unsigned int killed;
+
     static const int textSize;
     static const float shootTime;
     static const float bulletSpeed;
     static const float rateIncreaser;
     static const float speedIncreaser;
-
-    sf::Vector2f speed;
-    sf::Vector2f oldSpeed;
-    BlockFactory factoryB;
-    sf::Clock fireClock;
-    sf::Clock speedClock;
-    sf::Clock objectClock;
-    sf::Clock defectClock;
-    sf::Clock controlPowerUp;
-    std::vector<std::unique_ptr<Block>> blocks;
-    sf::SoundBuffer powerUpBuffer;
-    sf::Sound powerUpSound;
-
-    sf::Clock enemyClock;
-    EnemyFactory factoryE;
-    sf::Texture fEnemyTexture;
-    sf::Texture sEnemyTexture;
-    std::vector<std::unique_ptr<Enemy>> enemies;
-    sf::SoundBuffer enemyDeadBuffer;
-    sf::Sound enemyDeadSound;
-
-    sf::Text text;
-    sf::Font font1;
-    sf::Font font2;
-    sf::Text scoreText;
-    sf::Text gameOver;
-    sf::Text achievementText;
-    unsigned int score;
-    unsigned int killed;
-    std::list<Observer*> observers;
-
-    std::ofstream file;
+    static const float levelGround;
+    static const unsigned int creationLimit;
+    static const unsigned int speedMultiplier;
+    static const float speedLimit;
 };
 
 #endif //FLYJOYRIDE_GAME_H

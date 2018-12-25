@@ -6,8 +6,6 @@
 #define FLYJOYRIDE_SIMPLEBLOCKFACTORY_H
 
 #include "Block.h"
-#include "PowerUpBlock.h"
-#include "NormalBlock.h"
 
 enum BlockType { PowerUpBlock, NormalBlock };
 
@@ -16,6 +14,10 @@ public:
     BlockFactory();
     virtual ~BlockFactory();
     std::unique_ptr<Block> createBlock(BlockType type);
+
+private:
+    sf::Texture normalBlockTexture;
+    sf::Texture powerUpBlockTexture;
 };
 
 #endif //FLYJOYRIDE_SIMPLEBLOCKFACTORY_H

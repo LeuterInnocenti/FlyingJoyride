@@ -3,19 +3,23 @@
 //
 
 #include "EnemyFactory.h"
-#include "FlyingEnemy.h"
-#include "ShootingEnemy.h"
 
-EnemyFactory::EnemyFactory() {}
+EnemyFactory::EnemyFactory() {
+    flyingEnemyTexture.loadFromFile("fenemy1.png");
+    shootingEnemyTexture.loadFromFile("senemy1.png");
+}
 
 EnemyFactory::~EnemyFactory() {}
 
 std::unique_ptr<Enemy> EnemyFactory::createEnemy(EnemyType type) {
-    std::unique_ptr<Enemy> result;
+    std::unique_ptr<Enemy> result = std::unique_ptr<Enemy>(new class Enemy());
     if (type == EnemyType::FlyingEnemy) {
-        result = std::unique_ptr<Enemy>(new class FlyingEnemy());
+        result->setTexture(flyingEnemyTexture);
+        result->setScale(0.13, 0.13);
     } else if (type == EnemyType::ShootingEnemy) {
-        result = std::unique_ptr<Enemy>(new class ShootingEnemy());
+        result->setTexture(shootingEnemyTexture);
+        result->setScale(0.13, 0.13);
+        result->setCanShoot();
     }
     return result;
 }

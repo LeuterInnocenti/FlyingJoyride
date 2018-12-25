@@ -26,7 +26,7 @@ public:
 
 protected:
     char string[MAX_LINES][MAX_LINES_LEN];
-    unsigned int point, kill, a, b, c, d, e;
+    unsigned int point, kill, a, b, c, d, e, f;
     Game* game;
 };
 

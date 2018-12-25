@@ -19,7 +19,6 @@ public:
     sf::RenderWindow *getRenderWindow();
     sf::Vector2u getWindowSize();
     void draw(sf::Drawable &drawable);
-    void setDone() { done = true; }
 
 private:
     void setup(const std::string &title, const sf::Vector2u &size);
