@@ -1,4 +1,7 @@
 <application>
+  <component name="KeyboardSettings">
+    <option name="enabled" value="true" />
+  </component>
   <component name="UISettings">
     <option name="HIDE_TOOL_STRIPES" value="true" />
     <option name="IDE_AA_TYPE" value="Greyscale" />
