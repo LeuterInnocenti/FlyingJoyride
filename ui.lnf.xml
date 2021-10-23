@@ -3,6 +3,7 @@
     <option name="enabled" value="true" />
   </component>
   <component name="UISettings">
+    <option name="EDITOR_AA_TYPE" value="Greyscale" />
     <option name="HIDE_TOOL_STRIPES" value="true" />
     <option name="IDE_AA_TYPE" value="Greyscale" />
     <option name="MAX_LOOKUP_WIDTH2" value="958" />
